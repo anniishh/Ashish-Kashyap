@@ -109,20 +109,26 @@
 }
 
 @media print {
-  .print\:hidden {
-    display: none !important;
+  body.is-printing-card * {
+    visibility: hidden !important;
   }
-  .print\:shadow-none {
+  body.is-printing-card #printable-card,
+  body.is-printing-card #printable-card * {
+    visibility: visible !important;
+  }
+  body.is-printing-card #printable-card {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 90% !important;
+    max-width: 600px !important;
+    border: 1px solid #eee !important;
     box-shadow: none !important;
-  }
-  .print\:border-none {
-    border: none !important;
-  }
-  .print\:p-0 {
+    margin: 0 !important;
     padding: 0 !important;
   }
-  .print\:max-w-none {
-    max-w: none !important;
-    width: 100% !important;
+  .print\:hidden {
+    display: none !important;
   }
 }

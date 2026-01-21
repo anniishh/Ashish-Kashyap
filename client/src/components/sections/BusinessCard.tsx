@@ -11,13 +11,17 @@ export function BusinessCard() {
   const whatsappUrl = "https://api.whatsapp.com/send/?phone=918851427770&text&type=phone_number&app_absent=0";
 
   const handleDownload = () => {
-    // In a real app, this would generate a PDF. 
-    // For the mockup, we trigger the print dialog which is the most common way to save as PDF.
+    // We add a specific class to the body to trigger print styles
+    document.body.classList.add('is-printing-card');
     window.print();
+    // Use a slight delay to ensure the print dialog has been handled
+    setTimeout(() => {
+      document.body.classList.remove('is-printing-card');
+    }, 1000);
   };
 
   return (
-    <section className="py-20 bg-muted/30 relative overflow-hidden print:p-0">
+    <section id="business-card-section" className="py-20 bg-muted/30 relative overflow-hidden print:p-0">
       <div className="container mx-auto px-4 print:max-w-none print:p-0">
         <div className="text-center mb-16 print:hidden">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Digital Business Card</h2>
@@ -28,7 +32,8 @@ export function BusinessCard() {
 
         <div className="flex justify-center print:block">
           <motion.div 
-            className="w-full max-w-xl bg-white border border-black/5 rounded-2xl overflow-hidden shadow-2xl relative print:shadow-none print:border-none print:max-w-none"
+            id="printable-card"
+            className="w-full max-w-xl bg-white border border-black/5 rounded-2xl overflow-hidden shadow-2xl relative printable-card print:shadow-none print:border-none print:max-w-none"
             whileHover={{ scale: 1.01 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
