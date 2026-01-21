@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Phone, Mail, MessageCircle, MapPin, Share2, Map, Facebook, Linkedin, Instagram, Download } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 
+import whatsappIcon from "@assets/icons8-whatsapp-50_1768993742720.png";
+
 const XIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -124,20 +126,20 @@ export function BusinessCard() {
 
                   <div className="flex space-x-2 print:hidden">
                     {[
-                      { icon: MessageCircle, url: whatsappUrl },
-                      { icon: Facebook, url: "https://www.facebook.com/" },
-                      { icon: Instagram, url: "https://www.instagram.com/" },
-                      { icon: XIcon, url: "https://x.com/" },
-                      { icon: Linkedin, url: "https://www.linkedin.com/in/advocate-ashish-kashyap-4080351b3/" }
+                      { icon: () => <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 object-contain" />, url: whatsappUrl },
+                      { icon: () => <Facebook size={16} />, url: "https://www.facebook.com/" },
+                      { icon: () => <Instagram size={16} />, url: "https://www.instagram.com/" },
+                      { icon: () => <XIcon />, url: "https://x.com/" },
+                      { icon: () => <Linkedin size={16} />, url: "https://www.linkedin.com/in/advocate-ashish-kashyap-4080351b3/" }
                     ].map((item, i) => (
                       <a 
                         key={i} 
                         href={item.url} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="w-8 h-8 flex items-center justify-center rounded-lg bg-muted hover:bg-accent hover:text-white transition-all text-muted-foreground shadow-sm"
+                        className="w-8 h-8 flex items-center justify-center rounded-lg bg-muted hover:bg-accent hover:text-white transition-all text-muted-foreground shadow-sm group/icon"
                       >
-                        <item.icon size={16} />
+                        <item.icon />
                       </a>
                     ))}
                   </div>
