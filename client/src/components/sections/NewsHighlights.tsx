@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
 import image1 from "@assets/image_1768992319485.png";
+import image2 from "@assets/image_1768992478843.png";
 
 const newsItems = [
   {
@@ -20,7 +21,7 @@ const newsItems = [
     source: "Organiser",
     date: "Oct 28, 2023",
     link: "https://organiser.org/2023/10/28/203738/bharat/manipur/manipur-transnational-conspiracy-case-nia-opposes-bail-plea-of-moirangthem-anand-singh/",
-    image: "https://organiser.org/wp-content/uploads/2023/10/Manipur-NIA.jpg",
+    image: image2,
     description: "National Investigation Agency (NIA) has strongly opposed the bail plea of the prime accused in a case related to transnational conspiracy."
   },
   {
