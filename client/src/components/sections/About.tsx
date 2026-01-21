@@ -41,29 +41,6 @@ export function About() {
                 </div>
               </div>
             </div>
-
-            <div className="bg-muted p-8 rounded-2xl border border-border">
-              <h4 className="text-xl font-serif font-bold text-foreground mb-4 flex items-center">
-                <Scale className="text-accent mr-2 h-5 w-5" /> Cases he deals in
-              </h4>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {[
-                  "Criminal Cases",
-                  "CBI Cases",
-                  "ED Matters",
-                  "Prevention of Money Laundering Act",
-                  "Economic Offenses",
-                  "Special Acts Litigation",
-                  "Bail Matters",
-                  "Corporate Criminal Liability"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center text-sm text-muted-foreground">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent mr-2"></div>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
           
           <div className="relative">
@@ -89,6 +66,31 @@ export function About() {
                    </div>
                 </div>
              </div>
+          </div>
+        </div>
+
+        <div className="mb-24">
+          <div className="bg-white p-10 rounded-3xl border border-border shadow-sm">
+            <h4 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-8 flex items-center">
+              <Scale className="text-accent mr-3 h-8 w-8" /> Cases he deals in
+            </h4>
+            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                "Criminal Cases",
+                "CBI Cases",
+                "ED Matters",
+                "Prevention of Money Laundering Act",
+                "Economic Offenses",
+                "Special Acts Litigation",
+                "Bail Matters",
+                "Corporate Criminal Liability"
+              ].map((item, i) => (
+                <li key={i} className="flex items-center text-lg text-muted-foreground p-4 bg-muted/30 rounded-xl border border-transparent hover:border-accent/20 hover:bg-white transition-all group">
+                  <div className="w-2 h-2 rounded-full bg-accent mr-3 group-hover:scale-125 transition-transform"></div>
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
