@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroBg from "@assets/generated_images/abstract_legal_background_texture.png";
-import portrait from "@assets/generated_images/professional_male_lawyer_portrait.png";
+import portrait from "@assets/ak_1768985356593.jpg";
 
 export function Hero() {
   return (

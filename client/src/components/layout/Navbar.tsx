@@ -4,6 +4,8 @@ import { Menu, X, Phone, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
+import logo from "@assets/adv_logo_1768985356594.png";
+
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,8 +33,8 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div className="text-2xl font-serif font-bold tracking-tight text-white">
-          Adv. <span className="text-primary">Ashish Kashyap</span>
+        <div className="flex items-center">
+          <img src={logo} alt="Adv. Ashish Kashyap" className="h-8 md:h-10 w-auto invert brightness-0" />
         </div>
 
         {/* Desktop Nav */}

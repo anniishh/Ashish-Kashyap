@@ -1,5 +1,6 @@
 import { Facebook, Twitter, Linkedin, Instagram, MapPin, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@assets/adv_logo_1768985356594.png";
 
 export function Footer() {
   return (
@@ -7,9 +8,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1">
-            <h3 className="text-2xl font-serif font-bold text-white mb-6">
-              Adv. <span className="text-primary">Ashish Kashyap</span>
-            </h3>
+            <img src={logo} alt="Adv. Ashish Kashyap" className="h-10 w-auto mb-6 invert brightness-0" />
             <p className="text-muted-foreground mb-6 leading-relaxed">
               Providing expert legal counsel with integrity and dedication. Defending your rights and securing your future.
             </p>
