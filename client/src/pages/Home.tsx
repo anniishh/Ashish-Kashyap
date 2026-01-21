@@ -2,6 +2,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { NewsHighlights } from "@/components/sections/NewsHighlights";
+import { About } from "@/components/sections/About";
+import { Locations } from "@/components/sections/Locations";
 
 export default function Home() {
   return (
@@ -9,7 +11,11 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <About />
         <NewsHighlights />
+        <div className="bg-muted/30">
+          <Locations />
+        </div>
       </main>
       <Footer />
     </div>

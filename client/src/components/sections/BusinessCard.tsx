@@ -11,13 +11,35 @@ export function BusinessCard() {
   const whatsappUrl = "https://api.whatsapp.com/send/?phone=918851427770&text&type=phone_number&app_absent=0";
 
   const handleDownload = () => {
-    // We add a specific class to the body to trigger print styles
+    // Add specific class for print styling
     document.body.classList.add('is-printing-card');
-    window.print();
-    // Use a slight delay to ensure the print dialog has been handled
+    
+    // Create a temporary hidden container to force visibility of card
+    const card = document.getElementById('printable-card');
+    if (card) {
+      window.print();
+    }
+    
     setTimeout(() => {
       document.body.classList.remove('is-printing-card');
     }, 1000);
+  };
+
+  const handleShare = async () => {
+    const shareUrl = "https://advashishkashyap.vercel.app/";
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: 'Advocate Ashish Kashyap',
+          text: 'Digital Business Card of Adv. Ashish Kashyap',
+          url: shareUrl,
+        });
+      } catch (err) {
+        window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareUrl)}`);
+      }
+    } else {
+      window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareUrl)}`);
+    }
   };
 
   return (
@@ -144,7 +166,10 @@ export function BusinessCard() {
                   >
                     <Download className="w-4 h-4 mr-2" /> Download Card
                   </button>
-                  <button className="flex items-center text-accent text-xs font-bold hover:text-foreground transition-colors uppercase tracking-widest">
+                  <button 
+                    onClick={handleShare}
+                    className="flex items-center text-accent text-xs font-bold hover:text-foreground transition-colors uppercase tracking-widest"
+                  >
                     <Share2 className="w-4 h-4 mr-2" /> Share Card
                   </button>
                 </div>

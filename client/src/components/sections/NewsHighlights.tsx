@@ -48,7 +48,7 @@ const newsItems = [
 ];
 
 export function NewsHighlights({ fullPage = false }) {
-  const displayItems = fullPage ? newsItems : newsItems.slice(0, 4);
+  const displayItems = fullPage ? newsItems : newsItems.slice(0, 1);
 
   return (
     <section className={`py-24 ${fullPage ? 'bg-muted/30' : 'bg-white'}`}>
