@@ -53,7 +53,7 @@ export function Navbar() {
               </a>
             </Link>
           ))}
-          <Link href="/contact">
+          <Link href="/contact#schedule-consultation">
             <Button variant="default" className="bg-primary text-primary-foreground hover:bg-accent transition-colors">
               <Calendar className="mr-2 h-4 w-4" /> Book Appointment
             </Button>
@@ -89,9 +89,11 @@ export function Navbar() {
                   {link.name}
                 </a>
               ))}
-              <Button className="w-full bg-primary text-primary-foreground">
-                Book Appointment
-              </Button>
+              <Link href="/contact#schedule-consultation">
+                <Button className="w-full bg-primary text-primary-foreground" onClick={() => setMobileMenuOpen(false)}>
+                  Book Appointment
+                </Button>
+              </Link>
             </div>
           </motion.div>
         )}
