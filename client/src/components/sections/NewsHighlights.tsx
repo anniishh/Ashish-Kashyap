@@ -48,7 +48,7 @@ const newsItems = [
 ];
 
 export function NewsHighlights({ fullPage = false }) {
-  const displayItems = fullPage ? newsItems : newsItems.slice(0, 3);
+  const displayItems = fullPage ? newsItems : newsItems.slice(0, 4);
 
   return (
     <section className={`py-24 ${fullPage ? 'bg-muted/30' : 'bg-white'}`}>
@@ -63,7 +63,7 @@ export function NewsHighlights({ fullPage = false }) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {displayItems.map((item, index) => (
             <motion.div
               key={index}
@@ -73,41 +73,40 @@ export function NewsHighlights({ fullPage = false }) {
               transition={{ delay: index * 0.1 }}
             >
               <Card className="h-full border-border hover:border-accent/50 transition-all group flex flex-col overflow-hidden bg-white shadow-sm">
-                {fullPage && (
-                  <div className="aspect-video w-full overflow-hidden bg-muted relative">
-                    <img 
-                      src={`https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop`} 
-                      alt={item.title}
-                      className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 opacity-90"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                  </div>
-                )}
-                <CardContent className="p-6 flex flex-col h-full">
+                <div className="aspect-video w-full overflow-hidden bg-muted relative">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop";
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                </div>
+                <CardContent className="p-8 flex flex-col h-full">
                   <div className="flex items-center gap-2 text-accent mb-4">
-                    <Newspaper size={16} />
-                    <span className="text-[10px] font-bold uppercase tracking-widest">{item.source}</span>
+                    <Newspaper size={18} />
+                    <span className="text-xs font-bold uppercase tracking-widest">{item.source}</span>
                   </div>
-                  <h3 className={`font-serif font-bold text-foreground mb-4 group-hover:text-accent transition-colors ${fullPage ? 'text-xl' : 'text-lg line-clamp-3'}`}>
+                  <h3 className={`font-serif font-bold text-foreground mb-4 group-hover:text-accent transition-colors ${fullPage ? 'text-2xl' : 'text-xl line-clamp-2'}`}>
                     {item.title}
                   </h3>
-                  {fullPage && (
-                    <p className="text-sm text-muted-foreground mb-6 line-clamp-3 leading-relaxed italic">
-                      {item.description}
-                    </p>
-                  )}
+                  <p className="text-muted-foreground mb-8 line-clamp-3 leading-relaxed">
+                    {item.description}
+                  </p>
                   <div className="mt-auto pt-6 flex items-center justify-between border-t border-border/50">
-                    <div className="flex items-center text-muted-foreground text-[10px] uppercase font-bold tracking-wider">
-                      <Calendar size={12} className="mr-1.5" />
+                    <div className="flex items-center text-muted-foreground text-xs font-bold tracking-wider">
+                      <Calendar size={14} className="mr-2" />
                       {item.date}
                     </div>
                     <Button 
-                      variant="ghost" 
+                      variant="default" 
                       size="sm" 
-                      className="text-accent hover:text-accent hover:bg-accent/5 h-8 px-2 text-xs font-bold"
+                      className="bg-primary text-primary-foreground hover:bg-accent h-10 px-6 font-bold"
                       onClick={() => window.open(item.link, '_blank')}
                     >
-                      Read Full Article <ExternalLink size={14} className="ml-1.5" />
+                      Read Full Article <ExternalLink size={16} className="ml-2" />
                     </Button>
                   </div>
                 </CardContent>
