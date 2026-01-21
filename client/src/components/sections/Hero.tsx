@@ -30,8 +30,8 @@ export function Hero() {
             Deals in Criminal Cases | CBI | ED. Providing strategic legal counsel with unwavering integrity.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-accent text-lg px-8 py-6 transition-colors">
+            <Link href="/contact#schedule-consultation">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-accent text-lg px-8 py-6 transition-colors font-bold">
                 Book Appointment
               </Button>
             </Link>
