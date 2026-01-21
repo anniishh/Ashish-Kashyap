@@ -11,18 +11,63 @@ export function BusinessCard() {
   const whatsappUrl = "https://api.whatsapp.com/send/?phone=918851427770&text&type=phone_number&app_absent=0";
 
   const handleDownload = () => {
-    // Add specific class for print styling
-    document.body.classList.add('is-printing-card');
-    
-    // Create a temporary hidden container to force visibility of card
-    const card = document.getElementById('printable-card');
-    if (card) {
-      window.print();
-    }
-    
-    setTimeout(() => {
-      document.body.classList.remove('is-printing-card');
-    }, 1000);
+    const printContent = document.getElementById('printable-card');
+    if (!printContent) return;
+
+    const printWindow = window.open('', '', 'width=900,height=600');
+    if (!printWindow) return;
+
+    const styles = Array.from(document.querySelectorAll('style, link[rel="stylesheet"]'))
+      .map(s => s.outerHTML)
+      .join('');
+
+    printWindow.document.write(`
+      <html>
+        <head>
+          <title>Advocate Ashish Kashyap - Business Card</title>
+          ${styles}
+          <style>
+            @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+            body { 
+              margin: 0; 
+              padding: 0; 
+              display: flex; 
+              justify-content: center; 
+              align-items: center; 
+              min-height: 100vh;
+              background: #f9fafb;
+            }
+            .printable-card { 
+              width: 170mm !important; 
+              max-width: 170mm !important;
+              box-shadow: none !important;
+              border: 1px solid #eee !important;
+              margin: 0 !important;
+              visibility: visible !important;
+              display: block !important;
+              opacity: 1 !important;
+            }
+            @media print {
+              body { background: white; }
+              @page { margin: 0; size: auto; }
+            }
+            .print\\:hidden { display: none !important; }
+          </style>
+        </head>
+        <body>
+          <div class="printable-card">
+            ${printContent.innerHTML}
+          </div>
+          <script>
+            setTimeout(() => {
+              window.print();
+              window.close();
+            }, 500);
+          </script>
+        </body>
+      </html>
+    `);
+    printWindow.document.close();
   };
 
   const handleShare = async () => {
