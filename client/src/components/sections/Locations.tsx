@@ -41,7 +41,7 @@ export function Locations({ fullWidth = false }) {
               className={fullWidth ? "w-full" : ""}
             >
               <Card className={`overflow-hidden border-border hover:border-accent/50 transition-all bg-white shadow-sm flex flex-col ${fullWidth ? 'md:flex-row' : ''} h-full`}>
-                <div className={`${fullWidth ? 'md:w-1/2 h-[300px] md:h-auto' : 'h-72'} w-full bg-muted relative shrink-0`}>
+                <div className={`${fullWidth ? 'md:w-1/2 h-[350px] md:h-[400px]' : 'h-72'} w-full bg-muted relative shrink-0`}>
                   <iframe
                     src={loc.mapUrl}
                     width="100%"
