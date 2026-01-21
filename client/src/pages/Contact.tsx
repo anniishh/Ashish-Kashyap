@@ -9,9 +9,9 @@ export default function Contact() {
     <div className="min-h-screen bg-background text-foreground font-sans">
       <Navbar />
       <main className="pt-20">
-        <ContactSection />
         <Locations />
         <BusinessCard />
+        <ContactSection />
       </main>
       <Footer />
     </div>

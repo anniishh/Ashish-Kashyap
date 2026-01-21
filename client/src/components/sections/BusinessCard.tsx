@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Phone, Mail, MessageCircle, MapPin, Share2, QrCode, Facebook, Linkedin, Instagram } from "lucide-react";
+import { Phone, Mail, MessageCircle, MapPin, Share2, QrCode, Facebook, Linkedin, Instagram, Download } from "lucide-react";
 
 const XIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -10,19 +10,25 @@ const XIcon = () => (
 export function BusinessCard() {
   const whatsappUrl = "https://api.whatsapp.com/send/?phone=918851427770&text&type=phone_number&app_absent=0";
 
+  const handleDownload = () => {
+    // In a real app, this would generate a PDF. 
+    // For the mockup, we trigger the print dialog which is the most common way to save as PDF.
+    window.print();
+  };
+
   return (
-    <section className="py-20 bg-muted/30 relative overflow-hidden">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section className="py-20 bg-muted/30 relative overflow-hidden print:p-0">
+      <div className="container mx-auto px-4 print:max-w-none print:p-0">
+        <div className="text-center mb-16 print:hidden">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Digital Business Card</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Scan or tap to save my contact details instantly.
           </p>
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center print:block">
           <motion.div 
-            className="w-full max-w-xl bg-white border border-black/5 rounded-2xl overflow-hidden shadow-2xl relative"
+            className="w-full max-w-xl bg-white border border-black/5 rounded-2xl overflow-hidden shadow-2xl relative print:shadow-none print:border-none print:max-w-none"
             whileHover={{ scale: 1.01 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
@@ -35,7 +41,7 @@ export function BusinessCard() {
                   <h3 className="text-3xl font-serif font-bold text-foreground mb-1">Ashish Kashyap</h3>
                   <p className="text-accent font-semibold tracking-wide uppercase text-sm mb-4">Advocate</p>
                   
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  <div className="flex flex-wrap gap-2 mb-6 print:hidden">
                     {["Criminal Cases", "CBI", "ED"].map(tag => (
                       <span key={tag} className="px-3 py-1 bg-muted rounded-full text-xs font-medium text-muted-foreground border border-border">
                         {tag}
@@ -43,7 +49,7 @@ export function BusinessCard() {
                     ))}
                   </div>
 
-                  <div className="flex space-x-2">
+                  <div className="flex space-x-2 print:hidden">
                     {[
                       { icon: MessageCircle, url: whatsappUrl },
                       { icon: Facebook, url: "https://www.facebook.com/" },
@@ -122,13 +128,21 @@ export function BusinessCard() {
                 </div>
               </div>
 
-              <div className="mt-8 flex justify-between items-center">
+              <div className="mt-8 flex justify-between items-center print:hidden">
                 <p className="text-[10px] text-muted-foreground italic">
                   Deals in Criminal Cases | CBI | ED
                 </p>
-                <button className="flex items-center text-accent text-xs font-bold hover:text-foreground transition-colors uppercase tracking-widest">
-                  <Share2 className="w-4 h-4 mr-2" /> Share Card
-                </button>
+                <div className="flex space-x-4">
+                  <button 
+                    onClick={handleDownload}
+                    className="flex items-center text-accent text-xs font-bold hover:text-foreground transition-colors uppercase tracking-widest"
+                  >
+                    <Download className="w-4 h-4 mr-2" /> Download Card
+                  </button>
+                  <button className="flex items-center text-accent text-xs font-bold hover:text-foreground transition-colors uppercase tracking-widest">
+                    <Share2 className="w-4 h-4 mr-2" /> Share Card
+                  </button>
+                </div>
               </div>
             </div>
           </motion.div>
