@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Phone, Mail, MessageCircle, MapPin, Share2, QrCode, Facebook, Linkedin, Instagram, Download } from "lucide-react";
+import { Phone, Mail, MessageCircle, MapPin, Share2, Map, Facebook, Linkedin, Instagram, Download } from "lucide-react";
+import { QRCodeSVG } from "qrcode.react";
 
 const XIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -144,7 +145,20 @@ export function BusinessCard() {
                 
                 <div className="flex flex-col items-center gap-2">
                   <div className="bg-white p-2.5 rounded-xl border border-border shadow-sm">
-                    <QrCode className="w-16 h-16 text-foreground" strokeWidth={1.5} />
+                    <QRCodeSVG 
+                      value="https://advashishkashyap.vercel.app/"
+                      size={64}
+                      level="H"
+                      includeMargin={false}
+                      imageSettings={{
+                        src: "",
+                        x: undefined,
+                        y: undefined,
+                        height: 12,
+                        width: 12,
+                        excavate: true,
+                      }}
+                    />
                   </div>
                   <span className="text-[9px] uppercase tracking-widest text-muted-foreground font-bold">Scan to Save</span>
                 </div>
