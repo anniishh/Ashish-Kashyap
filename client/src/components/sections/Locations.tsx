@@ -40,8 +40,8 @@ export function Locations({ fullWidth = false }) {
               transition={{ delay: index * 0.1 }}
               className={fullWidth ? "w-full" : ""}
             >
-              <Card className={`overflow-hidden border-border hover:border-accent/50 transition-all bg-white shadow-sm flex flex-col ${fullWidth ? 'md:flex-row' : ''}`}>
-                <div className={`${fullWidth ? 'md:w-1/2 h-[300px] md:h-auto' : 'h-64'} w-full bg-muted relative`}>
+              <Card className={`overflow-hidden border-border hover:border-accent/50 transition-all bg-white shadow-sm flex flex-col ${fullWidth ? 'md:flex-row' : ''} h-full`}>
+                <div className={`${fullWidth ? 'md:w-1/2 h-[300px] md:h-auto' : 'h-72'} w-full bg-muted relative shrink-0`}>
                   <iframe
                     src={loc.mapUrl}
                     width="100%"
@@ -52,17 +52,17 @@ export function Locations({ fullWidth = false }) {
                     className="absolute inset-0 grayscale hover:grayscale-0 transition-all duration-500"
                   ></iframe>
                 </div>
-                <CardContent className={`p-8 ${fullWidth ? 'md:w-1/2 flex flex-col justify-center' : ''}`}>
+                <CardContent className={`p-8 ${fullWidth ? 'md:w-1/2 flex flex-col justify-center' : 'flex flex-col flex-grow'}`}>
                   <div className="flex items-center space-x-3 text-accent mb-4">
                     <MapPin className="h-6 w-6" />
                     <h3 className="text-2xl font-serif font-bold text-foreground">{loc.title}</h3>
                   </div>
-                  <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
+                  <p className="text-muted-foreground mb-6 text-lg leading-relaxed flex-grow">
                     {loc.address}
                   </p>
                   <Button 
                     variant="outline" 
-                    className="border-accent text-accent hover:bg-accent hover:text-white transition-all w-full md:w-fit"
+                    className="border-accent text-accent hover:bg-accent hover:text-white transition-all w-full md:w-fit mt-auto"
                     onClick={() => window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc.address)}`, '_blank')}
                   >
                     Get Directions

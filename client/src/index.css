@@ -109,10 +109,16 @@
 }
 
 @media print {
+  @page {
+    size: auto;
+    margin: 0mm;
+  }
   body.is-printing-card {
     background: white !important;
     margin: 0 !important;
     padding: 0 !important;
+    height: 100vh !important;
+    overflow: hidden !important;
   }
   body.is-printing-card * {
     visibility: hidden !important;
@@ -128,7 +134,7 @@
     left: 50% !important;
     top: 50% !important;
     transform: translate(-50%, -50%) !important;
-    width: 850px !important;
+    width: 180mm !important;
     height: auto !important;
     border: 1px solid #eee !important;
     box-shadow: none !important;
@@ -136,6 +142,7 @@
     padding: 0 !important;
     z-index: 9999 !important;
     background: white !important;
+    page-break-inside: avoid !important;
   }
   .print\:hidden {
     display: none !important;
