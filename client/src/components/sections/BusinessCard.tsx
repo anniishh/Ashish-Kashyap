@@ -68,7 +68,7 @@ export function BusinessCard() {
                   <h3 className="text-3xl font-serif font-bold text-foreground mb-1">Ashish Kashyap</h3>
                   <p className="text-accent font-semibold tracking-wide uppercase text-sm mb-4">Advocate</p>
                   
-                  <div className="flex flex-wrap gap-2 mb-6 print:hidden">
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {["Criminal Cases", "CBI", "ED"].map(tag => (
                       <span key={tag} className="px-3 py-1 bg-muted rounded-full text-[10px] font-medium text-muted-foreground border border-border uppercase tracking-wider">
                         {tag}
@@ -155,7 +155,7 @@ export function BusinessCard() {
                 </div>
               </div>
 
-              <div className="mt-8 flex justify-between items-center print:hidden">
+              <div className="mt-8 flex justify-between items-center">
                 <p className="text-[10px] text-muted-foreground italic">
                   Deals in Criminal Cases | CBI | ED
                 </p>
