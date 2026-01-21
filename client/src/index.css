@@ -118,11 +118,11 @@
     padding: 0 !important;
     height: 100% !important;
     overflow: hidden !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
   body.is-printing-card * {
     visibility: hidden !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
   }
   body.is-printing-card #printable-card,
   body.is-printing-card #printable-card * {
@@ -140,9 +140,9 @@
     margin: 0 !important;
     padding: 0 !important;
     background: white !important;
-    page-break-inside: avoid !important;
-    page-break-after: avoid !important;
-    page-break-before: avoid !important;
+    display: block !important;
+    opacity: 1 !important;
+    z-index: 99999 !important;
   }
   .print\:hidden {
     display: none !important;
