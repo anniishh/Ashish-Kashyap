@@ -6,6 +6,7 @@ import { Link } from "wouter";
 
 import image1 from "@assets/image_1768992319485.png";
 import image2 from "@assets/image_1768992478843.png";
+import image4 from "@assets/image_1768992955899.png";
 
 const newsItems = [
   {
@@ -37,7 +38,7 @@ const newsItems = [
     source: "The Sentinel",
     date: "Oct 17, 2023",
     link: "https://www.sentinelassam.com/north-east-india-news/manipur/manipur-transnational-conspiracy-case-moirangthem-anand-singh-withdraws-bail-plea-from-nia-court-674645",
-    image: "https://www.sentinelassam.com/wp-content/uploads/2023/10/NIA.jpg",
+    image: image4,
     description: "Significant legal update in the Manipur transnational conspiracy case as the main accused withdraws his petition."
   },
   {
