@@ -1,73 +1,83 @@
-import { Facebook, Twitter, Linkedin, Instagram, MapPin, Phone, Mail } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Instagram, MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@assets/adv_logo_1768985356594.png";
 
+const XIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
+
 export function Footer() {
+  const whatsappUrl = "https://api.whatsapp.com/send/?phone=918851427770&text&type=phone_number&app_absent=0";
+
   return (
-    <footer className="bg-card border-t border-border pt-20 pb-10">
+    <footer className="bg-muted border-t border-border pt-20 pb-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1">
-            <img src={logo} alt="Adv. Ashish Kashyap" className="h-10 w-auto mb-6 invert brightness-0" />
+            <img src={logo} alt="Adv. Ashish Kashyap" className="h-10 w-auto mb-6" />
             <p className="text-muted-foreground mb-6 leading-relaxed">
               Providing expert legal counsel with integrity and dedication. Defending your rights and securing your future.
             </p>
-            <div className="flex space-x-4">
-              <Button variant="outline" size="icon" className="rounded-full border-white/10 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
-                <Facebook className="h-4 w-4" />
+            <div className="flex space-x-3">
+              <Button asChild variant="outline" size="icon" className="rounded-full border-black/10 hover:bg-accent hover:text-white transition-colors">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><Facebook className="h-4 w-4" /></a>
               </Button>
-              <Button variant="outline" size="icon" className="rounded-full border-white/10 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
-                <Twitter className="h-4 w-4" />
+              <Button asChild variant="outline" size="icon" className="rounded-full border-black/10 hover:bg-accent hover:text-white transition-colors">
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer"><XIcon /></a>
               </Button>
-              <Button variant="outline" size="icon" className="rounded-full border-white/10 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
-                <Linkedin className="h-4 w-4" />
+              <Button asChild variant="outline" size="icon" className="rounded-full border-black/10 hover:bg-accent hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/in/advocate-ashish-kashyap-4080351b3/" target="_blank" rel="noopener noreferrer"><Linkedin className="h-4 w-4" /></a>
               </Button>
-              <Button variant="outline" size="icon" className="rounded-full border-white/10 hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors">
-                <Instagram className="h-4 w-4" />
+              <Button asChild variant="outline" size="icon" className="rounded-full border-black/10 hover:bg-accent hover:text-white transition-colors">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><Instagram className="h-4 w-4" /></a>
+              </Button>
+              <Button asChild variant="outline" size="icon" className="rounded-full border-black/10 hover:bg-accent hover:text-white transition-colors">
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle className="h-4 w-4" /></a>
               </Button>
             </div>
           </div>
 
           <div>
-            <h4 className="text-lg font-serif font-semibold text-white mb-6">Quick Links</h4>
+            <h4 className="text-lg font-serif font-semibold text-foreground mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Home</a></li>
-              <li><a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About Me</a></li>
-              <li><a href="#practice" className="text-muted-foreground hover:text-primary transition-colors">Practice Areas</a></li>
-              <li><a href="#news" className="text-muted-foreground hover:text-primary transition-colors">Legal News</a></li>
-              <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="#" className="text-muted-foreground hover:text-accent transition-colors">Home</a></li>
+              <li><a href="#about" className="text-muted-foreground hover:text-accent transition-colors">About Me</a></li>
+              <li><a href="#practice" className="text-muted-foreground hover:text-accent transition-colors">Practice Areas</a></li>
+              <li><a href="#locations" className="text-muted-foreground hover:text-accent transition-colors">Office Locations</a></li>
+              <li><a href="#contact" className="text-muted-foreground hover:text-accent transition-colors">Contact</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-serif font-semibold text-white mb-6">Practice Areas</h4>
+            <h4 className="text-lg font-serif font-semibold text-foreground mb-6">Expertise</h4>
             <ul className="space-y-3">
-              <li className="text-muted-foreground">Criminal Defense</li>
+              <li className="text-muted-foreground">Criminal Cases</li>
+              <li className="text-muted-foreground">CBI / ED Matters</li>
               <li className="text-muted-foreground">Civil Litigation</li>
               <li className="text-muted-foreground">Corporate Law</li>
-              <li className="text-muted-foreground">Family Law</li>
-              <li className="text-muted-foreground">Real Estate</li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-serif font-semibold text-white mb-6">Contact Info</h4>
+            <h4 className="text-lg font-serif font-semibold text-foreground mb-6">Contact Details</h4>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <MapPin className="h-5 w-5 text-primary mr-3 mt-1" />
+                <MapPin className="h-5 w-5 text-accent mr-3 mt-1" />
                 <span className="text-muted-foreground">
-                  Supreme Court of India,<br />
-                  Tilak Marg, Mandi House,<br />
-                  New Delhi, Delhi 110001
+                  Delhi High Court,<br />
+                  Lawyer's Chamber's Block,<br />
+                  New Delhi
                 </span>
               </li>
               <li className="flex items-center">
-                <Phone className="h-5 w-5 text-primary mr-3" />
-                <span className="text-muted-foreground">+91 98765 43210</span>
+                <Phone className="h-5 w-5 text-accent mr-3" />
+                <span className="text-muted-foreground">+91 88514 27770</span>
               </li>
               <li className="flex items-center">
-                <Mail className="h-5 w-5 text-primary mr-3" />
-                <span className="text-muted-foreground">contact@advashishkashyap.com</span>
+                <Mail className="h-5 w-5 text-accent mr-3" />
+                <span className="text-muted-foreground">advashishkashyap@gmail.com</span>
               </li>
             </ul>
           </div>

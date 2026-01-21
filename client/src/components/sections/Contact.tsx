@@ -46,13 +46,13 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-card relative">
+    <section id="contact" className="py-24 bg-muted/30 relative">
       <div className="container mx-auto px-4 max-w-4xl">
-        <div className="bg-background border border-white/5 rounded-2xl p-8 md:p-12 shadow-2xl">
+        <div className="bg-white border border-border rounded-2xl p-8 md:p-12 shadow-xl">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Book an Appointment</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Schedule Consultation</h2>
             <p className="text-muted-foreground">
-              Schedule a consultation to discuss your legal matters.
+              Directly contact our team for expert legal advice on Criminal, CBI, or ED matters.
             </p>
           </div>
 
@@ -64,9 +64,9 @@ export function Contact() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white">Full Name</FormLabel>
+                      <FormLabel className="text-foreground font-semibold">Full Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="John Doe" {...field} className="bg-secondary/50 border-white/10 text-white" />
+                        <Input placeholder="Your Name" {...field} className="bg-muted/50 border-border text-foreground focus:border-accent" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -77,9 +77,9 @@ export function Contact() {
                   name="phone"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white">Phone Number</FormLabel>
+                      <FormLabel className="text-foreground font-semibold">Phone Number</FormLabel>
                       <FormControl>
-                        <Input placeholder="+91 98765 43210" {...field} className="bg-secondary/50 border-white/10 text-white" />
+                        <Input placeholder="+91 88514 27770" {...field} className="bg-muted/50 border-border text-foreground focus:border-accent" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -93,9 +93,9 @@ export function Contact() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white">Email Address</FormLabel>
+                      <FormLabel className="text-foreground font-semibold">Email Address</FormLabel>
                       <FormControl>
-                        <Input placeholder="john@example.com" {...field} className="bg-secondary/50 border-white/10 text-white" />
+                        <Input placeholder="your.email@gmail.com" {...field} className="bg-muted/50 border-border text-foreground focus:border-accent" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -106,9 +106,9 @@ export function Contact() {
                   name="date"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-white">Preferred Date</FormLabel>
+                      <FormLabel className="text-foreground font-semibold">Preferred Date</FormLabel>
                       <FormControl>
-                        <Input type="date" {...field} className="bg-secondary/50 border-white/10 text-white" />
+                        <Input type="date" {...field} className="bg-muted/50 border-border text-foreground focus:border-accent" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -121,11 +121,11 @@ export function Contact() {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="text-white">Case Details (Optional)</FormLabel>
+                    <FormLabel className="text-foreground font-semibold">Brief Case Summary</FormLabel>
                     <FormControl>
                       <Textarea 
-                        placeholder="Briefly describe your legal issue..." 
-                        className="min-h-[120px] bg-secondary/50 border-white/10 text-white resize-none" 
+                        placeholder="Please provide brief details about your legal inquiry..." 
+                        className="min-h-[120px] bg-muted/50 border-border text-foreground resize-none focus:border-accent" 
                         {...field} 
                       />
                     </FormControl>
@@ -134,8 +134,8 @@ export function Contact() {
                 )}
               />
 
-              <Button type="submit" size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-6 text-lg font-semibold">
-                Confirm Appointment
+              <Button type="submit" size="lg" className="w-full bg-primary text-primary-foreground hover:bg-accent py-6 text-lg font-bold transition-all shadow-md">
+                Request Consultation
               </Button>
             </form>
           </Form>

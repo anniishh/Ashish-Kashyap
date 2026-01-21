@@ -29,12 +29,12 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md border-b border-border py-4" : "bg-transparent py-6"
+        isScrolled ? "bg-white/90 backdrop-blur-md border-b border-border py-4 shadow-sm" : "bg-transparent py-6"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <img src={logo} alt="Adv. Ashish Kashyap" className="h-8 md:h-10 w-auto invert brightness-0" />
+          <img src={logo} alt="Adv. Ashish Kashyap" className="h-8 md:h-10 w-auto" />
         </div>
 
         {/* Desktop Nav */}
@@ -43,19 +43,19 @@ export function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest"
+              className="text-sm font-medium text-foreground/70 hover:text-accent transition-colors uppercase tracking-widest"
             >
               {link.name}
             </a>
           ))}
-          <Button variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90">
+          <Button variant="default" className="bg-primary text-primary-foreground hover:bg-accent transition-colors">
             <Calendar className="mr-2 h-4 w-4" /> Book Appointment
           </Button>
         </div>
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-foreground"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X /> : <Menu />}

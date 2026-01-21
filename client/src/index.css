@@ -43,41 +43,38 @@
   --font-serif: "Playfair Display", serif;
 }
 
-/* Modern Legal Theme: Dark Navy & Gold */
+/* Updated Legal Theme: Light Mode with Red Dot Accent */
 :root {
-  /* Navy Blue Backgrounds */
-  --background: 222 47% 11%;
-  --foreground: 210 40% 98%;
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
 
-  /* Card / Elevated Surfaces */
-  --card: 222 47% 14%;
-  --card-foreground: 210 40% 98%;
+  --card: 0 0% 98%;
+  --card-foreground: 222 47% 11%;
   
-  --popover: 222 47% 11%;
-  --popover-foreground: 210 40% 98%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
 
-  /* Gold / Bronze Accents for Primary Actions */
-  --primary: 45 93% 47%;
-  --primary-foreground: 222 47% 11%;
+  /* Dark for authority, Red for accent */
+  --primary: 222 47% 11%;
+  --primary-foreground: 0 0% 100%;
 
-  /* Muted Navy for Secondary */
-  --secondary: 217 32% 17%;
-  --secondary-foreground: 210 40% 98%;
+  --secondary: 0 0% 92%;
+  --secondary-foreground: 222 47% 11%;
 
-  --muted: 217 32% 17%;
-  --muted-foreground: 215 20% 65%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 215 16% 47%;
 
-  --accent: 45 93% 47%;
-  --accent-foreground: 222 47% 11%;
+  --accent: 346 84% 49%; /* Red dot accent */
+  --accent-foreground: 0 0% 100%;
 
-  --destructive: 0 62% 30%;
+  --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 217 32% 20%;
-  --input: 217 32% 20%;
-  --ring: 45 93% 47%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 346 84% 49%;
 
-  --radius: 0.2rem;
+  --radius: 0.4rem;
 }
 
 @layer base {
@@ -92,17 +89,21 @@
   }
 }
 
-/* Custom Utilities for Glass and Textures */
 @layer utilities {
   .glass-panel {
-    @apply bg-black/40 backdrop-blur-md border border-white/10;
+    @apply bg-white/70 backdrop-blur-md border border-black/5;
   }
   
-  .text-gradient-gold {
-    @apply bg-gradient-to-r from-[#D4AF37] via-[#F2D06B] to-[#D4AF37] bg-clip-text text-transparent;
+  .text-gradient-dark {
+    @apply bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent;
   }
 
-  .gold-border {
-    @apply border border-[#D4AF37]/30;
+  .red-dot-accent {
+    @apply relative inline-block;
+  }
+  
+  .red-dot-accent::after {
+    content: "";
+    @apply absolute -right-3 bottom-2 w-2 h-2 rounded-full bg-accent;
   }
 }
