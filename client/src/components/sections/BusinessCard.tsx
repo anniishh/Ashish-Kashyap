@@ -55,22 +55,22 @@ export function BusinessCard() {
         <div className="flex justify-center print:block">
           <motion.div 
             id="printable-card"
-            className="w-full max-w-xl bg-white border border-black/5 rounded-2xl overflow-hidden shadow-2xl relative printable-card print:shadow-none print:border-none print:max-w-none"
+            className="w-full max-w-3xl bg-white border border-black/5 rounded-2xl overflow-hidden shadow-2xl relative printable-card print:shadow-none print:border-none print:max-w-none"
             whileHover={{ scale: 1.01 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             {/* Card Header Design */}
             <div className="h-1.5 bg-accent"></div>
             
-            <div className="p-8 md:p-12 relative">
-              <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-10">
+            <div className="p-6 md:p-10 relative">
+              <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-8">
                 <div className="flex-1">
                   <h3 className="text-3xl font-serif font-bold text-foreground mb-1">Ashish Kashyap</h3>
                   <p className="text-accent font-semibold tracking-wide uppercase text-sm mb-4">Advocate</p>
                   
                   <div className="flex flex-wrap gap-2 mb-6 print:hidden">
                     {["Criminal Cases", "CBI", "ED"].map(tag => (
-                      <span key={tag} className="px-3 py-1 bg-muted rounded-full text-xs font-medium text-muted-foreground border border-border">
+                      <span key={tag} className="px-3 py-1 bg-muted rounded-full text-[10px] font-medium text-muted-foreground border border-border uppercase tracking-wider">
                         {tag}
                       </span>
                     ))}
@@ -89,67 +89,67 @@ export function BusinessCard() {
                         href={item.url} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="w-9 h-9 flex items-center justify-center rounded-lg bg-muted hover:bg-accent hover:text-white transition-all text-muted-foreground shadow-sm"
+                        className="w-8 h-8 flex items-center justify-center rounded-lg bg-muted hover:bg-accent hover:text-white transition-all text-muted-foreground shadow-sm"
                       >
-                        <item.icon size={18} />
+                        <item.icon size={16} />
                       </a>
                     ))}
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center gap-2">
-                  <div className="bg-white p-3 rounded-xl border border-border shadow-sm">
-                    <QrCode className="w-20 h-20 text-foreground" strokeWidth={1.5} />
+                  <div className="bg-white p-2.5 rounded-xl border border-border shadow-sm">
+                    <QrCode className="w-16 h-16 text-foreground" strokeWidth={1.5} />
                   </div>
-                  <span className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold">Scan to Save</span>
+                  <span className="text-[9px] uppercase tracking-widest text-muted-foreground font-bold">Scan to Save</span>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-8 border-y border-border">
-                <div className="space-y-6">
-                  <div>
-                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold mb-2">Mobile</p>
-                    <div className="flex items-center space-x-3 text-foreground font-medium">
-                      <div className="text-accent"><Phone size={16} /></div>
-                      <span>+91 88514 27770</span>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 py-6 border-y border-border">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 rounded-lg bg-accent/5 flex items-center justify-center text-accent"><Phone size={14} /></div>
+                    <div>
+                      <p className="text-[9px] uppercase tracking-widest text-muted-foreground font-bold">Mobile</p>
+                      <p className="text-sm text-foreground font-medium">+91 88514 27770</p>
                     </div>
                   </div>
                   
-                  <div>
-                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold mb-2">Office</p>
-                    <div className="flex items-center space-x-3 text-foreground font-medium">
-                      <div className="text-accent"><Phone size={16} /></div>
-                      <span>+91 97163 24341</span>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 rounded-lg bg-accent/5 flex items-center justify-center text-accent"><Phone size={14} /></div>
+                    <div>
+                      <p className="text-[9px] uppercase tracking-widest text-muted-foreground font-bold">Office</p>
+                      <p className="text-sm text-foreground font-medium">+91 97163 24341</p>
                     </div>
                   </div>
 
-                  <div>
-                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold mb-2">Email</p>
-                    <div className="flex items-center space-x-3 text-foreground font-medium">
-                      <div className="text-accent"><Mail size={16} /></div>
-                      <span className="text-sm">advashishkashyap@gmail.com</span>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 rounded-lg bg-accent/5 flex items-center justify-center text-accent"><Mail size={14} /></div>
+                    <div>
+                      <p className="text-[9px] uppercase tracking-widest text-muted-foreground font-bold">Email</p>
+                      <p className="text-sm text-foreground font-medium">advashishkashyap@gmail.com</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="space-y-6">
-                  <div>
-                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold mb-2">Delhi High Court</p>
-                    <div className="flex items-start space-x-3 text-foreground font-medium">
-                      <div className="text-accent mt-1"><MapPin size={16} /></div>
-                      <span className="text-sm leading-relaxed">
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 rounded-lg bg-accent/5 flex items-center justify-center text-accent shrink-0 mt-1"><MapPin size={14} /></div>
+                    <div>
+                      <p className="text-[9px] uppercase tracking-widest text-muted-foreground font-bold">Delhi High Court</p>
+                      <p className="text-[13px] text-foreground font-medium leading-relaxed">
                         Consultation Room, Lawyer's Chamber's Block, Delhi High Court
-                      </span>
+                      </p>
                     </div>
                   </div>
 
-                  <div>
-                    <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-bold mb-2">Noida Office</p>
-                    <div className="flex items-start space-x-3 text-foreground font-medium">
-                      <div className="text-accent mt-1"><MapPin size={16} /></div>
-                      <span className="text-sm leading-relaxed">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 rounded-lg bg-accent/5 flex items-center justify-center text-accent shrink-0 mt-1"><MapPin size={14} /></div>
+                    <div>
+                      <p className="text-[9px] uppercase tracking-widest text-muted-foreground font-bold">Noida Office</p>
+                      <p className="text-[13px] text-foreground font-medium leading-relaxed">
                         C-130, 3rd Floor, Sector-9, Noida-201301
-                      </span>
+                      </p>
                     </div>
                   </div>
                 </div>
