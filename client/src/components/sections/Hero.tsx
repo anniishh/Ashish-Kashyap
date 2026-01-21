@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 import heroBg from "@assets/generated_images/abstract_legal_background_texture.png";
 import portrait from "@assets/ak_1768985356593.jpg";
 
@@ -29,12 +30,16 @@ export function Hero() {
             Deals in Criminal Cases | CBI | ED. Providing strategic legal counsel with unwavering integrity.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-accent text-lg px-8 py-6 transition-colors">
-              Book Appointment
-            </Button>
-            <Button size="lg" variant="outline" className="text-foreground border-border hover:bg-muted text-lg px-8 py-6 transition-colors">
-              Expertise <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/contact">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-accent text-lg px-8 py-6 transition-colors">
+                Book Appointment
+              </Button>
+            </Link>
+            <Link href="/about">
+              <Button size="lg" variant="outline" className="text-foreground border-border hover:bg-muted text-lg px-8 py-6 transition-colors">
+                Expertise <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
           
           <div className="mt-12 flex items-center space-x-8">

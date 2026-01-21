@@ -1,5 +1,6 @@
 import { Facebook, Twitter, Linkedin, Instagram, MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import logo from "@assets/adv_logo_1768985356594.png";
 
 const XIcon = () => (
@@ -42,11 +43,9 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-serif font-semibold text-foreground mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-muted-foreground hover:text-accent transition-colors">Home</a></li>
-              <li><a href="#about" className="text-muted-foreground hover:text-accent transition-colors">About Me</a></li>
-              <li><a href="#practice" className="text-muted-foreground hover:text-accent transition-colors">Practice Areas</a></li>
-              <li><a href="#locations" className="text-muted-foreground hover:text-accent transition-colors">Office Locations</a></li>
-              <li><a href="#contact" className="text-muted-foreground hover:text-accent transition-colors">Contact</a></li>
+              <li><Link href="/"><a className="text-muted-foreground hover:text-accent transition-colors">Home</a></Link></li>
+              <li><Link href="/about"><a className="text-muted-foreground hover:text-accent transition-colors">About Me</a></Link></li>
+              <li><Link href="/contact"><a className="text-muted-foreground hover:text-accent transition-colors">Contact & Locations</a></Link></li>
             </ul>
           </div>
 
