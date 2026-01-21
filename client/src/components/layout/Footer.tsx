@@ -2,6 +2,7 @@ import { Facebook, Twitter, Linkedin, Instagram, MapPin, Phone, Mail, MessageCir
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import logo from "@assets/adv_logo_1768985356594.png";
+import whatsappIcon from "@assets/icons8-whatsapp-50_1768993742720.png";
 
 const XIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -34,8 +35,10 @@ export function Footer() {
               <Button asChild variant="outline" size="icon" className="rounded-full border-black/10 hover:bg-accent hover:text-white transition-colors">
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><Instagram className="h-4 w-4" /></a>
               </Button>
-              <Button asChild variant="outline" size="icon" className="rounded-full border-black/10 hover:bg-accent hover:text-white transition-colors">
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"><MessageCircle className="h-4 w-4" /></a>
+              <Button asChild variant="outline" size="icon" className="rounded-full border-black/10 hover:bg-accent hover:text-white transition-colors group/icon">
+                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                  <img src={whatsappIcon} alt="WhatsApp" className="h-4 w-4 object-contain group-hover/icon:invert transition-all" />
+                </a>
               </Button>
             </div>
           </div>
