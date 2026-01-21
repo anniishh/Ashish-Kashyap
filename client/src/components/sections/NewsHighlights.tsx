@@ -63,7 +63,7 @@ export function NewsHighlights({ fullPage = false }) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 gap-12 max-w-7xl mx-auto">
           {displayItems.map((item, index) => (
             <motion.div
               key={index}
@@ -72,8 +72,8 @@ export function NewsHighlights({ fullPage = false }) {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="h-full border-border hover:border-accent/50 transition-all group flex flex-col overflow-hidden bg-white shadow-sm">
-                <div className="aspect-video w-full overflow-hidden bg-muted relative">
+              <Card className="h-full border-border hover:border-accent/50 transition-all group overflow-hidden bg-white shadow-md flex flex-col md:flex-row">
+                <div className="md:w-2/5 aspect-video md:aspect-auto overflow-hidden bg-muted relative">
                   <img 
                     src={item.image} 
                     alt={item.title}
@@ -84,29 +84,29 @@ export function NewsHighlights({ fullPage = false }) {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
-                <CardContent className="p-8 flex flex-col h-full">
+                <CardContent className="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
                   <div className="flex items-center gap-2 text-accent mb-4">
                     <Newspaper size={18} />
                     <span className="text-xs font-bold uppercase tracking-widest">{item.source}</span>
                   </div>
-                  <h3 className={`font-serif font-bold text-foreground mb-4 group-hover:text-accent transition-colors ${fullPage ? 'text-2xl' : 'text-xl line-clamp-2'}`}>
+                  <h3 className={`font-serif font-bold text-foreground mb-4 group-hover:text-accent transition-colors ${fullPage ? 'text-3xl' : 'text-2xl line-clamp-2'}`}>
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground mb-8 line-clamp-3 leading-relaxed">
+                  <p className="text-muted-foreground mb-8 line-clamp-3 text-lg leading-relaxed">
                     {item.description}
                   </p>
-                  <div className="mt-auto pt-6 flex items-center justify-between border-t border-border/50">
-                    <div className="flex items-center text-muted-foreground text-xs font-bold tracking-wider">
-                      <Calendar size={14} className="mr-2" />
+                  <div className="mt-auto pt-6 flex flex-wrap items-center justify-between border-t border-border/50 gap-4">
+                    <div className="flex items-center text-muted-foreground text-sm font-bold tracking-wider">
+                      <Calendar size={16} className="mr-2" />
                       {item.date}
                     </div>
                     <Button 
                       variant="default" 
-                      size="sm" 
-                      className="bg-primary text-primary-foreground hover:bg-accent h-10 px-6 font-bold"
+                      size="lg" 
+                      className="bg-primary text-primary-foreground hover:bg-accent h-12 px-8 font-bold text-base"
                       onClick={() => window.open(item.link, '_blank')}
                     >
-                      Read Full Article <ExternalLink size={16} className="ml-2" />
+                      Read Full Article <ExternalLink size={18} className="ml-2" />
                     </Button>
                   </div>
                 </CardContent>
