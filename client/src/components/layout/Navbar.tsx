@@ -80,14 +80,19 @@ export function Navbar() {
           >
             <div className="container px-4 py-6 flex flex-col space-y-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
                   href={link.href}
-                  className="text-lg font-medium text-white"
-                  onClick={() => setMobileMenuOpen(false)}
                 >
-                  {link.name}
-                </a>
+                  <a 
+                    className={`text-lg font-medium transition-colors uppercase tracking-widest ${
+                      location === link.href ? "text-accent" : "text-foreground/70"
+                    }`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                  </a>
+                </Link>
               ))}
               <Link href="/contact#schedule-consultation">
                 <Button className="w-full bg-primary text-primary-foreground" onClick={() => setMobileMenuOpen(false)}>

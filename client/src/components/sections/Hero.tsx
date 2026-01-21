@@ -59,7 +59,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9, y: 50 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative hidden md:block"
+          className="relative block"
         >
           <div className="relative z-10 rounded-2xl overflow-hidden border border-border shadow-2xl shadow-black/5 aspect-[3/4] max-w-md mx-auto">
             <img 
@@ -70,8 +70,8 @@ export function Hero() {
           </div>
           
           {/* Decorative elements behind the image */}
-          <div className="absolute -top-6 -right-6 w-32 h-32 border-t-2 border-r-2 border-accent/20 rounded-tr-3xl"></div>
-          <div className="absolute -bottom-6 -left-6 w-32 h-32 border-b-2 border-l-2 border-accent/20 rounded-bl-3xl"></div>
+          <div className="absolute -top-6 -right-6 w-32 h-32 border-t-2 border-r-2 border-accent/20 rounded-tr-3xl hidden md:block"></div>
+          <div className="absolute -bottom-6 -left-6 w-32 h-32 border-b-2 border-l-2 border-accent/20 rounded-bl-3xl hidden md:block"></div>
         </motion.div>
       </div>
     </section>
