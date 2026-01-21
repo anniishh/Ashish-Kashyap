@@ -72,7 +72,7 @@ export function About() {
         <div className="mb-24">
           <div className="bg-white p-10 rounded-3xl border border-border shadow-sm">
             <h4 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-8 flex items-center">
-              <Scale className="text-accent mr-3 h-8 w-8" /> Cases he deals in
+              <Scale className="text-accent mr-3 h-8 w-8" /> Cases deals in
             </h4>
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
