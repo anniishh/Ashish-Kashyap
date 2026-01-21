@@ -1,5 +1,7 @@
 import { MapPin, Clock } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const locations = [
   {
@@ -16,46 +18,58 @@ const locations = [
   }
 ];
 
-export function Locations() {
+export function Locations({ fullWidth = false }) {
   return (
     <section id="locations" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Office Locations</h2>
-          <p className="text-muted-foreground">Visit us for a consultation at your nearest location.</p>
+          <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Visit us at our offices for professional legal consultation.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className={`grid grid-cols-1 ${fullWidth ? 'gap-12' : 'md:grid-cols-2 gap-8'} max-w-6xl mx-auto`}>
           {locations.map((loc, index) => (
-            <Card key={index} className="bg-white border-border overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow">
-              <div className="h-64 w-full bg-muted relative">
-                <iframe 
-                  src={loc.mapUrl} 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen={false} 
-                  loading="lazy"
-                  className="grayscale hover:grayscale-0 transition-all duration-500"
-                ></iframe>
-              </div>
-              <CardHeader className="pb-2">
-                <div className="inline-block px-2 py-1 bg-accent/10 rounded mb-2 w-fit">
-                  <span className="text-[10px] font-bold text-accent uppercase tracking-wider">{loc.type}</span>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className={fullWidth ? "w-full" : ""}
+            >
+              <Card className={`overflow-hidden border-border hover:border-accent/50 transition-all bg-white shadow-sm flex flex-col ${fullWidth ? 'md:flex-row' : ''}`}>
+                <div className={`${fullWidth ? 'md:w-1/2 h-[300px] md:h-auto' : 'h-64'} w-full bg-muted relative`}>
+                  <iframe
+                    src={loc.mapUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    className="absolute inset-0 grayscale hover:grayscale-0 transition-all duration-500"
+                  ></iframe>
                 </div>
-                <CardTitle className="text-foreground text-xl font-serif">{loc.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-start space-x-3 text-muted-foreground mb-4">
-                  <MapPin className="h-5 w-5 text-accent shrink-0 mt-0.5" />
-                  <span className="text-sm leading-relaxed">{loc.address}</span>
-                </div>
-                <div className="flex items-start space-x-3 text-muted-foreground">
-                  <Clock className="h-5 w-5 text-accent shrink-0 mt-0.5" />
-                  <span className="text-sm">Mon - Sat: 10:00 AM - 07:00 PM</span>
-                </div>
-              </CardContent>
-            </Card>
+                <CardContent className={`p-8 ${fullWidth ? 'md:w-1/2 flex flex-col justify-center' : ''}`}>
+                  <div className="flex items-center space-x-3 text-accent mb-4">
+                    <MapPin className="h-6 w-6" />
+                    <h3 className="text-2xl font-serif font-bold text-foreground">{loc.title}</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
+                    {loc.address}
+                  </p>
+                  <Button 
+                    variant="outline" 
+                    className="border-accent text-accent hover:bg-accent hover:text-white transition-all w-full md:w-fit"
+                    onClick={() => window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc.address)}`, '_blank')}
+                  >
+                    Get Directions
+                  </Button>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>

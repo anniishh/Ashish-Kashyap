@@ -25,7 +25,7 @@ export function About() {
               His approach combines deep legal knowledge with strategic thinking to deliver favorable outcomes for his clients. He brings the same level of dedication and integrity to every case, whether it's a complex corporate investigation or a sensitive criminal defense.
             </p>
             
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-6 mb-12">
               <div className="flex items-center space-x-3">
                 <Clock className="text-accent h-6 w-6" />
                 <div>
@@ -40,6 +40,29 @@ export function About() {
                   <p className="text-xs text-muted-foreground">Legal Representation</p>
                 </div>
               </div>
+            </div>
+
+            <div className="bg-muted p-8 rounded-2xl border border-border">
+              <h4 className="text-xl font-serif font-bold text-foreground mb-4 flex items-center">
+                <Scale className="text-accent mr-2 h-5 w-5" /> Cases he deals in
+              </h4>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {[
+                  "Criminal Cases",
+                  "CBI Cases",
+                  "ED Matters",
+                  "Prevention of Money Laundering Act",
+                  "Economic Offenses",
+                  "Special Acts Litigation",
+                  "Bail Matters",
+                  "Corporate Criminal Liability"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center text-sm text-muted-foreground">
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent mr-2"></div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
           
