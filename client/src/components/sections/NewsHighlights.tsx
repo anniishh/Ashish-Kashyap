@@ -7,6 +7,7 @@ import { Link } from "wouter";
 import image1 from "@assets/image_1768992319485.png";
 import image2 from "@assets/image_1768992478843.png";
 import image4 from "@assets/image_1768992955899.png";
+import image5 from "@assets/image_1768993034423.png";
 
 const newsItems = [
   {
@@ -46,7 +47,7 @@ const newsItems = [
     source: "India Today NE",
     date: "Dec 11, 2025",
     link: "https://www.indiatodayne.in/manipur/story/supreme-court-grants-bail-to-manipur-conspiracy-accused-after-prolonged-custody-1316127-2025-12-11",
-    image: "https://www.indiatodayne.in/manipur/story/supreme-court-grants-bail-to-manipur-conspiracy-accused-after-prolonged-custody-1316127-2025-12-11",
+    image: image5,
     description: "The Supreme Court observed that prolonged pre-trial detention violates the right to personal liberty while granting bail."
   }
 ];
