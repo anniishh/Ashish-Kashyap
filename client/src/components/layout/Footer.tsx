@@ -2,7 +2,7 @@ import { Facebook, Twitter, Linkedin, Instagram, MapPin, Phone, Mail, MessageCir
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import logo from "@assets/adv_logo_1768985356594.png";
-import whatsappIcon from "@assets/icons8-whatsapp-50_1768993742720.png";
+import whatsappIcon from "@assets/whatsapp-icon_1768994029624.png";
 
 const XIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">

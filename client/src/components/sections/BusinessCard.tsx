@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Phone, Mail, MessageCircle, MapPin, Share2, Map, Facebook, Linkedin, Instagram, Download } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 
-import whatsappIcon from "@assets/icons8-whatsapp-50_1768993742720.png";
+import whatsappIcon from "@assets/whatsapp-icon_1768994029624.png";
 
 const XIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
