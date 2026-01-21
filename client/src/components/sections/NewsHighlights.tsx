@@ -4,13 +4,15 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
+import image1 from "@assets/image_1768992319485.png";
+
 const newsItems = [
   {
     title: "Manipur Violence: Delhi Court grants CBI transit custody of man accused of looting arms from police",
     source: "India Today NE",
     date: "Oct 22, 2023",
     link: "https://www.indiatodayne.in/manipur/story/manipur-violence-delhi-court-grants-cbi-transit-custody-of-man-accused-of-looting-arms-from-police-698803-2023-10-22",
-    image: "https://www.indiatodayne.in/manipur/story/manipur-violence-delhi-court-grants-cbi-transit-custody-of-man-accused-of-looting-arms-from-police-698803-2023-10-22",
+    image: image1,
     description: "The Delhi High Court has granted transit custody of a person accused of looting arms from police stations during the Manipur ethnic violence."
   },
   {
