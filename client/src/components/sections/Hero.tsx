@@ -49,7 +49,7 @@ export function Hero() {
             </div>
             <div className="w-px h-12 bg-border"></div>
             <div>
-              <p className="text-3xl font-bold text-foreground">500+</p>
+              <p className="text-3xl font-bold text-foreground">300+</p>
               <p className="text-sm text-muted-foreground uppercase tracking-wider">Cases Won</p>
             </div>
           </div>

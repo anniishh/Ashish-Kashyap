@@ -68,7 +68,7 @@ export function About() {
                  </div>
               </div>
               <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
-                 <h3 className="text-4xl font-bold text-accent mb-1">500+</h3>
+                 <h3 className="text-4xl font-bold text-accent mb-1">300+</h3>
                  <p className="text-sm text-muted-foreground">Cases Resolved</p>
               </div>
               <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
