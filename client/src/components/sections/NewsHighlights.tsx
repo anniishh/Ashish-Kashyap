@@ -19,12 +19,36 @@ const newsItems = [
     description: "Four persons accused in a J&K terror funding case have voluntarily agreed to plead guilty before a Delhi court in a money laundering case."
   },
   {
+    title: "J&K Terror Funding Case: 4 Associated with Hizbul Mujahideen Plead Guilty of Money Laundering",
+    source: "Kashmir Digest",
+    date: "Feb 13, 2023",
+    link: "https://www.kashmirdigest.com/j-k-terror-funding-case-4-associated-with-hizbul-mujahideen-plead-guilty-of-money-laundering/",
+    image: "https://www.kashmirdigest.com/wp-content/uploads/2023/02/ED-1.jpg",
+    description: "In a significant development, four individuals linked to Hizbul Mujahideen have pleaded guilty in a terror funding case investigated by the ED."
+  },
+  {
     title: "Anand Singh had conspired with foreign groups during the violence in Manipur",
     source: "Hindustan Times",
     date: "Oct 24, 2023",
     link: "https://www.livehindustan.com/ncr/delhi/story-anand-singh-had-conspired-with-foreign-groups-during-the-violence-in-manipur-8902575.html",
     image: image1,
     description: "The NIA investigation revealed that Moirangthem Anand Singh conspired with foreign insurgent groups to carry out attacks during the ethnic violence in Manipur."
+  },
+  {
+    title: "Manipur Violence: Delhi Court grants CBI transit custody of man accused of looting arms from police",
+    source: "India Today NE",
+    date: "Oct 22, 2023",
+    link: "https://www.indiatodayne.in/manipur/story/manipur-violence-delhi-court-grants-cbi-transit-custody-of-man-accused-of-looting-arms-from-police-698803-2023-10-22",
+    image: image1,
+    description: "The Delhi High Court has granted transit custody of a person accused of looting arms from police stations during the Manipur ethnic violence."
+  },
+  {
+    title: "Manipur: Transnational conspiracy case, NIA opposes bail plea of Moirangthem Anand Singh",
+    source: "Organiser",
+    date: "Oct 28, 2023",
+    link: "https://organiser.org/2023/10/28/203738/bharat/manipur/manipur-transnational-conspiracy-case-nia-opposes-bail-plea-of-moirangthem-anand-singh/",
+    image: image2,
+    description: "National Investigation Agency (NIA) has strongly opposed the bail plea of the prime accused in a case related to transnational conspiracy."
   },
   {
     title: "NIA case: Moirangthem Anand Singh withdraws bail plea",
