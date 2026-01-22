@@ -11,6 +11,13 @@ const locations = [
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.502998632616!2d77.2274!3d28.6146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2d6e3006953%3A0x63351d3824151703!2sDelhi%20High%20Court!5e0!3m2!1sen!2sin!4v1737466540000!5m2!1sen!2sin"
   },
   {
+    title: "East Delhi Office",
+    address: "Office No. U-144(a), Near Shakarpur Metro Station Gate No. 4, Shakarpur, East District, Delhi-110092",
+    firmName: "M/s AR & Associates",
+    type: "Law Firm",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.876793655182!2d77.2774293!3d28.6334733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfcad6a394347%3A0x7707e15509d30c5e!2sShakarpur%20Metro%20Station%20Gate%20No.%204!5e0!3m2!1sen!2sin!4v1737466540000!5m2!1sen!2sin"
+  },
+  {
     title: "Noida Office",
     address: "C-130, 3rd Floor, Sector-9, Noida-201301",
     type: "Corporate Office",
@@ -30,7 +37,7 @@ export function Locations({ fullWidth = false }) {
           </p>
         </div>
 
-        <div className={`grid grid-cols-1 ${fullWidth ? 'gap-12' : 'md:grid-cols-2 gap-8'} max-w-6xl mx-auto`}>
+        <div className={`grid grid-cols-1 ${fullWidth ? 'gap-12' : 'md:grid-cols-2 lg:grid-cols-3 gap-8'} max-w-7xl mx-auto`}>
           {locations.map((loc, index) => (
             <motion.div
               key={index}
@@ -55,7 +62,10 @@ export function Locations({ fullWidth = false }) {
                 <CardContent className={`p-8 ${fullWidth ? 'md:w-1/2 flex flex-col justify-center' : 'flex flex-col flex-grow'}`}>
                   <div className="flex items-center space-x-3 text-accent mb-4">
                     <MapPin className="h-6 w-6" />
-                    <h3 className="text-2xl font-serif font-bold text-foreground">{loc.title}</h3>
+                  <h3 className="text-2xl font-serif font-bold text-foreground">
+                    {loc.title}
+                    {loc.firmName && <span className="block text-sm font-sans font-normal text-muted-foreground mt-1">{loc.firmName}</span>}
+                  </h3>
                   </div>
                   <p className="text-muted-foreground mb-6 text-lg leading-relaxed flex-grow">
                     {loc.address}
