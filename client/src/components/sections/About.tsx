@@ -63,8 +63,8 @@ export function About() {
                     <p className="text-sm text-muted-foreground">Success Rate</p>
                  </div>
                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
-                    <h3 className="text-4xl font-bold text-accent mb-1">15+</h3>
-                    <p className="text-sm text-muted-foreground">Years Experience</p>
+                    <h3 className="text-4xl font-bold text-accent mb-1">24/7</h3>
+                    <p className="text-sm text-muted-foreground">Legal Support</p>
                  </div>
               </div>
               <div className="bg-white p-6 rounded-2xl border border-border shadow-md">

@@ -44,8 +44,8 @@ export function Hero() {
           
           <div className="mt-12 flex items-center space-x-8">
             <div>
-              <p className="text-3xl font-bold text-foreground">15+</p>
-              <p className="text-sm text-muted-foreground uppercase tracking-wider">Years Experience</p>
+              <p className="text-3xl font-bold text-foreground italic">24/7</p>
+              <p className="text-sm text-muted-foreground uppercase tracking-wider">Legal Support</p>
             </div>
             <div className="w-px h-12 bg-border"></div>
             <div>
