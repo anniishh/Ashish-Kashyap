@@ -47,35 +47,27 @@ export function About() {
           
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
-              <div className="relative group overflow-hidden rounded-2xl shadow-xl aspect-square">
-                <img 
-                  src={justiceStatue} 
-                  alt="Lady Justice" 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
-                  <p className="text-white text-xs font-serif italic">"Justice delayed is justice denied."</p>
-                </div>
-              </div>
-              <div className="space-y-4">
-                 <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
-                    <h3 className="text-4xl font-bold text-accent mb-1">98%</h3>
-                    <p className="text-sm text-muted-foreground">Success Rate</p>
-                 </div>
-                 <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
-                    <h3 className="text-4xl font-bold text-accent mb-1">24/7</h3>
-                    <p className="text-sm text-muted-foreground">Legal Support</p>
-                 </div>
-              </div>
-              <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
-                 <h3 className="text-4xl font-bold text-accent mb-1">300+</h3>
-                 <p className="text-sm text-muted-foreground">Cases Resolved</p>
-              </div>
-              <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
-                 <h3 className="text-4xl font-bold text-accent mb-1">120+</h3>
-                 <p className="text-sm text-muted-foreground">Corporate Clients</p>
-              </div>
-           </div>
+               <div className="space-y-4 mt-8">
+                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
+                     <h3 className="text-4xl font-bold text-accent mb-1">98%</h3>
+                     <p className="text-sm text-muted-foreground">Success Rate</p>
+                  </div>
+                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
+                     <h3 className="text-4xl font-bold text-accent mb-1">120+</h3>
+                     <p className="text-sm text-muted-foreground">Corporate Clients</p>
+                  </div>
+               </div>
+               <div className="space-y-4">
+                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
+                     <h3 className="text-4xl font-bold text-accent mb-1">300+</h3>
+                     <p className="text-sm text-muted-foreground">Cases Resolved</p>
+                  </div>
+                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
+                     <h3 className="text-4xl font-bold text-accent mb-1">24/7</h3>
+                     <p className="text-sm text-muted-foreground">Legal Support</p>
+                  </div>
+               </div>
+            </div>
           </div>
         </div>
 
