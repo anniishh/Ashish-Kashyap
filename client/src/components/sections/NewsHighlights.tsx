@@ -9,6 +9,8 @@ import image2 from "@assets/image_1768992478843.png";
 import image4 from "@assets/image_1768992955899.png";
 import image5 from "@assets/image_1768993034423.png";
 
+import imageLast from "@assets/image_1769099289328.png";
+
 const newsItems = [
   {
     title: "Manipur Violence: Delhi Court grants CBI transit custody of man accused of looting arms from police",
@@ -55,7 +57,7 @@ const newsItems = [
     source: "ANI News",
     date: "Feb 3, 2023",
     link: "https://www.aninews.in/news/national/general-news/j-k-terror-funding-case-four-accused-voluntarily-agreed-to-plead-guilty-in-ed-case20230203182946/",
-    image: "https://static.theprint.in/wp-content/uploads/2022/05/Enforcement-Directorate-ED.jpg",
+    image: imageLast,
     description: "In a significant development in a J&K terror funding case, four accused persons have voluntarily agreed to plead guilty before a Delhi court in a money laundering case."
   }
 ];
