@@ -9,14 +9,14 @@ export default function About() {
     <div className="min-h-screen bg-background text-foreground font-sans">
       <Navbar />
       <main className="pt-20">
-        <div className="container mx-auto px-4 py-12">
+        <div className="container mx-auto px-4 pt-6 pb-2">
           {/* Supreme Court Header Image */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95, y: 30 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            className="relative w-full h-[300px] md:h-[500px] rounded-[2rem] overflow-hidden mb-8 shadow-2xl group"
+            className="relative w-full h-[300px] md:h-[500px] rounded-[2rem] overflow-hidden mb-4 shadow-2xl group"
           >
             <img 
               src={scImage} 
