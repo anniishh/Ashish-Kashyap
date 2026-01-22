@@ -22,6 +22,12 @@ const locations = [
     address: "C-130, 3rd Floor, Sector-9, Noida-201301",
     type: "Corporate Office",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.744123547893!2d77.3129!3d28.5774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4532a68579f%3A0x6310246473177656!2sSector%209%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1645512345678!5m2!1sen!2sin"
+  },
+  {
+    title: "Siwan Office",
+    address: "Advocate Ashish Kashyap, Nai Basti Mahadeva, near Gandhi Maidan, Siwan, Bihar - 841226",
+    type: "Regional Office",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.468234850123!2d84.3562!3d26.2196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3992fb68f543e319%3A0x6d5663f7215f606a!2sGandhi%20Maidan%2C%20Siwan!5e0!3m2!1sen!2sin!4v1737466540000!5m2!1sen!2sin"
   }
 ];
 
@@ -37,7 +43,7 @@ export function Locations({ fullWidth = false }) {
           </p>
         </div>
 
-        <div className={`grid grid-cols-1 ${fullWidth ? 'gap-12' : 'md:grid-cols-2 lg:grid-cols-3 gap-8'} max-w-7xl mx-auto`}>
+        <div className={`grid grid-cols-1 ${fullWidth ? 'gap-12' : 'md:grid-cols-2 gap-8'} max-w-7xl mx-auto`}>
           {locations.map((loc, index) => (
             <motion.div
               key={index}
