@@ -16,7 +16,7 @@ export default function About() {
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            className="relative w-full h-[300px] md:h-[500px] rounded-[2rem] overflow-hidden mb-20 shadow-2xl group"
+            className="relative w-full h-[300px] md:h-[500px] rounded-[2rem] overflow-hidden mb-8 shadow-2xl group"
           >
             <img 
               src={scImage} 
