@@ -49,6 +49,14 @@ const newsItems = [
     link: "https://www.indiatodayne.in/manipur/story/supreme-court-grants-bail-to-manipur-conspiracy-accused-after-prolonged-custody-1316127-2025-12-11",
     image: image5,
     description: "The Supreme Court observed that prolonged pre-trial detention violates the right to personal liberty while granting bail."
+  },
+  {
+    title: "Manipur Transnational Conspiracy Case: Supreme Court grants bail to Moirangthem Anand Singh",
+    source: "ANI News",
+    date: "Dec 11, 2025",
+    link: "https://www.aninews.in/news/national/general-news/supreme-court-grants-bail-to-manipur-transnational-conspiracy-case-accused20241211181234/",
+    image: image5,
+    description: "The Supreme Court on Wednesday granted bail to Moirangthem Anand Singh, an accused in the Manipur transnational conspiracy case, noting the long period of incarceration."
   }
 ];
 
