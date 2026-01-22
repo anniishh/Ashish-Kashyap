@@ -18,12 +18,6 @@ const locations = [
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.876793655182!2d77.2774293!3d28.6334733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfcad6a394347%3A0x7707e15509d30c5e!2sShakarpur%20Metro%20Station%20Gate%20No.%204!5e0!3m2!1sen!2sin!4v1737466540000!5m2!1sen!2sin"
   },
   {
-    title: "Noida Office",
-    address: "C-130, 3rd Floor, Sector-9, Noida-201301",
-    type: "Corporate Office",
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.744123547893!2d77.3129!3d28.5774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4532a68579f%3A0x6310246473177656!2sSector%209%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1645512345678!5m2!1sen!2sin"
-  },
-  {
     title: "Siwan Office",
     address: "Advocate Ashish Kashyap, Nai Basti Mahadeva, near Gandhi Maidan, Siwan, Bihar - 841226",
     type: "Regional Office",
@@ -37,7 +31,9 @@ const locations = [
   }
 ];
 
-export function Locations({ fullWidth = false }) {
+export function Locations({ fullWidth = false, limit = null }) {
+  const displayLocations = limit ? locations.slice(0, limit) : locations;
+
   return (
     <section id="locations" className="py-24 bg-white">
       <div className="container mx-auto px-4">
@@ -50,7 +46,7 @@ export function Locations({ fullWidth = false }) {
         </div>
 
         <div className={`grid grid-cols-1 ${fullWidth ? 'gap-12' : 'md:grid-cols-2 gap-8'} max-w-7xl mx-auto`}>
-          {locations.map((loc, index) => (
+          {displayLocations.map((loc, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}

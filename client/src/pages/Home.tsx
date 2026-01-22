@@ -14,7 +14,7 @@ export default function Home() {
         <About />
         <NewsHighlights />
         <div className="bg-muted/30">
-          <Locations />
+          <Locations limit={2} />
         </div>
       </main>
       <Footer />

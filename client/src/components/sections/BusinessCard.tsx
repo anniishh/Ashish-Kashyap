@@ -207,9 +207,19 @@ export function BusinessCard() {
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 rounded-lg bg-accent/5 flex items-center justify-center text-accent shrink-0 mt-1"><MapPin size={14} /></div>
                     <div>
-                      <p className="text-[9px] uppercase tracking-widest text-muted-foreground font-bold">Noida Office</p>
+                      <p className="text-[9px] uppercase tracking-widest text-muted-foreground font-bold">Law Firm</p>
                       <p className="text-[13px] text-foreground font-medium leading-relaxed">
-                        C-130, 3rd Floor, Sector-9, Noida-201301
+                        Office No. U-144(a), Shakarpur, East District, Delhi-110092
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 rounded-lg bg-accent/5 flex items-center justify-center text-accent shrink-0 mt-1"><MapPin size={14} /></div>
+                    <div>
+                      <p className="text-[9px] uppercase tracking-widest text-muted-foreground font-bold">Regional Offices</p>
+                      <p className="text-[13px] text-foreground font-medium leading-relaxed">
+                        Siwan (Bihar) | Kolkata (West Bengal)
                       </p>
                     </div>
                   </div>
