@@ -11,7 +11,7 @@ const locations = [
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.502998632616!2d77.2274!3d28.6146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2d6e3006953%3A0x63351d3824151703!2sDelhi%20High%20Court!5e0!3m2!1sen!2sin!4v1737466540000!5m2!1sen!2sin"
   },
   {
-    title: "East Delhi Office",
+    title: "Law Firm",
     address: "Office No. U-144(a), Near Shakarpur Metro Station Gate No. 4, Shakarpur, East District, Delhi-110092",
     firmName: "M/s AR & Associates",
     type: "Law Firm",
