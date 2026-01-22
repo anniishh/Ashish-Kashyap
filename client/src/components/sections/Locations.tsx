@@ -28,6 +28,12 @@ const locations = [
     address: "Advocate Ashish Kashyap, Nai Basti Mahadeva, near Gandhi Maidan, Siwan, Bihar - 841226",
     type: "Regional Office",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.468234850123!2d84.3562!3d26.2196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3992fb68f543e319%3A0x6d5663f7215f606a!2sGandhi%20Maidan%2C%20Siwan!5e0!3m2!1sen!2sin!4v1737466540000!5m2!1sen!2sin"
+  },
+  {
+    title: "Kolkata Office",
+    address: "Abode Arrangers, 1, Porabazar-Lane, Kolkata - 700020",
+    type: "Regional Office",
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.23456789!2d88.3456789!3d22.5678901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027705353d7197%3A0x60c77607a3c31627!2s1%2C%20Pura%20Bazar%20Ln%2C%20Garcha%2C%20Ballygunge%2C%20Kolkata%2C%20West%20Bengal%20700020!5e0!3m2!1sen!2sin!4v1737466540000!5m2!1sen!2sin"
   }
 ];
 
