@@ -19,7 +19,7 @@ export function About() {
               A Legacy of <span className="text-accent">Legal Excellence</span>
             </h2>
             <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
-              Advocate Ashish Kashyap is a distinguished legal practitioner specializing in high-stakes Criminal Cases, CBI, and ED matters. Practicing at the Supreme Court of India and Delhi High Court, he has built a reputation for meticulous preparation and aggressive advocacy.
+              Advocate Ashish Kashyap is a distinguished legal practitioner specializing in high-stakes Criminal Cases, CBI, ED, and NIA matters. Practicing at the Supreme Court of India and Delhi High Court, he has built a reputation for meticulous preparation and aggressive advocacy.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
               His approach combines deep legal knowledge with strategic thinking to deliver favorable outcomes for his clients. He brings the same level of dedication and integrity to every case, whether it's a complex corporate investigation or a sensitive criminal defense.
@@ -79,6 +79,7 @@ export function About() {
                 "Criminal Cases",
                 "CBI Cases",
                 "ED Matters",
+                "NIA Matters",
                 "Prevention of Money Laundering Act",
                 "Economic Offenses",
                 "Special Acts Litigation",

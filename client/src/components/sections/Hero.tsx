@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import heroBg from "@assets/generated_images/abstract_legal_background_texture.png";
-import portrait from "@assets/ak_1768985356593.jpg";
+import portrait from "@assets/image_1769096431460.png";
 
 export function Hero() {
   return (
@@ -27,7 +27,7 @@ export function Hero() {
             <span className="red-dot-accent">Ashish Kashyap</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg leading-relaxed">
-            Deals in Criminal Cases | CBI | ED. Providing strategic legal counsel with unwavering integrity.
+            Deals in Criminal Cases | CBI | ED | NIA. Providing strategic legal counsel with unwavering integrity.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact#schedule-consultation">

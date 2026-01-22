@@ -117,7 +117,7 @@ export function BusinessCard() {
                   <p className="text-accent font-semibold tracking-wide uppercase text-sm mb-4">Advocate</p>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {["Criminal Cases", "CBI", "ED"].map(tag => (
+                    {["Criminal Cases", "CBI", "ED", "NIA"].map(tag => (
                       <span key={tag} className="px-3 py-1 bg-muted rounded-full text-[10px] font-medium text-muted-foreground border border-border uppercase tracking-wider">
                         {tag}
                       </span>
@@ -218,7 +218,7 @@ export function BusinessCard() {
 
               <div className="mt-8 flex justify-between items-center">
                 <p className="text-[10px] text-muted-foreground italic">
-                  Deals in Criminal Cases | CBI | ED
+                  Deals in Criminal Cases | CBI | ED | NIA
                 </p>
                 <div className="flex space-x-4">
                   <button 

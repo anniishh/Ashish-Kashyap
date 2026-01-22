@@ -57,7 +57,7 @@ export function Footer() {
             <h4 className="text-lg font-serif font-semibold text-foreground mb-6">Expertise</h4>
             <ul className="space-y-3">
               <li className="text-muted-foreground">Criminal Cases</li>
-              <li className="text-muted-foreground">CBI / ED Matters</li>
+              <li className="text-muted-foreground">CBI / ED / NIA Matters</li>
               <li className="text-muted-foreground">Civil Litigation</li>
               <li className="text-muted-foreground">Corporate Law</li>
             </ul>
