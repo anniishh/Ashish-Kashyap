@@ -22,8 +22,8 @@ export function Hero() {
               Supreme Court & High Court Advocate
             </span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground leading-tight mb-6">
-            Advocate <br />
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-bold text-foreground leading-tight mb-6">
+            Advocate <br className="hidden sm:block" />
             <span className="red-dot-accent">Ashish Kashyap</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg leading-relaxed">
