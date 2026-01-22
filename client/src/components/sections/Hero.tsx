@@ -11,7 +11,7 @@ export function Hero() {
       {/* Background Subtle Gradient */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,_var(--color-muted),_transparent_50%)]"></div>
 
-      <div className="container mx-auto px-4 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
