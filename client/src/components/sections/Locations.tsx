@@ -45,7 +45,7 @@ export function Locations({ fullWidth = false, limit = null }) {
           </p>
         </div>
 
-        <div className={`grid grid-cols-1 ${fullWidth ? 'gap-12' : 'md:grid-cols-2 lg:grid-cols-3 gap-8'} max-w-7xl mx-auto`}>
+        <div className={`row g-4 justify-content-center ${fullWidth ? '' : 'max-w-6xl mx-auto'}`}>
           {displayLocations.map((loc, index) => (
             <motion.div
               key={index}
@@ -53,10 +53,10 @@ export function Locations({ fullWidth = false, limit = null }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={fullWidth ? "w-full" : ""}
+              className={fullWidth ? "col-12" : "col-12 md:col-6 lg:col-4"}
             >
-              <Card className={`overflow-hidden border-border hover:border-accent/50 transition-all bg-white shadow-sm flex flex-col ${fullWidth ? 'md:flex-row' : ''} h-full`}>
-                <div className={`${fullWidth ? 'md:w-1/2 h-[350px] md:h-[400px]' : 'h-72'} w-full bg-muted relative shrink-0`}>
+              <Card className={`overflow-hidden border-border hover:border-accent/50 transition-all bg-white shadow-sm d-flex flex-column ${fullWidth ? 'flex-md-row' : ''} h-100`}>
+                <div className={`${fullWidth ? 'col-md-6 h-400' : 'h-72'} w-100 bg-muted position-relative flex-shrink-0`} style={fullWidth ? {height: '400px'} : {}}>
                   <iframe
                     src={loc.mapUrl}
                     width="100%"
@@ -64,23 +64,23 @@ export function Locations({ fullWidth = false, limit = null }) {
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
-                    className="absolute inset-0 grayscale hover:grayscale-0 transition-all duration-500"
+                    className="position-absolute inset-0 grayscale hover:grayscale-0 transition-all duration-500"
                   ></iframe>
                 </div>
-                <CardContent className={`p-8 ${fullWidth ? 'md:w-1/2 flex flex-col justify-center' : 'flex flex-col flex-grow'}`}>
-                  <div className="flex items-center space-x-3 text-accent mb-4">
-                    <MapPin className="h-6 w-6" />
-                  <h3 className="text-2xl font-serif font-bold text-foreground">
-                    {loc.title}
-                    {loc.firmName && <span className="block text-sm font-sans font-normal text-muted-foreground mt-1">{loc.firmName}</span>}
-                  </h3>
+                <CardContent className={`p-4 p-md-5 ${fullWidth ? 'col-md-6 d-flex flex-column justify-content-center' : 'd-flex flex-column flex-grow-1'}`}>
+                  <div className="d-flex align-items-center mb-4 text-accent">
+                    <MapPin className="me-3" size={24} />
+                    <h3 className="h4 font-serif fw-bold m-0 text-foreground">
+                      {loc.title}
+                      {loc.firmName && <span className="d-block small font-sans fw-normal text-muted-foreground mt-1">{loc.firmName}</span>}
+                    </h3>
                   </div>
-                  <p className="text-muted-foreground mb-6 text-lg leading-relaxed flex-grow">
+                  <p className="text-muted-foreground mb-4 fs-5 lh-base flex-grow-1">
                     {loc.address}
                   </p>
                   <Button 
                     variant="outline" 
-                    className="border-accent text-accent hover:bg-accent hover:text-white transition-all w-full md:w-fit mt-auto"
+                    className="border-accent text-accent hover:bg-accent hover:text-white transition-all w-100 w-md-auto mt-auto"
                     onClick={() => window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc.address)}`, '_blank')}
                   >
                     Get Directions
