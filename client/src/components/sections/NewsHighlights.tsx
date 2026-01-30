@@ -67,6 +67,14 @@ const newsItems = [
     link: "https://www.kashmirdigest.com/j-k-terror-funding-case-4-associated-with-hizbul-mujahideen-plead-guilty-of-money-laundering/",
     image: "https://kashmirdigest.com/wp-content/uploads/2021/08/court.jpg",
     description: "Four people associated with the Hizbul Mujahideen voluntarily pleaded guilty before a Delhi court in a money laundering case related to the Jammu Kashmir Affectees Relief Trust terror funding matter."
+  },
+  {
+    title: "Delhi court grants bail to person accused of 'looting arms' from police during Manipur ethnic violence",
+    source: "ANI News",
+    date: "Dec 1, 2025",
+    link: "https://www.aninews.in/news/national/general-news/delhi-court-grants-bail-to-person-accused-of-looting-arms-from-police-during-manipur-ethnic-violence20251201182946/",
+    image: "https://d3lzcn6mbbadaf.cloudfront.net/media/details/ANI-20231022131234.jpg",
+    description: "A Delhi Court has granted bail to a person accused of looting arms and ammunition from a police station during the Manipur ethnic violence, noting the lack of concrete evidence for prolonged detention."
   }
 ];
 
