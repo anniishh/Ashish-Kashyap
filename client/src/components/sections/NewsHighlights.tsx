@@ -75,6 +75,14 @@ const newsItems = [
     link: "https://www.aninews.in/news/national/general-news/delhi-court-grants-bail-to-person-accused-of-looting-arms-from-police-during-manipur-ethnic-violence20251201182946/",
     image: "https://d3lzcn6mbbadaf.cloudfront.net/media/details/ANI-20231022131234.jpg",
     description: "A Delhi Court has granted bail to a person accused of looting arms and ammunition from a police station during the Manipur ethnic violence, noting the lack of concrete evidence for prolonged detention."
+  },
+  {
+    title: "J-K terror funding case: 4 associated with Hizbul Mujahideen plead guilty of money laundering",
+    source: "The Print",
+    date: "Feb 3, 2023",
+    link: "https://theprint.in/india/j-k-terror-funding-case-4-associated-with-hizbul-mujahideen-plead-guilty-of-money-laundering/1352623/",
+    image: "https://staticprintenglish.theprint.in/wp-content/uploads/2022/01/logo_800x149_transp-11.png",
+    description: "Four people associated with the Hizbul Mujahideen voluntarily pleaded guilty before a Delhi court in a money laundering case related to the Jammu Kashmir Affectees Relief Trust (JKART) terror funding matter."
   }
 ];
 
