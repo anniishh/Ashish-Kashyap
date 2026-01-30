@@ -59,6 +59,14 @@ const newsItems = [
     link: "https://www.aninews.in/news/national/general-news/j-k-terror-funding-case-four-accused-voluntarily-agreed-to-plead-guilty-in-ed-case20230203182946/",
     image: imageLast,
     description: "In a significant development in a J&K terror funding case, four accused persons have voluntarily agreed to plead guilty before a Delhi court in a money laundering case."
+  },
+  {
+    title: "J-K terror funding case: 4 associated with Hizbul Mujahideen plead guilty of money laundering",
+    source: "Kashmir Digest",
+    date: "Feb 4, 2023",
+    link: "https://www.kashmirdigest.com/j-k-terror-funding-case-4-associated-with-hizbul-mujahideen-plead-guilty-of-money-laundering/",
+    image: "https://kashmirdigest.com/wp-content/uploads/2021/08/court.jpg",
+    description: "Four people associated with the Hizbul Mujahideen voluntarily pleaded guilty before a Delhi court in a money laundering case related to the Jammu Kashmir Affectees Relief Trust terror funding matter."
   }
 ];
 
