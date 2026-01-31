@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <Navbar />
-      <main className="pt-20">
+      <main className="pt-12 md:pt-16">
         <div className="container mx-auto px-4 pt-6 pb-2">
           {/* Contact Header Image */}
           <motion.div 
