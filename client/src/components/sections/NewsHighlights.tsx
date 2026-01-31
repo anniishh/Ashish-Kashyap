@@ -83,6 +83,14 @@ const newsItems = [
     link: "https://theprint.in/india/j-k-terror-funding-case-4-associated-with-hizbul-mujahideen-plead-guilty-of-money-laundering/1352623/",
     image: "https://staticprintenglish.theprint.in/wp-content/uploads/2022/01/logo_800x149_transp-11.png",
     description: "Four people associated with the Hizbul Mujahideen voluntarily pleaded guilty before a Delhi court in a money laundering case related to the Jammu Kashmir Affectees Relief Trust (JKART) terror funding matter."
+  },
+  {
+    title: "आनंद सिंह ने मणिपुर में हिंसा के दौरान विदेशी गुटों के साथ किया था षड़यंत्र (Anand Singh had conspired with foreign groups during the violence in Manipur)",
+    source: "Hindustan",
+    date: "Oct 28, 2023",
+    link: "https://www.livehindustan.com/ncr/new-delhi/story-anand-singh-had-conspired-with-foreign-groups-during-the-violence-in-manipur-8902279.html",
+    image: "https://www.livehindustan.com/lh-img/uploadimage/library/2020/10/29/16_9/16_9_3/default-image384x216.jpg",
+    description: "National Investigation Agency (NIA) opposed the bail plea of Moirangthem Anand Singh, stating he was arrested with sophisticated weapons and conspired with foreign groups to wage war against the government."
   }
 ];
 
