@@ -6,7 +6,7 @@ export default function Cases() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
       <Navbar />
-      <main className="pt-12 md:pt-16">
+      <main className="pt-0">
         <NewsHighlights fullPage={true} />
       </main>
       <Footer />
