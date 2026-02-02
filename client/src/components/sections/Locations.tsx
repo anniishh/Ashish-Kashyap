@@ -64,7 +64,7 @@ export function Locations({ fullWidth = false, limit = null }) {
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
-                    className="absolute inset-0 grayscale hover:grayscale-0 transition-all duration-500"
+                    className="absolute inset-0 transition-all duration-500"
                   ></iframe>
                 </div>
                 <CardContent className={`p-8 ${fullWidth ? 'md:w-1/2 flex flex-col justify-center' : 'flex flex-col flex-grow'}`}>
