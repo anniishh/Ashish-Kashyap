@@ -98,7 +98,7 @@ export function NewsHighlights({ fullPage = false }) {
   const displayItems = fullPage ? newsItems : newsItems.slice(0, 1);
 
   return (
-    <section className={`py-12 md:py-20 ${fullPage ? 'bg-muted/30 pt-4 md:pt-6' : 'bg-white'}`}>
+    <section className={`py-12 md:py-20 ${fullPage ? 'bg-muted/30' : 'bg-white'}`}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
