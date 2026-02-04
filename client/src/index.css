@@ -104,12 +104,12 @@
   
   .red-dot-accent::after {
     content: "";
-    @apply absolute -right-3 bottom-2 w-2 h-2 rounded-full bg-accent;
+    @apply absolute -right-2 bottom-1.5 w-1.5 h-1.5 rounded-full bg-accent;
   }
 
   @media (max-width: 768px) {
     .red-dot-accent::after {
-      @apply -right-2 bottom-1.5 w-1.5 h-1.5;
+      @apply -right-2 bottom-1 w-1 h-1;
     }
   }
 }

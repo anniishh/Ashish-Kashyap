@@ -29,13 +29,13 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 backdrop-blur-md border-b border-border py-4 shadow-sm" : "bg-transparent py-6"
+        isScrolled ? "bg-white/95 backdrop-blur-md border-b border-border py-3 md:py-4 shadow-sm" : "bg-white/80 md:bg-transparent py-4 md:py-6"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/">
           <div className="flex items-center cursor-pointer">
-            <img src={logo} alt="Adv. Ashish Kashyap" className="h-8 md:h-10 w-auto" />
+            <img src={logo} alt="Adv. Ashish Kashyap" className="h-6 sm:h-8 md:h-10 w-auto object-contain" />
           </div>
         </Link>
 
