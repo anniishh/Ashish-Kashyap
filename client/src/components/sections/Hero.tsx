@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import heroBg from "@assets/generated_images/abstract_legal_background_texture.png";
-import portrait from "@assets/image_1769096431460.png";
+import portrait from "@assets/image_5_1770220553483.jpeg";
 
 export function Hero() {
   return (
@@ -61,7 +61,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative block"
         >
-          <div className="relative z-10 rounded-2xl overflow-hidden border border-border shadow-2xl shadow-black/5 aspect-[3/4] max-w-md mx-auto">
+          <div className="relative z-10 rounded-2xl overflow-hidden border border-border shadow-2xl shadow-black/5 aspect-square md:aspect-[3/4] max-w-md mx-auto">
             <img 
               src={portrait} 
               alt="Advocate Ashish Kashyap" 

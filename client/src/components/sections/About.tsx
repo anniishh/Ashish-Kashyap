@@ -9,7 +9,7 @@ const areas = [
   { icon: Users, title: "Family Disputes", desc: "Divorce, custody, and inheritance matters." },
 ];
 
-import justiceStatue from "@assets/image_1769099455444.png";
+import justiceStatue from "@assets/image_1_1770220553485.jpeg";
 
 export function About() {
   return (
@@ -46,27 +46,15 @@ export function About() {
           </div>
           
           <div className="relative">
-            <div className="grid grid-cols-2 gap-4">
-               <div className="space-y-4 mt-8">
-                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
-                     <h3 className="text-4xl font-bold text-accent mb-1">98%</h3>
-                     <p className="text-sm text-muted-foreground">Success Rate</p>
-                  </div>
-                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
-                     <h3 className="text-4xl font-bold text-accent mb-1">120+</h3>
-                     <p className="text-sm text-muted-foreground">Corporate Clients</p>
-                  </div>
-               </div>
-               <div className="space-y-4">
-                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
-                     <h3 className="text-4xl font-bold text-accent mb-1">300+</h3>
-                     <p className="text-sm text-muted-foreground">Cases Resolved</p>
-                  </div>
-                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
-                     <h3 className="text-4xl font-bold text-accent mb-1">24/7</h3>
-                     <p className="text-sm text-muted-foreground">Legal Support</p>
-                  </div>
-               </div>
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border group aspect-[4/5] max-w-lg mx-auto lg:ml-auto">
+              <img 
+                src={justiceStatue} 
+                alt="Advocate Ashish Kashyap" 
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+                <p className="text-white font-serif italic text-lg">"Dedicated to the pursuit of justice and truth."</p>
+              </div>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { About as AboutSection } from "@/components/sections/About";
 import { motion } from "framer-motion";
-import scImage from "@assets/image_1769099584273.png";
+import scImage from "@assets/image_3_1770220553484.jpeg";
 
 export default function About() {
   return (
