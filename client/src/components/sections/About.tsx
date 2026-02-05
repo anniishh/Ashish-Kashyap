@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { Scale, Gavel, BookOpen, Users, Clock, Award } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Scale, Gavel, BookOpen, Users, Clock, Award, ChevronRight, ChevronDown } from "lucide-react";
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const areas = [
@@ -7,6 +8,41 @@ const areas = [
   { icon: Gavel, title: "Criminal Defense", desc: "Strong representation in all criminal proceedings." },
   { icon: BookOpen, title: "Corporate Law", desc: "Legal advisory for businesses, startups, and compliance." },
   { icon: Users, title: "Family Disputes", desc: "Divorce, custody, and inheritance matters." },
+];
+
+const caseCategories = [
+  {
+    title: "Criminal Cases",
+    subcategories: ["Homicide & Murder Trials", "Sexual Offenses (POCSO & IPC)", "Drug & Psychotropic Substances (NDPS)", "Cyber Crimes & Digital Fraud"]
+  },
+  {
+    title: "CBI Cases",
+    subcategories: ["Corruption & Bribery Investigations", "Banking Fraud & Embezzlement", "High-profile Institutional Crimes", "Central Government Employee Misconduct"]
+  },
+  {
+    title: "ED Matters",
+    subcategories: ["Money Laundering (PMLA)", "Foreign Exchange Violations (FEMA)", "Asset Attachment & Seizure", "Corporate Financial Investigations"]
+  },
+  {
+    title: "NIA Matters",
+    subcategories: ["Terror Funding Investigations", "National Security Cases", "Unlawful Activities (UAPA)", "Transnational Organized Crime"]
+  },
+  {
+    title: "Special Acts Litigation",
+    subcategories: ["Arms Act", "Information Technology Act", "Narcotics Control", "Prevention of Corruption Act"]
+  },
+  {
+    title: "Bail Matters",
+    subcategories: ["Anticipatory Bail Applications", "Regular Bail Petitions", "Default Bail", "Bail in Special Court Matters"]
+  },
+  {
+    title: "Economic Offenses",
+    subcategories: ["White Collar Crimes", "Tax Evasion & GST Fraud", "Stock Market Malpractices", "Insolvency & Bankruptcy Crimes"]
+  },
+  {
+    title: "Corporate Criminal Liability",
+    subcategories: ["Director's Liability", "Vicarious Liability of Companies", "Regulatory Non-compliance", "Environmental Legal Violations"]
+  }
 ];
 
 import justiceStatue from "@assets/image_1769099455444.png";
@@ -18,6 +54,12 @@ import img4 from "@assets/image_4_1770220553484.jpeg";
 import img5 from "@assets/image_5_1770220553483.jpeg";
 
 export function About() {
+  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
+
+  const toggleCategory = (index: number) => {
+    setExpandedCategory(expandedCategory === index ? null : index);
+  };
+
   return (
     <section id="about" className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -100,28 +142,57 @@ export function About() {
         </div>
 
         <div className="mb-24">
-          <div className="bg-white p-10 rounded-3xl border border-border shadow-sm">
+          <div className="bg-white p-6 md:p-10 rounded-3xl border border-border shadow-sm">
             <h4 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-8 flex items-center">
               <Scale className="text-accent mr-3 h-8 w-8" /> Cases deals in
             </h4>
-            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                "Criminal Cases",
-                "CBI Cases",
-                "ED Matters",
-                "NIA Matters",
-                "Prevention of Money Laundering Act",
-                "Economic Offenses",
-                "Special Acts Litigation",
-                "Bail Matters",
-                "Corporate Criminal Liability"
-              ].map((item, i) => (
-                <li key={i} className="flex items-center text-lg text-muted-foreground p-4 bg-muted/30 rounded-xl border border-transparent hover:border-accent/20 hover:bg-white transition-all group">
-                  <div className="w-2 h-2 rounded-full bg-accent mr-3 group-hover:scale-125 transition-transform"></div>
-                  {item}
-                </li>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {caseCategories.map((category, i) => (
+                <div key={i} className="flex flex-col">
+                  <button
+                    onClick={() => toggleCategory(i)}
+                    className={`flex items-center justify-between text-left text-lg font-medium p-4 rounded-xl border transition-all group ${
+                      expandedCategory === i 
+                        ? "bg-accent text-white border-accent shadow-md" 
+                        : "bg-muted/30 text-muted-foreground border-transparent hover:border-accent/20 hover:bg-white"
+                    }`}
+                  >
+                    <div className="flex items-center">
+                      <div className={`w-2 h-2 rounded-full mr-3 transition-colors ${
+                        expandedCategory === i ? "bg-white" : "bg-accent group-hover:scale-125"
+                      }`}></div>
+                      {category.title}
+                    </div>
+                    {expandedCategory === i ? <ChevronDown className="h-5 w-5" /> : <ChevronRight className="h-5 w-5" />}
+                  </button>
+                  <AnimatePresence>
+                    {expandedCategory === i && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        className="overflow-hidden"
+                      >
+                        <ul className="py-3 px-6 space-y-2">
+                          {category.subcategories.map((sub, j) => (
+                            <motion.li 
+                              key={j}
+                              initial={{ x: -10, opacity: 0 }}
+                              animate={{ x: 0, opacity: 1 }}
+                              transition={{ delay: j * 0.05 }}
+                              className="text-sm md:text-base text-muted-foreground flex items-center"
+                            >
+                              <div className="w-1 h-1 bg-accent/40 rounded-full mr-2"></div>
+                              {sub}
+                            </motion.li>
+                          ))}
+                        </ul>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
 
