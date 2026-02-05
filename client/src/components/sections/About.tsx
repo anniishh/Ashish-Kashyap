@@ -9,12 +9,40 @@ const areas = [
   { icon: Users, title: "Family Disputes", desc: "Divorce, custody, and inheritance matters." },
 ];
 
-import justiceStatue from "@assets/image_1_1770220553485.jpeg";
+import justiceStatue from "@assets/image_1769099455444.png";
+
+import img1 from "@assets/image_1_1770220553485.jpeg";
+import img2 from "@assets/image_2_1770220553485.jpeg";
+import img3 from "@assets/image_3_1770220553484.jpeg";
+import img4 from "@assets/image_4_1770220553484.jpeg";
+import img5 from "@assets/image_5_1770220553483.jpeg";
 
 export function About() {
   return (
     <section id="about" className="py-24 bg-muted/30">
       <div className="container mx-auto px-4">
+        {/* Gallery Section */}
+        <div className="mb-24">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Professional Gallery</h2>
+            <div className="w-24 h-1 bg-accent mx-auto"></div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {[img1, img2, img3, img4, img5].map((img, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-lg border border-border group"
+              >
+                <img src={img} alt={`Gallery ${i+1}`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
           <div>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
@@ -46,15 +74,27 @@ export function About() {
           </div>
           
           <div className="relative">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-border group aspect-[4/5] max-w-lg mx-auto lg:ml-auto">
-              <img 
-                src={justiceStatue} 
-                alt="Advocate Ashish Kashyap" 
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
-                <p className="text-white font-serif italic text-lg">"Dedicated to the pursuit of justice and truth."</p>
-              </div>
+            <div className="grid grid-cols-2 gap-4">
+               <div className="space-y-4 mt-8">
+                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
+                     <h3 className="text-4xl font-bold text-accent mb-1">98%</h3>
+                     <p className="text-sm text-muted-foreground">Success Rate</p>
+                  </div>
+                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
+                     <h3 className="text-4xl font-bold text-accent mb-1">120+</h3>
+                     <p className="text-sm text-muted-foreground">Corporate Clients</p>
+                  </div>
+               </div>
+               <div className="space-y-4">
+                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
+                     <h3 className="text-4xl font-bold text-accent mb-1">300+</h3>
+                     <p className="text-sm text-muted-foreground">Cases Resolved</p>
+                  </div>
+                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
+                     <h3 className="text-4xl font-bold text-accent mb-1">24/7</h3>
+                     <p className="text-sm text-muted-foreground">Legal Support</p>
+                  </div>
+               </div>
             </div>
           </div>
         </div>
