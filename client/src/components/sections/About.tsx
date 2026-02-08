@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Scale, Gavel, BookOpen, Users, Clock, Award, ChevronRight, ChevronDown } from "lucide-react";
+import { Scale, Gavel, BookOpen, Users, Clock, Award, ChevronRight, ChevronDown, Camera, Sparkles, LayoutGrid } from "lucide-react";
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -56,9 +56,20 @@ import img6 from "@assets/image_6_1770571634508.jpeg";
 import img7 from "@assets/image_7_1770571634508.jpeg";
 import img8 from "@assets/image_8_1770571634508.jpeg";
 
+const galleryImages = [
+  { src: img5, title: "Advocacy", size: "large" },
+  { src: img1, title: "Consultation", size: "small" },
+  { src: img6, title: "Preparation", size: "medium" },
+  { src: img2, title: "Dedication", size: "small" },
+  { src: img7, title: "Justice", size: "medium" },
+  { src: img3, title: "Strategy", size: "small" },
+  { src: img8, title: "Professionalism", size: "large" },
+  { src: img4, title: "Integrity", size: "medium" }
+];
+
 export function About() {
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
-  const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8];
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const toggleCategory = (index: number) => {
     setExpandedCategory(expandedCategory === index ? null : index);
@@ -67,46 +78,65 @@ export function About() {
   return (
     <section id="about" className="py-24 bg-muted/30 overflow-hidden">
       <div className="container mx-auto px-4">
-        {/* Gallery Section */}
-        <div className="mb-24">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Professional Gallery</h2>
-            <div className="w-24 h-1 bg-accent mx-auto"></div>
+        {/* Cinematic Bento-style Gallery */}
+        <div className="mb-32">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div className="max-w-2xl">
+              <div className="flex items-center gap-3 text-accent mb-4">
+                <LayoutGrid className="h-6 w-6" />
+                <span className="uppercase tracking-[0.5em] text-xs font-bold">Visual Portfolio</span>
+              </div>
+              <h2 className="text-5xl md:text-7xl font-serif font-bold text-foreground leading-tight">
+                Professional <span className="text-accent italic">Perspective</span>
+              </h2>
+            </div>
+            <div className="hidden md:block w-48 h-px bg-accent/20 mb-6"></div>
           </div>
-          
-          <div className="relative h-[400px] md:h-[500px] flex items-center justify-center">
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px]">
             {galleryImages.map((img, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: 100, rotate: 0 }}
-                whileInView={{ 
-                  opacity: 1, 
-                  x: (i - (galleryImages.length / 2)) * 40,
-                  rotate: (i - (galleryImages.length / 2)) * 5,
-                  zIndex: i
-                }}
-                whileHover={{ 
-                  scale: 1.1, 
-                  rotate: 0, 
-                  zIndex: 50,
-                  y: -20,
-                  transition: { duration: 0.3 }
-                }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ 
-                  type: "spring",
-                  stiffness: 260,
-                  damping: 20,
-                  delay: i * 0.1 
+                  duration: 0.8, 
+                  delay: i * 0.05,
+                  ease: [0.21, 0.45, 0.32, 0.9]
                 }}
-                className="absolute w-48 h-64 md:w-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white cursor-pointer group"
+                onMouseEnter={() => setHoveredIndex(i)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                className={`relative group rounded-[2rem] overflow-hidden shadow-xl cursor-pointer ${
+                  img.size === 'large' ? 'md:col-span-2 md:row-span-2' : 
+                  img.size === 'medium' ? 'md:row-span-2' : ''
+                }`}
               >
-                <img 
-                  src={img} 
-                  alt={`Gallery ${i+1}`} 
-                  className="w-full h-full object-cover" 
+                <motion.img 
+                  src={img.src} 
+                  alt={img.title}
+                  animate={{ 
+                    scale: hoveredIndex === i ? 1.05 : 1,
+                  }}
+                  transition={{ duration: 0.6 }}
+                  className="w-full h-full object-cover transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    whileHover={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <span className="text-accent text-xs font-bold uppercase tracking-[0.3em] mb-2 block">
+                      {img.title}
+                    </span>
+                    <h3 className="text-white font-serif text-2xl">
+                      Adv. Ashish Kashyap
+                    </h3>
+                  </motion.div>
+                </div>
+                {/* Decorative overlay border */}
+                <div className="absolute inset-0 border border-white/10 rounded-[2rem] pointer-events-none group-hover:border-accent/30 transition-colors duration-500" />
               </motion.div>
             ))}
           </div>
