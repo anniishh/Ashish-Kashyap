@@ -52,16 +52,20 @@ import img2 from "@assets/image_2_1770220553485.jpeg";
 import img3 from "@assets/image_3_1770220553484.jpeg";
 import img4 from "@assets/image_4_1770220553484.jpeg";
 import img5 from "@assets/image_5_1770220553483.jpeg";
+import img6 from "@assets/image_6_1770571634508.jpeg";
+import img7 from "@assets/image_7_1770571634508.jpeg";
+import img8 from "@assets/image_8_1770571634508.jpeg";
 
 export function About() {
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
+  const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8];
 
   const toggleCategory = (index: number) => {
     setExpandedCategory(expandedCategory === index ? null : index);
   };
 
   return (
-    <section id="about" className="py-24 bg-muted/30">
+    <section id="about" className="py-24 bg-muted/30 overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Gallery Section */}
         <div className="mb-24">
@@ -69,17 +73,40 @@ export function About() {
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Professional Gallery</h2>
             <div className="w-24 h-1 bg-accent mx-auto"></div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {[img1, img2, img3, img4, img5].map((img, i) => (
+          
+          <div className="relative h-[400px] md:h-[500px] flex items-center justify-center">
+            {galleryImages.map((img, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, x: 100, rotate: 0 }}
+                whileInView={{ 
+                  opacity: 1, 
+                  x: (i - (galleryImages.length / 2)) * 40,
+                  rotate: (i - (galleryImages.length / 2)) * 5,
+                  zIndex: i
+                }}
+                whileHover={{ 
+                  scale: 1.1, 
+                  rotate: 0, 
+                  zIndex: 50,
+                  y: -20,
+                  transition: { duration: 0.3 }
+                }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-lg border border-border group"
+                transition={{ 
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 20,
+                  delay: i * 0.1 
+                }}
+                className="absolute w-48 h-64 md:w-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white cursor-pointer group"
               >
-                <img src={img} alt={`Gallery ${i+1}`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img 
+                  src={img} 
+                  alt={`Gallery ${i+1}`} 
+                  className="w-full h-full object-cover" 
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
               </motion.div>
             ))}
           </div>
