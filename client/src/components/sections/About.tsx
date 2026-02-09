@@ -58,11 +58,14 @@ import img8 from "@assets/image_8_1770571634508.jpeg";
 
 export function About() {
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
+  const [showAllImages, setShowAllImages] = useState(false);
   const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8];
 
   const toggleCategory = (index: number) => {
     setExpandedCategory(expandedCategory === index ? null : index);
   };
+
+  const visibleImages = showAllImages ? galleryImages : galleryImages.slice(0, 2);
 
   return (
     <section id="about" className="py-24 bg-muted/30 overflow-hidden">
@@ -73,19 +76,33 @@ export function About() {
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Professional Gallery</h2>
             <div className="w-24 h-1 bg-accent mx-auto"></div>
           </div>
+          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {galleryImages.map((img, i) => (
+            {(showAllImages ? galleryImages : galleryImages).map((img, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="relative aspect-[3/4] rounded-xl overflow-hidden shadow-lg border border-border group"
+                className={`relative aspect-[3/4] rounded-xl overflow-hidden shadow-lg border border-border group ${!showAllImages && i >= 2 ? 'hidden md:block' : ''}`}
               >
                 <img src={img} alt={`Gallery ${i+1}`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
               </motion.div>
             ))}
+          </div>
+          
+          <div className="mt-8 flex justify-center md:hidden">
+            <button
+              onClick={() => setShowAllImages(!showAllImages)}
+              className="flex items-center gap-2 px-6 py-3 bg-white border border-border rounded-full text-foreground font-medium shadow-sm active:scale-95 transition-all"
+            >
+              {showAllImages ? (
+                <>Show Less <ChevronDown className="h-4 w-4 rotate-180" /></>
+              ) : (
+                <>Show More <ChevronDown className="h-4 w-4" /></>
+              )}
+            </button>
           </div>
         </div>
 
