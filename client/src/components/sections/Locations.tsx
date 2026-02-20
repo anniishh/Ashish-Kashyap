@@ -35,17 +35,17 @@ export function Locations({ fullWidth = false, limit = null }) {
   const displayLocations = limit ? locations.slice(0, limit) : locations;
 
   return (
-    <section id="locations" className="py-24 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Office Locations</h2>
-          <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+    <section id="locations" className="py-5 bg-white">
+      <div className="container">
+        <div className="text-center mb-5">
+          <h2 className="display-5 font-serif fw-bold text-foreground mb-3">Office Locations</h2>
+          <div className="w-25 h-1 bg-accent mx-auto mb-4" style={{ height: '4px', maxWidth: '100px' }}></div>
+          <p className="lead text-muted-foreground max-w-2xl mx-auto">
             Visit us at our offices for professional legal consultation.
           </p>
         </div>
 
-        <div className={`grid grid-cols-1 ${fullWidth ? 'gap-12' : 'md:grid-cols-2 gap-8'} max-w-7xl mx-auto`}>
+        <div className="row g-4 justify-content-center">
           {displayLocations.map((loc, index) => (
             <motion.div
               key={index}
@@ -53,10 +53,10 @@ export function Locations({ fullWidth = false, limit = null }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={fullWidth ? "w-full" : ""}
+              className={`col-12 ${fullWidth ? 'col-lg-12' : 'col-md-6 col-lg-6'}`}
             >
-              <Card className={`overflow-hidden border-border hover:border-accent/50 transition-all bg-white shadow-sm flex flex-col ${fullWidth ? 'md:flex-row' : ''} h-full`}>
-                <div className={`${fullWidth ? 'md:w-1/2 h-[350px] md:h-[400px]' : 'h-72'} w-full bg-muted relative shrink-0`}>
+              <div className={`card h-100 overflow-hidden border-border hover-border-accent transition-all bg-white shadow-sm flex-column ${fullWidth ? 'flex-md-row' : ''}`}>
+                <div className={`${fullWidth ? 'col-md-6 min-vh-50' : 'ratio ratio-16x9'} position-relative bg-muted overflow-hidden`}>
                   <iframe
                     src={loc.mapUrl}
                     width="100%"
@@ -64,29 +64,29 @@ export function Locations({ fullWidth = false, limit = null }) {
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
-                    className="absolute inset-0 transition-all duration-500"
+                    className="position-absolute inset-0 transition-all duration-500"
                   ></iframe>
                 </div>
-                <CardContent className={`p-8 ${fullWidth ? 'md:w-1/2 flex flex-col justify-center' : 'flex flex-col flex-grow'}`}>
-                  <div className="flex items-center space-x-3 text-accent mb-4">
-                    <MapPin className="h-6 w-6" />
-                  <h3 className="text-2xl font-serif font-bold text-foreground">
-                    {loc.title}
-                    {loc.firmName && <span className="block text-sm font-sans font-normal text-muted-foreground mt-1">{loc.firmName}</span>}
-                  </h3>
+                <div className={`card-body p-4 p-md-5 ${fullWidth ? 'col-md-6 d-flex flex-column justify-content-center' : 'd-flex flex-column'}`}>
+                  <div className="d-flex align-items-center gap-3 text-accent mb-3">
+                    <MapPin className="h-6 w-6 shrink-0" />
+                    <h3 className="h4 font-serif fw-bold text-foreground mb-0">
+                      {loc.title}
+                      {loc.firmName && <small className="d-block h6 font-sans fw-normal text-muted-foreground mt-1">{loc.firmName}</small>}
+                    </h3>
                   </div>
-                  <p className="text-muted-foreground mb-6 text-lg leading-relaxed flex-grow">
+                  <p className="card-text text-muted-foreground mb-4 fs-5 leading-relaxed">
                     {loc.address}
                   </p>
                   <Button 
                     variant="outline" 
-                    className="border-accent text-accent hover:bg-accent hover:text-white transition-all w-full md:w-fit mt-auto"
+                    className="btn-outline-danger border-accent text-accent hover-bg-accent hover-text-white transition-all w-fit mt-auto"
                     onClick={() => window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(loc.address)}`, '_blank')}
                   >
                     Get Directions
                   </Button>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
