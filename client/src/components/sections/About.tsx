@@ -222,54 +222,6 @@ export function About() {
             </div>
           </div>
         </div>
-              {caseCategories.map((category, i) => (
-                <div key={i} className="flex flex-col">
-                  <button
-                    onClick={() => toggleCategory(i)}
-                    className={`flex items-center justify-between text-left text-lg font-medium p-4 rounded-xl border transition-all group ${
-                      expandedCategory === i 
-                        ? "bg-accent text-white border-accent shadow-md" 
-                        : "bg-muted/30 text-muted-foreground border-transparent hover:border-accent/20 hover:bg-white"
-                    }`}
-                  >
-                    <div className="flex items-center">
-                      <div className={`w-2 h-2 rounded-full mr-3 transition-colors ${
-                        expandedCategory === i ? "bg-white" : "bg-accent group-hover:scale-125"
-                      }`}></div>
-                      {category.title}
-                    </div>
-                    {expandedCategory === i ? <ChevronDown className="h-5 w-5" /> : <ChevronRight className="h-5 w-5" />}
-                  </button>
-                  <AnimatePresence>
-                    {expandedCategory === i && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="overflow-hidden"
-                      >
-                        <ul className="py-3 px-6 space-y-2">
-                          {category.subcategories.map((sub, j) => (
-                            <motion.li 
-                              key={j}
-                              initial={{ x: -10, opacity: 0 }}
-                              animate={{ x: 0, opacity: 1 }}
-                              transition={{ delay: j * 0.05 }}
-                              className="text-sm md:text-base text-muted-foreground flex items-center"
-                            >
-                              <div className="w-1 h-1 bg-accent/40 rounded-full mr-2"></div>
-                              {sub}
-                            </motion.li>
-                          ))}
-                        </ul>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
         <div id="practice" className="pt-5">
           <div className="text-center mb-5">
