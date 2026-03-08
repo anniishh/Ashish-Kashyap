@@ -68,36 +68,34 @@ export function About() {
   const visibleImages = showAllImages ? galleryImages : galleryImages.slice(0, 2);
 
   return (
-    <section id="about" className="py-5 bg-muted/30 overflow-hidden">
-      <div className="container">
+    <section id="about" className="py-24 bg-muted/30 overflow-hidden">
+      <div className="container mx-auto px-4">
         {/* Gallery Section */}
-        <div className="mb-5 pb-5">
-          <div className="text-center mb-5">
-            <h2 className="display-5 font-serif fw-bold text-foreground mb-3">Professional Gallery</h2>
-            <div className="w-25 h-1 bg-accent mx-auto" style={{ height: '4px', maxWidth: '100px' }}></div>
+        <div className="mb-24">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Professional Gallery</h2>
+            <div className="w-24 h-1 bg-accent mx-auto"></div>
           </div>
           
-          <div className="row g-3">
-            {galleryImages.map((img, i) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {(showAllImages ? galleryImages : galleryImages).map((img, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className={`col-6 col-md-3 ${!showAllImages && i >= 2 ? 'd-none d-md-block' : 'd-block'}`}
+                className={`relative aspect-[3/4] rounded-xl overflow-hidden shadow-lg border border-border group ${!showAllImages && i >= 2 ? 'hidden md:block' : ''}`}
               >
-                <div className="position-relative ratio ratio-3x4 rounded-4 overflow-hidden shadow-sm border group">
-                  <img src={img} alt={`Gallery ${i+1}`} className="w-100 h-100 object-cover transition-transform duration-500 group-hover:scale-110" />
-                </div>
+                <img src={img} alt={`Gallery ${i+1}`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
               </motion.div>
             ))}
           </div>
           
-          <div className="mt-4 d-flex justify-center d-md-none">
+          <div className="mt-8 flex justify-center md:hidden">
             <button
               onClick={() => setShowAllImages(!showAllImages)}
-              className="btn btn-light border border-border rounded-pill px-4 py-2 fw-medium shadow-sm active:scale-95 transition-all d-flex align-items-center gap-2"
+              className="flex items-center gap-2 px-6 py-3 bg-white border border-border rounded-full text-foreground font-medium shadow-sm active:scale-95 transition-all"
             >
               {showAllImages ? (
                 <>Show Less <ChevronDown className="h-4 w-4 rotate-180" /></>
@@ -108,89 +106,85 @@ export function About() {
           </div>
         </div>
 
-        <div className="row align-items-center mb-5 pb-5 gy-5">
-          <div className="col-12 col-lg-6">
-            <h2 className="display-6 font-serif fw-bold text-foreground mb-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-6">
               A Legacy of <span className="text-accent">Legal Excellence</span>
             </h2>
-            <p className="lead text-muted-foreground mb-4">
+            <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
               Advocate Ashish Kashyap is a distinguished legal practitioner specializing in high-stakes Criminal Cases, CBI, ED, and NIA matters. Practicing at the Supreme Court of India and Delhi High Court, he has built a reputation for meticulous preparation and aggressive advocacy.
             </p>
-            <p className="text-muted-foreground mb-4">
+            <p className="text-muted-foreground mb-8 leading-relaxed">
               His approach combines deep legal knowledge with strategic thinking to deliver favorable outcomes for his clients. He brings the same level of dedication and integrity to every case, whether it's a complex corporate investigation or a sensitive criminal defense.
             </p>
             
-            <div className="row g-4 mb-4">
-              <div className="col-6">
-                <div className="d-flex align-items-center gap-3">
-                  <Clock className="text-accent h-6 w-6 shrink-0" />
-                  <div>
-                    <h4 className="fw-bold text-foreground mb-0">Expert Consultation</h4>
-                    <p className="text-xs text-muted-foreground mb-0">Available Mon-Sat</p>
-                  </div>
+            <div className="grid grid-cols-2 gap-6 mb-12">
+              <div className="flex items-center space-x-3">
+                <Clock className="text-accent h-6 w-6" />
+                <div>
+                  <h4 className="font-bold text-foreground">Expert Consultation</h4>
+                  <p className="text-xs text-muted-foreground">Available Mon-Sat</p>
                 </div>
               </div>
-              <div className="col-6">
-                <div className="d-flex align-items-center gap-3">
-                  <Award className="text-accent h-6 w-6 shrink-0" />
-                  <div>
-                    <h4 className="fw-bold text-foreground mb-0">Top Rated</h4>
-                    <p className="text-xs text-muted-foreground mb-0">Legal Representation</p>
-                  </div>
+              <div className="flex items-center space-x-3">
+                <Award className="text-accent h-6 w-6" />
+                <div>
+                  <h4 className="font-bold text-foreground">Top Rated</h4>
+                  <p className="text-xs text-muted-foreground">Legal Representation</p>
                 </div>
               </div>
             </div>
           </div>
           
-          <div className="col-12 col-lg-6">
-            <div className="row g-3">
-               <div className="col-6 pt-5">
-                  <div className="bg-white p-4 rounded-4 border border-border shadow-sm mb-3">
-                     <h3 className="h1 fw-bold text-accent mb-1">98%</h3>
-                     <p className="text-sm text-muted-foreground mb-0">Success Rate</p>
+          <div className="relative">
+            <div className="grid grid-cols-2 gap-4">
+               <div className="space-y-4 mt-8">
+                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
+                     <h3 className="text-4xl font-bold text-accent mb-1">98%</h3>
+                     <p className="text-sm text-muted-foreground">Success Rate</p>
                   </div>
-                  <div className="bg-white p-4 rounded-4 border border-border shadow-sm">
-                     <h3 className="h1 fw-bold text-accent mb-1">120+</h3>
-                     <p className="text-sm text-muted-foreground mb-0">Corporate Clients</p>
+                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
+                     <h3 className="text-4xl font-bold text-accent mb-1">120+</h3>
+                     <p className="text-sm text-muted-foreground">Corporate Clients</p>
                   </div>
                </div>
-               <div className="col-6">
-                  <div className="bg-white p-4 rounded-4 border border-border shadow-sm mb-3">
-                     <h3 className="h1 fw-bold text-accent mb-1">300+</h3>
-                     <p className="text-sm text-muted-foreground mb-0">Cases Resolved</p>
+               <div className="space-y-4">
+                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
+                     <h3 className="text-4xl font-bold text-accent mb-1">300+</h3>
+                     <p className="text-sm text-muted-foreground">Cases Resolved</p>
                   </div>
-                  <div className="bg-white p-4 rounded-4 border border-border shadow-sm">
-                     <h3 className="h1 fw-bold text-accent mb-1">24/7</h3>
-                     <p className="text-sm text-muted-foreground mb-0">Legal Support</p>
+                  <div className="bg-white p-6 rounded-2xl border border-border shadow-md">
+                     <h3 className="text-4xl font-bold text-accent mb-1">24/7</h3>
+                     <p className="text-sm text-muted-foreground">Legal Support</p>
                   </div>
                </div>
             </div>
           </div>
         </div>
 
-        <div className="mb-5">
-          <div className="bg-white p-4 p-md-5 rounded-4 border border-border shadow-sm">
-            <h4 className="h3 font-serif fw-bold text-foreground mb-4 d-flex align-items-center">
-              <Scale className="text-accent me-3 h-8 w-8" /> Cases deals in
+        <div className="mb-24">
+          <div className="bg-white p-6 md:p-10 rounded-3xl border border-border shadow-sm">
+            <h4 className="text-2xl md:text-3xl font-serif font-bold text-foreground mb-8 flex items-center">
+              <Scale className="text-accent mr-3 h-8 w-8" /> Cases deals in
             </h4>
-            <div className="row row-cols-1 row-cols-md-2 g-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {caseCategories.map((category, i) => (
-                <div key={i} className="col">
+                <div key={i} className="flex flex-col">
                   <button
                     onClick={() => toggleCategory(i)}
-                    className={`btn w-100 text-start text-lg fw-medium p-3 rounded-3 border transition-all d-flex align-items-center justify-content-between ${
+                    className={`flex items-center justify-between text-left text-lg font-medium p-4 rounded-xl border transition-all group ${
                       expandedCategory === i 
-                        ? "btn-danger bg-danger border-danger shadow-sm text-white" 
-                        : "btn-light bg-light text-muted-foreground border-transparent"
+                        ? "bg-accent text-white border-accent shadow-md" 
+                        : "bg-muted/30 text-muted-foreground border-transparent hover:border-accent/20 hover:bg-white"
                     }`}
                   >
-                    <div className="d-flex align-items-center">
-                      <div className={`rounded-circle me-3 transition-colors ${
-                        expandedCategory === i ? "bg-white" : "bg-accent"
-                      }`} style={{ width: '8px', height: '8px' }}></div>
+                    <div className="flex items-center">
+                      <div className={`w-2 h-2 rounded-full mr-3 transition-colors ${
+                        expandedCategory === i ? "bg-white" : "bg-accent group-hover:scale-125"
+                      }`}></div>
                       {category.title}
                     </div>
-                    {expandedCategory === i ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
+                    {expandedCategory === i ? <ChevronDown className="h-5 w-5" /> : <ChevronRight className="h-5 w-5" />}
                   </button>
                   <AnimatePresence>
                     {expandedCategory === i && (
@@ -200,17 +194,17 @@ export function About() {
                         exit={{ opacity: 0, height: 0 }}
                         className="overflow-hidden"
                       >
-                        <ul className="list-unstyled py-3 px-4 mb-0 space-y-2">
+                        <ul className="py-3 px-6 space-y-2">
                           {category.subcategories.map((sub, j) => (
                             <motion.li 
                               key={j}
                               initial={{ x: -10, opacity: 0 }}
                               animate={{ x: 0, opacity: 1 }}
                               transition={{ delay: j * 0.05 }}
-                              className="text-sm text-muted-foreground d-flex align-items-center mb-2"
+                              className="text-sm md:text-base text-muted-foreground flex items-center"
                             >
-                              <div className="rounded-circle bg-accent bg-opacity-25 me-2" style={{ width: '4px', height: '4px' }}></div>
-                              <span>{sub}</span>
+                              <div className="w-1 h-1 bg-accent/40 rounded-full mr-2"></div>
+                              {sub}
                             </motion.li>
                           ))}
                         </ul>
@@ -223,13 +217,13 @@ export function About() {
           </div>
         </div>
 
-        <div id="practice" className="pt-5">
-          <div className="text-center mb-5">
-            <h2 className="display-5 font-serif fw-bold text-foreground mb-3">Core Areas of Practice</h2>
-            <div className="w-25 h-1 bg-accent mx-auto" style={{ height: '4px', maxWidth: '100px' }}></div>
+        <div id="practice">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Core Areas of Practice</h2>
+            <div className="w-24 h-1 bg-accent mx-auto"></div>
           </div>
           
-          <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {areas.map((area, index) => (
               <motion.div
                 key={index}
@@ -237,19 +231,18 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="col"
               >
-                <div className="card h-100 bg-white border-border hover-border-accent transition-colors group shadow-sm">
-                  <div className="card-body p-4 text-center">
-                    <div className="rounded-circle mx-auto bg-accent bg-opacity-10 d-flex align-items-center justify-content-center mb-4 group-hover-bg-accent transition-colors" style={{ width: '56px', height: '56px' }}>
-                      <area.icon className="h-6 w-6 text-accent group-hover-text-white transition-colors" />
+                <Card className="bg-white border-border h-full hover:border-accent/50 transition-colors group shadow-sm">
+                  <CardContent className="p-8 text-center">
+                    <div className="w-14 h-14 mx-auto bg-accent/5 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
+                      <area.icon className="h-7 w-7 text-accent group-hover:text-white transition-colors" />
                     </div>
-                    <h3 className="h4 font-serif fw-bold text-foreground mb-3">{area.title}</h3>
-                    <p className="card-text text-muted-foreground text-sm leading-relaxed mb-0">
+                    <h3 className="text-xl font-serif font-bold text-foreground mb-3">{area.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
                       {area.desc}
                     </p>
-                  </div>
-                </div>
+                  </CardContent>
+                </Card>
               </motion.div>
             ))}
           </div>

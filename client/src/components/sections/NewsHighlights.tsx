@@ -98,19 +98,19 @@ export function NewsHighlights({ fullPage = false }) {
   const displayItems = fullPage ? newsItems : newsItems.slice(0, 1);
 
   return (
-    <section className={`py-5 ${fullPage ? 'bg-muted/30' : 'bg-white'}`}>
-      <div className="container">
-        <div className="text-center mb-5">
-          <h2 className="display-5 font-serif fw-bold text-foreground mb-3">
+    <section className={`py-12 md:py-20 ${fullPage ? 'bg-muted/30' : 'bg-white'}`}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
             {fullPage ? "Legal Cases & News Archive" : "Case Highlights & Media"}
           </h2>
-          <div className="w-25 h-1 bg-accent mx-auto mb-4" style={{ height: '4px', maxWidth: '100px' }}></div>
-          <p className="lead text-muted-foreground max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             Significant legal developments and media coverage of high-profile representations.
           </p>
         </div>
 
-        <div className="row g-4 justify-content-center">
+        <div className="grid grid-cols-1 gap-12 max-w-7xl mx-auto">
           {displayItems.map((item, index) => (
             <motion.div
               key={index}
@@ -118,56 +118,55 @@ export function NewsHighlights({ fullPage = false }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="col-12"
             >
-              <div className="card h-100 border-border hover-border-accent transition-all group overflow-hidden bg-white shadow-sm flex-column flex-md-row">
-                <div className="col-md-5 ratio ratio-16x9 ratio-md-auto overflow-hidden bg-muted position-relative">
+              <Card className="h-full border-border hover:border-accent/50 transition-all group overflow-hidden bg-white shadow-md flex flex-col md:flex-row">
+                <div className="md:w-2/5 aspect-video md:aspect-auto overflow-hidden bg-muted relative">
                   <img 
                     src={item.image} 
                     alt={item.title}
-                    className="object-cover w-100 h-100 group-hover-scale-105 transition-transform duration-500"
+                    className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop";
                     }}
                   />
-                  <div className="position-absolute inset-0 bg-gradient-to-t from-black-50 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
-                <div className="card-body col-md-7 p-4 p-md-5 d-flex flex-column justify-content-center">
-                  <div className="d-flex align-items-center gap-2 text-accent mb-3">
+                <CardContent className="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
+                  <div className="flex items-center gap-2 text-accent mb-4">
                     <Newspaper size={18} />
-                    <span className="text-xs fw-bold text-uppercase tracking-widest">{item.source}</span>
+                    <span className="text-xs font-bold uppercase tracking-widest">{item.source}</span>
                   </div>
-                  <h3 className={`font-serif fw-bold text-foreground mb-3 group-hover-text-accent transition-colors ${fullPage ? 'display-6' : 'h3 text-truncate-2'}`}>
+                  <h3 className={`font-serif font-bold text-foreground mb-4 group-hover:text-accent transition-colors ${fullPage ? 'text-3xl' : 'text-2xl line-clamp-2'}`}>
                     {item.title}
                   </h3>
-                  <p className="card-text text-muted-foreground mb-4 text-truncate-3 fs-5 leading-relaxed">
+                  <p className="text-muted-foreground mb-8 line-clamp-3 text-lg leading-relaxed">
                     {item.description}
                   </p>
-                  <div className="mt-auto pt-4 d-flex flex-wrap align-items-center justify-content-between border-top border-border border-opacity-50 gap-3">
-                    <div className="d-flex align-items-center text-muted-foreground text-sm fw-bold tracking-wider">
-                      <Calendar size={16} className="me-2" />
+                  <div className="mt-auto pt-6 flex flex-wrap items-center justify-between border-t border-border/50 gap-4">
+                    <div className="flex items-center text-muted-foreground text-sm font-bold tracking-wider">
+                      <Calendar size={16} className="mr-2" />
                       {item.date}
                     </div>
                     <Button 
                       variant="default" 
                       size="lg" 
-                      className="btn-primary bg-primary text-primary-foreground hover-bg-accent px-4 py-2 fw-bold"
+                      className="bg-primary text-primary-foreground hover:bg-accent h-12 px-8 font-bold text-base"
                       onClick={() => window.open(item.link, '_blank')}
                     >
-                      Read Full Article <ExternalLink size={18} className="ms-2" />
+                      Read Full Article <ExternalLink size={18} className="ml-2" />
                     </Button>
                   </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             </motion.div>
           ))}
         </div>
 
         {!fullPage && (
-          <div className="mt-5 text-center">
+          <div className="mt-16 text-center">
             <Link href="/cases">
-              <Button variant="outline" className="btn-outline-danger border-accent text-accent hover-bg-accent hover-text-white transition-all px-4 py-2">
-                View All Cases <ArrowRight className="ms-2 h-4 w-4" />
+              <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-white transition-all px-8">
+                View All Cases <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
           </div>
