@@ -45,12 +45,14 @@ export function Navbar() {
             <Link
               key={link.name}
               href={link.href}
+              className={`text-sm font-medium transition-colors uppercase tracking-widest relative group ${
+                location === link.href ? "text-accent" : "text-black hover:text-accent"
+              }`}
             >
-              <a className={`text-sm font-medium transition-colors uppercase tracking-widest ${
-                location === link.href ? "text-accent" : "text-foreground/70 hover:text-accent"
-              }`}>
-                {link.name}
-              </a>
+              {link.name}
+              <span className={`absolute -bottom-1 left-0 w-full h-px bg-accent transform origin-left transition-transform duration-300 ease-out ${
+                location === link.href ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+              }`}></span>
             </Link>
           ))}
           <Link href="/contact#schedule-consultation">
@@ -83,15 +85,12 @@ export function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
+                  className={`text-lg font-medium transition-colors uppercase tracking-widest ${
+                    location === link.href ? "text-accent" : "text-foreground/70"
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
                 >
-                  <a 
-                    className={`text-lg font-medium transition-colors uppercase tracking-widest ${
-                      location === link.href ? "text-accent" : "text-foreground/70"
-                    }`}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.name}
-                  </a>
+                  {link.name}
                 </Link>
               ))}
               <Link href="/contact#schedule-consultation">
