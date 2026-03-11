@@ -92,7 +92,7 @@ export function BusinessCard() {
 
   return (
     <section id="business-card-section" className="py-20 bg-muted/30 relative overflow-hidden print:p-0">
-      <div className="container mx-auto px-4 print:max-w-none print:p-0">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 print:max-w-none print:p-0">
         <div className="text-center mb-16 print:hidden">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Digital Business Card</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">

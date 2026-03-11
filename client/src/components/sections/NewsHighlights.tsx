@@ -99,7 +99,7 @@ export function NewsHighlights({ fullPage = false }) {
 
   return (
     <section className={`py-12 md:py-20 ${fullPage ? 'bg-muted/30' : 'bg-white'}`}>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">
             {fullPage ? "Legal Cases & News Archive" : "Case Highlights & Media"}

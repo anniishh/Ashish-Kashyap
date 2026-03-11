@@ -11,7 +11,7 @@ export default function Contact() {
     <div className="min-h-screen bg-background text-foreground font-sans">
       <Navbar />
       <main className="pt-20 md:pt-16">
-        <div className="container mx-auto px-4 pt-6 pb-2">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 pt-6 pb-2">
           {/* Contact Header Image */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95, y: 30 }}
