@@ -1,14 +1,12 @@
 import { motion } from "framer-motion";
-import { Phone, Mail, MessageCircle, MapPin, Share2, Map, Facebook, Linkedin, Instagram, Download } from "lucide-react";
+import { Phone, Mail, MessageCircle, MapPin, Share2, Map, Download } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 
-import whatsappIcon from "@assets/whatsapp-icon_1768994029624.png";
-
-const XIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-  </svg>
-);
+import whatsappIcon from "@assets/wahtsapp_1776751866688.png";
+import facebookIcon from "@assets/facebook_1776751866689.png";
+import twitterIcon from "@assets/twitter_1776751866689.png";
+import linkedinIcon from "@assets/linkedin_1776751866688.png";
+import instagramIcon from "@assets/instagram_1776751866688.png";
 
 export function BusinessCard() {
   const whatsappUrl = "https://api.whatsapp.com/send/?phone=918851427770&text&type=phone_number&app_absent=0";
@@ -126,18 +124,18 @@ export function BusinessCard() {
 
                   <div className="flex space-x-2 print:hidden">
                     {[
-                      { icon: () => <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 object-contain" />, url: whatsappUrl },
-                      { icon: () => <Facebook size={16} />, url: "https://www.facebook.com/" },
-                      { icon: () => <Instagram size={16} />, url: "https://www.instagram.com/" },
-                      { icon: () => <XIcon />, url: "https://x.com/" },
-                      { icon: () => <Linkedin size={16} />, url: "https://www.linkedin.com/in/advocate-ashish-kashyap-4080351b3/" }
+                      { icon: () => <img src={whatsappIcon} alt="WhatsApp" className="w-5 h-5 object-contain" />, url: whatsappUrl },
+                      { icon: () => <img src={facebookIcon} alt="Facebook" className="w-5 h-5 object-contain" />, url: "https://www.facebook.com/" },
+                      { icon: () => <img src={instagramIcon} alt="Instagram" className="w-5 h-5 object-contain" />, url: "https://www.instagram.com/" },
+                      { icon: () => <img src={twitterIcon} alt="Twitter" className="w-5 h-5 object-contain" />, url: "https://x.com/" },
+                      { icon: () => <img src={linkedinIcon} alt="LinkedIn" className="w-5 h-5 object-contain" />, url: "https://www.linkedin.com/in/advocate-ashish-kashyap-4080351b3/" }
                     ].map((item, i) => (
                       <a 
                         key={i} 
                         href={item.url} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="w-8 h-8 flex items-center justify-center rounded-lg bg-muted hover:bg-accent hover:text-white transition-all text-muted-foreground shadow-sm group/icon"
+                        className="w-10 h-10 flex items-center justify-center rounded-full bg-muted hover:bg-accent hover:text-white transition-all text-muted-foreground shadow-sm group/icon overflow-hidden border border-black/10"
                       >
                         <item.icon />
                       </a>

@@ -1,14 +1,12 @@
-import { Facebook, Twitter, Linkedin, Instagram, MapPin, Phone, Mail, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import logo from "@assets/adv_logo_1768985356594.png";
-import whatsappIcon from "@assets/whatsapp-icon_1768994029624.png";
-
-const XIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-  </svg>
-);
+import whatsappIcon from "@assets/wahtsapp_1776751866688.png";
+import facebookIcon from "@assets/facebook_1776751866689.png";
+import twitterIcon from "@assets/twitter_1776751866689.png";
+import linkedinIcon from "@assets/linkedin_1776751866688.png";
+import instagramIcon from "@assets/instagram_1776751866688.png";
 
 export function Footer() {
   const whatsappUrl = "https://api.whatsapp.com/send/?phone=918851427770&text&type=phone_number&app_absent=0";
@@ -23,21 +21,29 @@ export function Footer() {
               Providing expert legal counsel with integrity and dedication. Defending your rights and securing your future.
             </p>
             <div className="flex space-x-3">
-              <Button asChild variant="outline" size="icon" className="rounded-full border-black/20 text-black hover:bg-accent hover:text-white hover:border-accent transition-colors">
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><Facebook className="h-4 w-4" /></a>
+              <Button asChild variant="outline" size="icon" className="rounded-full border-black/20 text-black hover:border-accent hover:bg-transparent overflow-hidden p-0 w-10 h-10 transition-transform hover:scale-110">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                  <img src={facebookIcon} alt="Facebook" className="w-full h-full object-cover" />
+                </a>
               </Button>
-              <Button asChild variant="outline" size="icon" className="rounded-full border-black/20 text-black hover:bg-accent hover:text-white hover:border-accent transition-colors">
-                <a href="https://x.com/" target="_blank" rel="noopener noreferrer"><XIcon /></a>
+              <Button asChild variant="outline" size="icon" className="rounded-full border-black/20 text-black hover:border-accent hover:bg-transparent overflow-hidden p-0 w-10 h-10 transition-transform hover:scale-110">
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
+                  <img src={twitterIcon} alt="Twitter" className="w-full h-full object-cover bg-black" />
+                </a>
               </Button>
-              <Button asChild variant="outline" size="icon" className="rounded-full border-black/20 text-black hover:bg-accent hover:text-white hover:border-accent transition-colors">
-                <a href="https://www.linkedin.com/in/advocate-ashish-kashyap-4080351b3/" target="_blank" rel="noopener noreferrer"><Linkedin className="h-4 w-4" /></a>
+              <Button asChild variant="outline" size="icon" className="rounded-full border-black/20 text-black hover:border-accent hover:bg-transparent overflow-hidden p-0 w-10 h-10 transition-transform hover:scale-110">
+                <a href="https://www.linkedin.com/in/advocate-ashish-kashyap-4080351b3/" target="_blank" rel="noopener noreferrer">
+                  <img src={linkedinIcon} alt="LinkedIn" className="w-full h-full object-cover" />
+                </a>
               </Button>
-              <Button asChild variant="outline" size="icon" className="rounded-full border-black/20 text-black hover:bg-accent hover:text-white hover:border-accent transition-colors">
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><Instagram className="h-4 w-4" /></a>
+              <Button asChild variant="outline" size="icon" className="rounded-full border-black/20 text-black hover:border-accent hover:bg-transparent overflow-hidden p-0 w-10 h-10 transition-transform hover:scale-110">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                  <img src={instagramIcon} alt="Instagram" className="w-full h-full object-cover" />
+                </a>
               </Button>
-              <Button asChild variant="outline" size="icon" className="rounded-full border-black/20 text-black hover:bg-accent hover:text-white hover:border-accent transition-colors group/icon">
+              <Button asChild variant="outline" size="icon" className="rounded-full border-black/20 text-black hover:border-accent hover:bg-transparent overflow-hidden p-0 w-10 h-10 transition-transform hover:scale-110 group/icon">
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  <img src={whatsappIcon} alt="WhatsApp" className="h-4 w-4 object-contain group-hover/icon:invert group-hover/icon:brightness-0 transition-all filter-none" />
+                  <img src={whatsappIcon} alt="WhatsApp" className="w-full h-full object-cover" />
                 </a>
               </Button>
             </div>
