@@ -1,7 +1,7 @@
 import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import logo from "@assets/logo_2_1776754856516.png";
+import logo from "@assets/adv_logo_1768985356594.png";
 import whatsappIcon from "@assets/wahtsapp_1776751866688.png";
 import facebookIcon from "@assets/facebook_1776751866689.png";
 import twitterIcon from "@assets/twitter_1776751866689.png";
