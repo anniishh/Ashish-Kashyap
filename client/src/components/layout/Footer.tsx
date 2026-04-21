@@ -16,7 +16,7 @@ export function Footer() {
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-1">
-            <img src={logo} alt="Adv. Ashish Kashyap" className="h-20 w-auto mb-6 object-contain" />
+            <img src={logo} alt="Adv. Ashish Kashyap" className="h-10 w-auto mb-6" />
             <p className="text-black/80 mb-6 leading-relaxed">
               Providing expert legal counsel with integrity and dedication. Defending your rights and securing your future.
             </p>
