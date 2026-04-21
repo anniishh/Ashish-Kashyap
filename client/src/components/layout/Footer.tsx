@@ -23,7 +23,7 @@ export function Footer() {
             <div className="flex items-center space-x-4 mt-6">
               <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="group inline-flex">
                 <div className="w-9 h-9 flex items-center justify-center transition-transform group-hover:scale-110">
-                  <img src={facebookIcon} alt="Facebook" className="w-[85%] h-[85%] object-contain" />
+                  <img src={facebookIcon} alt="Facebook" className="w-[100%] h-[100%] object-contain" />
                 </div>
               </a>
               <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className="group inline-flex">
