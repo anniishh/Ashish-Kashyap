@@ -13,13 +13,17 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import PhoneInput from 'react-phone-number-input';
+import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
   email: z.string().email("Invalid email address"),
-  phone: z.string().min(10, "Valid phone number is required"),
+  phone: z.string().min(1, "Phone number is required").refine((val) => {
+    return isValidPhoneNumber(val);
+  }, {
+    message: "Invalid phone number for the selected country"
+  }),
   date: z.string().min(1, "Please select a date"),
   message: z.string().optional(),
 });
