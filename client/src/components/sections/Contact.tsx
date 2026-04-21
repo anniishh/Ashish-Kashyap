@@ -13,6 +13,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -79,7 +81,16 @@ export function Contact() {
                     <FormItem>
                       <FormLabel className="text-foreground font-semibold">Phone Number</FormLabel>
                       <FormControl>
-                        <Input placeholder="+91 88514 27770" {...field} className="bg-muted/50 border-border text-foreground focus:border-accent" />
+                        <div className="flex h-10 w-full rounded-md border border-border bg-muted/50 px-3 py-2 text-sm text-foreground focus-within:border-accent focus-within:ring-1 focus-within:ring-accent transition-colors">
+                          <PhoneInput
+                            international
+                            defaultCountry="IN"
+                            placeholder="+91 88514 27770"
+                            value={field.value}
+                            onChange={field.onChange}
+                            className="w-full bg-transparent border-none focus:outline-none"
+                          />
+                        </div>
                       </FormControl>
                       <FormMessage />
                     </FormItem>
