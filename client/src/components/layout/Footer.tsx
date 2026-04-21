@@ -28,9 +28,7 @@ export function Footer() {
               </a>
               <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className="group inline-flex">
                 <div className="w-9 h-9 flex items-center justify-center transition-transform group-hover:scale-110">
-                  <div className="w-[85%] h-[85%] rounded-full bg-black flex items-center justify-center">
-                    <img src={twitterIcon} alt="Twitter" className="w-[60%] h-[60%] object-contain" style={{ filter: 'invert(1)' }} />
-                  </div>
+                  <img src={twitterIcon} alt="Twitter" className="w-[85%] h-[85%] object-contain" />
                 </div>
               </a>
               <a href="https://www.linkedin.com/in/advocate-ashish-kashyap-4080351b3/" target="_blank" rel="noopener noreferrer" className="group inline-flex">
