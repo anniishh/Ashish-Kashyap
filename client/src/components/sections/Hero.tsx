@@ -7,7 +7,7 @@ import portrait from "@assets/image_1769096431460.png";
 
 export function Hero() {
   return (
-    <section id="home" className="relative min-h-[90vh] md:min-h-screen flex items-center pt-24 md:pt-12 overflow-hidden bg-white">
+    <section id="home" className="relative min-h-[90vh] md:min-h-screen flex items-center pt-32 md:pt-36 lg:pt-24 md:mt-[10px] overflow-hidden bg-white">
       {/* Background Subtle Gradient */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,_var(--color-muted),_transparent_50%)]"></div>
 
