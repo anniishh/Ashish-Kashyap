@@ -5,7 +5,7 @@ import logo from "@assets/adv_logo_1768985356594.png";
 import whatsappIcon from "@assets/wahtsapp_1776751866688.png";
 import facebookIcon from "@assets/facebook_1776751866689.png";
 import twitterIcon from "@assets/twitter_1776751866689.png";
-import linkedinIcon from "@assets/linkedin_1776751866688.png";
+import linkedinIcon from "@assets/linkedin_(1)_1776755255592.png";
 import instagramIcon from "@assets/instagram_1776751866688.png";
 
 export function Footer() {
