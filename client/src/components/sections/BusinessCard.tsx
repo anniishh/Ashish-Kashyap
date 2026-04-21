@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Phone, Mail, MessageCircle, MapPin, Share2, Map, Download } from "lucide-react";
 import { QRCodeSVG } from "qrcode.react";
 
-import whatsappIcon from "@assets/wahtsapp_1776751866688.png";
-import facebookIcon from "@assets/facebook_1776751866689.png";
+import whatsappIcon from "@assets/whatsapp_1776755320545.png";
+import facebookIcon from "@assets/facebook_(1)_1776755388990.png";
 import twitterIcon from "@assets/twitter_1776751866689.png";
-import linkedinIcon from "@assets/linkedin_1776751866688.png";
+import linkedinIcon from "@assets/linkedin_(1)_1776755255592.png";
 import instagramIcon from "@assets/instagram_1776751866688.png";
 
 export function BusinessCard() {
@@ -122,24 +122,32 @@ export function BusinessCard() {
                     ))}
                   </div>
 
-                  <div className="flex items-center space-x-4 print:hidden">
-                    {[
-                      { icon: () => <img src={whatsappIcon} alt="WhatsApp" className="w-8 h-8 object-contain" />, url: whatsappUrl },
-                      { icon: () => <img src={facebookIcon} alt="Facebook" className="w-8 h-8 object-contain" />, url: "https://www.facebook.com/" },
-                      { icon: () => <img src={instagramIcon} alt="Instagram" className="w-8 h-8 object-contain" />, url: "https://www.instagram.com/" },
-                      { icon: () => <img src={twitterIcon} alt="Twitter" className="w-8 h-8 object-contain" />, url: "https://x.com/" },
-                      { icon: () => <img src={linkedinIcon} alt="LinkedIn" className="w-8 h-8 object-contain" />, url: "https://www.linkedin.com/in/advocate-ashish-kashyap-4080351b3/" }
-                    ].map((item, i) => (
-                      <a 
-                        key={i} 
-                        href={item.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-flex hover:scale-110 transition-transform"
-                      >
-                        <item.icon />
-                      </a>
-                    ))}
+                  <div className="flex items-center space-x-4 print:hidden mt-2">
+                    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="group inline-flex">
+                      <div className="w-9 h-9 flex items-center justify-center transition-transform group-hover:scale-110">
+                        <img src={whatsappIcon} alt="WhatsApp" className="w-[95%] h-[95%] object-contain" />
+                      </div>
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="group inline-flex">
+                      <div className="w-9 h-9 flex items-center justify-center transition-transform group-hover:scale-110">
+                        <img src={facebookIcon} alt="Facebook" className="w-[85%] h-[85%] object-contain" />
+                      </div>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="group inline-flex">
+                      <div className="w-9 h-9 flex items-center justify-center transition-transform group-hover:scale-110">
+                        <img src={instagramIcon} alt="Instagram" className="w-[85%] h-[85%] object-contain" />
+                      </div>
+                    </a>
+                    <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className="group inline-flex">
+                      <div className="w-9 h-9 flex items-center justify-center transition-transform group-hover:scale-110">
+                        <img src={twitterIcon} alt="Twitter" className="w-[85%] h-[85%] object-contain" />
+                      </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/advocate-ashish-kashyap-4080351b3/" target="_blank" rel="noopener noreferrer" className="group inline-flex">
+                      <div className="w-9 h-9 flex items-center justify-center transition-transform group-hover:scale-110">
+                        <img src={linkedinIcon} alt="LinkedIn" className="w-[85%] h-[85%] object-contain" />
+                      </div>
+                    </a>
                   </div>
                 </div>
                 
