@@ -35,7 +35,7 @@ export function Navbar() {
       <div className="container mx-auto px-6 md:px-12 lg:px-20 flex justify-between items-center">
         <Link href="/">
           <div className="flex items-center cursor-pointer">
-            <img src={logo} alt="Adv. Ashish Kashyap" className="h-6 sm:h-8 md:h-10 w-auto object-contain" />
+            <img src={logo} alt="Adv. Ashish Kashyap" className="h-12 sm:h-16 md:h-20 w-auto object-contain" />
           </div>
         </Link>
 
