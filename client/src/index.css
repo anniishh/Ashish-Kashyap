@@ -174,8 +174,8 @@
   cursor: pointer;
 }
 .PhoneInputCountryIcon {
-  width: calc(1.5rem * 1.5);
-  height: 1.5rem;
+  width: calc(1.2rem * 1.5);
+  height: 1.2rem;
 }
 .PhoneInputCountryIcon--square {
   border-radius: 0.25rem;
