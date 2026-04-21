@@ -32,20 +32,20 @@ export function Navbar() {
         isScrolled ? "bg-white/95 backdrop-blur-md border-b border-border py-3 md:py-4 shadow-sm" : "bg-white/95 md:bg-white/80 md:bg-transparent py-4 md:py-6 shadow-sm md:shadow-none"
       }`}
     >
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 flex justify-between items-center">
+      <div className="container mx-auto px-6 md:px-8 lg:px-20 flex justify-between items-center gap-8 lg:gap-12">
         <Link href="/">
-          <div className="flex items-center cursor-pointer">
+          <div className="flex items-center cursor-pointer shrink-0 mr-auto">
             <img src={logo} alt="Adv. Ashish Kashyap" className="h-6 sm:h-8 md:h-10 w-auto object-contain" />
           </div>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-4 lg:space-x-8 overflow-hidden">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium transition-colors uppercase tracking-widest relative group ${
+              className={`text-sm font-medium transition-colors uppercase tracking-widest relative group whitespace-nowrap ${
                 location === link.href ? "text-accent" : "text-black hover:text-accent"
               }`}
             >
