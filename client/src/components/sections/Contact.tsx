@@ -92,6 +92,7 @@ export function Contact() {
                             placeholder="+91 88514 27770"
                             value={field.value}
                             onChange={field.onChange}
+                            limitMaxLength={true}
                             className="w-full bg-transparent border-none focus:outline-none"
                           />
                         </div>
