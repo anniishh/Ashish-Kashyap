@@ -52,7 +52,7 @@ export function Contact() {
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4">Schedule Consultation</h2>
             <p className="text-muted-foreground">
-              Directly contact our team for expert legal advice on Criminal, CBI, or ED matters.
+              Directly contact our team for expert legal advice on Criminal, CBI, ED, or NIA matters.
             </p>
           </div>
 
