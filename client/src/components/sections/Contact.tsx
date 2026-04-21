@@ -13,7 +13,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
+import PhoneInput, { isValidPhoneNumber, parsePhoneNumber } from 'react-phone-number-input/max';
 import 'react-phone-number-input/style.css';
 
 const formSchema = z.object({
@@ -89,17 +89,32 @@ export function Contact() {
                           <PhoneInput
                             international
                             defaultCountry="IN"
-                            placeholder="+91 88514 27770"
+                            placeholder="Enter phone number"
                             value={field.value}
                             onChange={(value) => {
-                              if (value && field.value && value.length > field.value.length) {
-                                // Only prevent if the PREVIOUS value was valid and the NEW value is invalid
-                                // This allows backspacing, but prevents adding digits to an already valid number
-                                if (isValidPhoneNumber(field.value) && !isValidPhoneNumber(value)) {
-                                  return; 
+                              field.onChange(value);
+                            }}
+                            onKeyDown={(e) => {
+                              // If the current value is already a fully valid phone number
+                              if (field.value && isValidPhoneNumber(field.value)) {
+                                // Allow if user has selected text (meaning they are replacing it)
+                                const target = e.target as HTMLInputElement;
+                                if (target && target.selectionStart !== target.selectionEnd) {
+                                  return;
+                                }
+                                // Prevent typing more numbers or spaces
+                                if (/^[\d\s]$/.test(e.key)) {
+                                  e.preventDefault();
                                 }
                               }
-                              field.onChange(value);
+                            }}
+                            onPaste={(e) => {
+                              if (field.value && isValidPhoneNumber(field.value)) {
+                                const target = e.target as HTMLInputElement;
+                                if (target && target.selectionStart === target.selectionEnd) {
+                                  e.preventDefault();
+                                }
+                              }
                             }}
                             className="w-full bg-transparent border-none focus:outline-none"
                           />
