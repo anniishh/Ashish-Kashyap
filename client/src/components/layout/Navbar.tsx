@@ -4,7 +4,7 @@ import { Menu, X, Phone, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
-import logo from "@assets/adv_logo_1768985356594.png";
+import logo from "@assets/logo_2_1776754856516.png";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
