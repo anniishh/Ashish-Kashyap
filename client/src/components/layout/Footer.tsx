@@ -20,32 +20,22 @@ export function Footer() {
             <p className="text-black/80 mb-6 leading-relaxed">
               Providing expert legal counsel with integrity and dedication. Defending your rights and securing your future.
             </p>
-            <div className="flex space-x-3">
-              <Button asChild variant="outline" size="icon" className="rounded-full border-black/20 text-black hover:border-accent hover:bg-transparent overflow-hidden p-0 w-10 h-10 transition-transform hover:scale-110">
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-                  <img src={facebookIcon} alt="Facebook" className="w-full h-full object-cover" />
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="icon" className="rounded-full border-black/20 text-black hover:border-accent hover:bg-transparent overflow-hidden p-0 w-10 h-10 transition-transform hover:scale-110">
-                <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
-                  <img src={twitterIcon} alt="Twitter" className="w-full h-full object-cover bg-black" />
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="icon" className="rounded-full border-black/20 text-black hover:border-accent hover:bg-transparent overflow-hidden p-0 w-10 h-10 transition-transform hover:scale-110">
-                <a href="https://www.linkedin.com/in/advocate-ashish-kashyap-4080351b3/" target="_blank" rel="noopener noreferrer">
-                  <img src={linkedinIcon} alt="LinkedIn" className="w-full h-full object-cover" />
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="icon" className="rounded-full border-black/20 text-black hover:border-accent hover:bg-transparent overflow-hidden p-0 w-10 h-10 transition-transform hover:scale-110">
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-                  <img src={instagramIcon} alt="Instagram" className="w-full h-full object-cover" />
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="icon" className="rounded-full border-black/20 text-black hover:border-accent hover:bg-transparent overflow-hidden p-0 w-10 h-10 transition-transform hover:scale-110 group/icon">
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                  <img src={whatsappIcon} alt="WhatsApp" className="w-full h-full object-cover" />
-                </a>
-              </Button>
+            <div className="flex items-center space-x-4 mt-6">
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="inline-flex hover:scale-110 transition-transform">
+                <img src={facebookIcon} alt="Facebook" className="w-8 h-8 object-contain" />
+              </a>
+              <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className="inline-flex hover:scale-110 transition-transform">
+                <img src={twitterIcon} alt="Twitter" className="w-8 h-8 object-contain" />
+              </a>
+              <a href="https://www.linkedin.com/in/advocate-ashish-kashyap-4080351b3/" target="_blank" rel="noopener noreferrer" className="inline-flex hover:scale-110 transition-transform">
+                <img src={linkedinIcon} alt="LinkedIn" className="w-8 h-8 object-contain" />
+              </a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="inline-flex hover:scale-110 transition-transform">
+                <img src={instagramIcon} alt="Instagram" className="w-8 h-8 object-contain" />
+              </a>
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex hover:scale-110 transition-transform">
+                <img src={whatsappIcon} alt="WhatsApp" className="w-8 h-8 object-contain" />
+              </a>
             </div>
           </div>
 

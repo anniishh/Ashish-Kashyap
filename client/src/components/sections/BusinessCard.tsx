@@ -122,20 +122,20 @@ export function BusinessCard() {
                     ))}
                   </div>
 
-                  <div className="flex space-x-2 print:hidden">
+                  <div className="flex items-center space-x-4 print:hidden">
                     {[
-                      { icon: () => <img src={whatsappIcon} alt="WhatsApp" className="w-5 h-5 object-contain" />, url: whatsappUrl },
-                      { icon: () => <img src={facebookIcon} alt="Facebook" className="w-5 h-5 object-contain" />, url: "https://www.facebook.com/" },
-                      { icon: () => <img src={instagramIcon} alt="Instagram" className="w-5 h-5 object-contain" />, url: "https://www.instagram.com/" },
-                      { icon: () => <img src={twitterIcon} alt="Twitter" className="w-5 h-5 object-contain" />, url: "https://x.com/" },
-                      { icon: () => <img src={linkedinIcon} alt="LinkedIn" className="w-5 h-5 object-contain" />, url: "https://www.linkedin.com/in/advocate-ashish-kashyap-4080351b3/" }
+                      { icon: () => <img src={whatsappIcon} alt="WhatsApp" className="w-8 h-8 object-contain" />, url: whatsappUrl },
+                      { icon: () => <img src={facebookIcon} alt="Facebook" className="w-8 h-8 object-contain" />, url: "https://www.facebook.com/" },
+                      { icon: () => <img src={instagramIcon} alt="Instagram" className="w-8 h-8 object-contain" />, url: "https://www.instagram.com/" },
+                      { icon: () => <img src={twitterIcon} alt="Twitter" className="w-8 h-8 object-contain" />, url: "https://x.com/" },
+                      { icon: () => <img src={linkedinIcon} alt="LinkedIn" className="w-8 h-8 object-contain" />, url: "https://www.linkedin.com/in/advocate-ashish-kashyap-4080351b3/" }
                     ].map((item, i) => (
                       <a 
                         key={i} 
                         href={item.url} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="w-10 h-10 flex items-center justify-center rounded-full bg-muted hover:bg-accent hover:text-white transition-all text-muted-foreground shadow-sm group/icon overflow-hidden border border-black/10"
+                        className="inline-flex hover:scale-110 transition-transform"
                       >
                         <item.icon />
                       </a>
