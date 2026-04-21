@@ -85,14 +85,22 @@ export function Contact() {
                     <FormItem>
                       <FormLabel className="text-foreground font-semibold">Phone Number</FormLabel>
                       <FormControl>
-                        <div className="flex h-10 w-full rounded-md border border-border bg-muted/50 px-3 py-2 text-sm text-foreground focus-within:border-accent focus-within:ring-1 focus-within:ring-accent transition-colors">
+                        <div className={`flex h-10 w-full rounded-md border bg-muted/50 px-3 py-2 text-sm text-foreground transition-colors ${field.value && isValidPhoneNumber(field.value) ? 'border-green-500 focus-within:border-green-500 focus-within:ring-green-500' : field.value ? 'border-red-500 focus-within:border-red-500 focus-within:ring-red-500' : 'border-border focus-within:border-accent focus-within:ring-1 focus-within:ring-accent'}`}>
                           <PhoneInput
                             international
                             defaultCountry="IN"
                             placeholder="+91 88514 27770"
                             value={field.value}
-                            onChange={field.onChange}
-                            limitMaxLength={true}
+                            onChange={(value) => {
+                              if (value && field.value && value.length > field.value.length) {
+                                // Only prevent if the PREVIOUS value was valid and the NEW value is invalid
+                                // This allows backspacing, but prevents adding digits to an already valid number
+                                if (isValidPhoneNumber(field.value) && !isValidPhoneNumber(value)) {
+                                  return; 
+                                }
+                              }
+                              field.onChange(value);
+                            }}
                             className="w-full bg-transparent border-none focus:outline-none"
                           />
                         </div>
