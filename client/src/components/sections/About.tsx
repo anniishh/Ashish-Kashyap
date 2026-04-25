@@ -1,7 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Scale, Gavel, BookOpen, Users, Clock, Award, ChevronRight, ChevronDown } from "lucide-react";
+import { Scale, Gavel, BookOpen, Users, Clock, Award, ChevronRight, ChevronDown, X } from "lucide-react";
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 const areas = [
   { icon: Scale, title: "Civil Litigation", desc: "Property disputes, family law, and contract breaches." },
@@ -60,6 +61,7 @@ import img9 from "@assets/akadv_1777142128223.jpg";
 export function About() {
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
   const [showAllImages, setShowAllImages] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
   const toggleCategory = (index: number) => {
@@ -86,12 +88,35 @@ export function About() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className={`relative aspect-[3/4] rounded-xl overflow-hidden shadow-lg border border-border group ${!showAllImages && i >= 2 ? 'hidden md:block' : ''}`}
+                className={`relative aspect-[3/4] rounded-xl overflow-hidden shadow-lg border border-border group cursor-pointer ${!showAllImages && i >= 2 ? 'hidden md:block' : ''}`}
+                onClick={() => setSelectedImage(img)}
               >
                 <img src={img} alt={`Gallery ${i+1}`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
               </motion.div>
             ))}
           </div>
+
+          <Dialog open={!!selectedImage} onOpenChange={(open) => !open && setSelectedImage(null)}>
+            <DialogContent className="max-w-[95vw] md:max-w-4xl p-1 bg-transparent border-none shadow-none h-[90vh] flex flex-col justify-center items-center" aria-describedby={undefined}>
+              <DialogTitle className="sr-only">Image Preview</DialogTitle>
+              {selectedImage && (
+                <div className="relative w-full h-full flex items-center justify-center" onClick={() => setSelectedImage(null)}>
+                  <button 
+                    onClick={(e) => { e.stopPropagation(); setSelectedImage(null); }}
+                    className="absolute -top-10 right-0 md:-right-10 z-50 p-2 bg-black/50 hover:bg-black/80 text-white rounded-full transition-colors"
+                  >
+                    <X className="h-6 w-6" />
+                  </button>
+                  <img 
+                    src={selectedImage} 
+                    alt="Gallery Full View" 
+                    className="max-w-full max-h-full object-contain rounded-md cursor-pointer"
+                    onClick={(e) => e.stopPropagation()}
+                  />
+                </div>
+              )}
+            </DialogContent>
+          </Dialog>
           
           <div className="mt-8 flex justify-center md:hidden">
             <button
