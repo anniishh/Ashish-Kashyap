@@ -33,7 +33,7 @@ export function Navbar() {
         isScrolled ? "bg-white/95 backdrop-blur-md border-b border-border py-3 md:py-4 shadow-sm" : "bg-white/95 md:bg-white/80 md:bg-transparent py-4 md:py-6 shadow-sm md:shadow-none"
       }`}
     >
-      <div className="container mx-auto px-4 md:px-6 lg:px-20 flex justify-between items-center gap-4 lg:gap-12">
+      <div className="container mx-auto px-3 md:px-4 lg:px-20 flex justify-between items-center gap-2 lg:gap-12">
         <Link href="/">
           <div className="flex items-center cursor-pointer shrink-0 mr-auto">
             <img src={logo} alt="Adv. Ashish Kashyap" className="h-6 sm:h-8 md:h-10 w-auto object-contain" />
@@ -41,12 +41,12 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-3 lg:space-x-8 overflow-hidden">
+        <div className="hidden md:flex items-center space-x-2 lg:space-x-8 overflow-hidden">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className={`text-xs lg:text-sm font-medium transition-colors uppercase tracking-widest relative group whitespace-nowrap ${
+              className={`text-[11px] lg:text-sm font-medium transition-colors uppercase tracking-widest relative group whitespace-nowrap ${
                 location === link.href ? "text-accent" : "text-black hover:text-accent"
               }`}
             >
@@ -57,8 +57,8 @@ export function Navbar() {
             </Link>
           ))}
           <Link href="/contact#schedule-consultation">
-            <Button variant="default" className="bg-primary text-primary-foreground hover:bg-accent transition-colors px-2 md:px-3 text-[10px] md:text-xs lg:px-4 lg:text-sm whitespace-nowrap h-8 lg:h-10">
-              <Calendar className="mr-1 lg:mr-2 h-3 w-3 lg:h-4 lg:w-4" /> <span className="hidden xl:inline">Book Appointment</span><span className="hidden lg:inline xl:hidden">Appointment</span><span className="lg:hidden">Book</span>
+            <Button variant="default" className="bg-primary text-primary-foreground hover:bg-accent transition-colors px-3 md:px-1.5 lg:px-4 text-xs md:text-[9px] lg:text-sm whitespace-nowrap h-8 md:h-7 lg:h-10">
+              <Calendar className="hidden lg:inline-block mr-2 h-4 w-4" /> Book Appointment
             </Button>
           </Link>
         </div>
