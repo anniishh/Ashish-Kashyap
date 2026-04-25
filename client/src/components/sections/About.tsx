@@ -55,11 +55,12 @@ import img5 from "@assets/image_5_1770220553483.jpeg";
 import img6 from "@assets/image_6_1770571634508.jpeg";
 import img7 from "@assets/image_7_1770571634508.jpeg";
 import img8 from "@assets/image_8_1770571634508.jpeg";
+import img9 from "@assets/akadv_1777142128223.jpg";
 
 export function About() {
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
   const [showAllImages, setShowAllImages] = useState(false);
-  const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8];
+  const galleryImages = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
 
   const toggleCategory = (index: number) => {
     setExpandedCategory(expandedCategory === index ? null : index);
