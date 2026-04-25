@@ -1,48 +1,88 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Scale, Gavel, BookOpen, Users, Clock, Award, ChevronRight, ChevronDown, X } from "lucide-react";
+import { Scale, Gavel, BookOpen, Users, Clock, Award, ChevronRight, ChevronDown, X, ShieldAlert, Landmark, Building2 } from "lucide-react";
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 
 const areas = [
-  { icon: Scale, title: "Civil Litigation", desc: "Property disputes, family law, and contract breaches." },
-  { icon: Gavel, title: "Criminal Defense", desc: "Strong representation in all criminal proceedings." },
-  { icon: BookOpen, title: "Corporate Law", desc: "Legal advisory for businesses, startups, and compliance." },
-  { icon: Users, title: "Family Disputes", desc: "Divorce, custody, and inheritance matters." },
+  { icon: ShieldAlert, title: "Specialized Agency Defense", desc: "Expert representation in complex investigations by NIA, CBI, and Enforcement Directorate (ED)." },
+  { icon: Landmark, title: "Constitutional & Appellate", desc: "Filing and defending Special Leave Petitions, Writ Petitions, and Appeals in the Supreme Court and High Courts." },
+  { icon: Building2, title: "Economic & White Collar Crimes", desc: "Defense against PMLA, FEMA violations, corporate fraud, and multi-crore financial scams." },
+  { icon: Gavel, title: "High-Stakes Criminal Trials", desc: "Strategic defense in serious IPC offenses, UAPA, NDPS, and politically sensitive matters." },
 ];
 
 const caseCategories = [
   {
-    title: "Criminal Cases",
-    subcategories: ["Homicide & Murder Trials", "Sexual Offenses (POCSO & IPC)", "Drug & Psychotropic Substances (NDPS)", "Cyber Crimes & Digital Fraud"]
+    title: "National Investigation Agency (NIA) Cases",
+    subcategories: [
+      "Terror Funding & Conspiracy Investigations", 
+      "National Security & Sovereignty Matters", 
+      "Unlawful Activities (Prevention) Act (UAPA)", 
+      "Transnational Organized Crime Syndicates"
+    ]
   },
   {
-    title: "CBI Cases",
-    subcategories: ["Corruption & Bribery Investigations", "Banking Fraud & Embezzlement", "High-profile Institutional Crimes", "Central Government Employee Misconduct"]
+    title: "Central Bureau of Investigation (CBI) Matters",
+    subcategories: [
+      "High-Profile Corruption & Bribery Investigations", 
+      "Multi-Crore Banking Fraud & Embezzlement", 
+      "Institutional Crimes & Public Servant Misconduct", 
+      "Complex Interstate Criminal Conspiracies"
+    ]
   },
   {
-    title: "ED Matters",
-    subcategories: ["Money Laundering (PMLA)", "Foreign Exchange Violations (FEMA)", "Asset Attachment & Seizure", "Corporate Financial Investigations"]
+    title: "Enforcement Directorate (ED) Cases",
+    subcategories: [
+      "Prevention of Money Laundering Act (PMLA) Proceedings", 
+      "Foreign Exchange Management Act (FEMA) Violations", 
+      "Asset Attachment, Seizure & Confiscation Defense", 
+      "Corporate Financial Fraud Investigations"
+    ]
   },
   {
-    title: "NIA Matters",
-    subcategories: ["Terror Funding Investigations", "National Security Cases", "Unlawful Activities (UAPA)", "Transnational Organized Crime"]
+    title: "Supreme Court Litigation",
+    subcategories: [
+      "Special Leave Petitions (SLP) in Criminal Matters", 
+      "Constitutional Bench & Fundamental Rights Enforcement", 
+      "Transfer Petitions Across Jurisdictions", 
+      "Appellate Jurisdiction in High-Stakes Crimes"
+    ]
   },
   {
-    title: "Special Acts Litigation",
-    subcategories: ["Arms Act", "Information Technology Act", "Narcotics Control", "Prevention of Corruption Act"]
+    title: "High Court Proceedings",
+    subcategories: [
+      "Writ Petitions for Quashing FIRs & Investigations", 
+      "Criminal Appeals & Revisions", 
+      "Anticipatory & Regular Bail in Serious Offenses", 
+      "Habeas Corpus & Protection from Arbitrary Arrest"
+    ]
   },
   {
-    title: "Bail Matters",
-    subcategories: ["Anticipatory Bail Applications", "Regular Bail Petitions", "Default Bail", "Bail in Special Court Matters"]
+    title: "Chief Minister & Political Leader Defense",
+    subcategories: [
+      "Representation in Politically Sensitive Matters", 
+      "Defamation & Electoral Offenses", 
+      "Navigating Complex Media & Public Scrutiny", 
+      "Strategic Counsel for Public Figures"
+    ]
   },
   {
-    title: "Economic Offenses",
-    subcategories: ["White Collar Crimes", "Tax Evasion & GST Fraud", "Stock Market Malpractices", "Insolvency & Bankruptcy Crimes"]
+    title: "Economic Offenses & White Collar Crimes",
+    subcategories: [
+      "Tax Evasion, Income Tax & GST Fraud", 
+      "Stock Market Malpractices (SEBI Violations)", 
+      "Insolvency & Bankruptcy Code (IBC) Crimes", 
+      "Corporate Criminal Liability & Director Defense"
+    ]
   },
   {
-    title: "Corporate Criminal Liability",
-    subcategories: ["Director's Liability", "Vicarious Liability of Companies", "Regulatory Non-compliance", "Environmental Legal Violations"]
+    title: "Serious Criminal Trials",
+    subcategories: [
+      "Homicide, Murder & Attempt to Murder Trials", 
+      "Sexual Offenses (POCSO & Complex IPC Matters)", 
+      "Narcotics & Psychotropic Substances (NDPS)", 
+      "Cyber Crimes, Digital Fraud & IT Act Violations"
+    ]
   }
 ];
 
