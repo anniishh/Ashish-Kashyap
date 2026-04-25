@@ -7,6 +7,7 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Cases from "@/pages/Cases";
+import CaseGallery from "@/pages/CaseGallery";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -15,6 +16,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/cases" component={Cases} />
+      <Route path="/gallery" component={CaseGallery} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
