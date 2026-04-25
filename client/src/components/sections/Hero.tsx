@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import heroBg from "@assets/generated_images/abstract_legal_background_texture.png";
-import portrait from "@assets/akadv_1777142128223.jpg";
+import portrait from "@assets/image_1769096431460.png";
 
 export function Hero() {
   return (
