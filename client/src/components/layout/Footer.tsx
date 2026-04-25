@@ -104,11 +104,11 @@ export function Footer() {
           <p className="text-black/70 text-sm mb-4 md:mb-0">
             &copy; {new Date().getFullYear()} Adv. Ashish Kashyap. All rights reserved.
           </p>
-          <div className="flex space-x-6 text-sm text-black/70">
-            <a href="#" className="hover:text-black transition-colors relative group">Privacy Policy
+          <div className="flex flex-wrap gap-4 md:gap-6 text-sm text-black/70">
+            <a href="/static/privacy-policy.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors relative group">Privacy Policy
               <span className="absolute -bottom-1 left-0 w-full h-px bg-black transform scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
             </a>
-            <a href="#" className="hover:text-black transition-colors relative group">Terms of Service
+            <a href="/static/terms-of-service.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors relative group">Terms of Service
               <span className="absolute -bottom-1 left-0 w-full h-px bg-black transform scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100"></span>
             </a>
           </div>
