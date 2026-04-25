@@ -80,21 +80,26 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-serif font-semibold text-black mb-6">Contact Details</h4>
             <ul className="space-y-4">
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 text-accent mr-3 mt-1" />
-                <span className="text-black/80">
+              <li className="flex items-start group">
+                <MapPin className="h-5 w-5 text-accent mr-3 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <a 
+                  href="https://maps.google.com/?q=Delhi+High+Court" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-black/80 hover:text-black transition-colors"
+                >
                   Delhi High Court,<br />
                   Lawyer's Chamber's Block,<br />
                   New Delhi
-                </span>
+                </a>
               </li>
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 text-accent mr-3" />
-                <span className="text-black/80">+91 88514 27770</span>
+              <li className="flex items-center group">
+                <Phone className="h-5 w-5 text-accent mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <a href="tel:+918851427770" className="text-black/80 hover:text-black transition-colors">+91 88514 27770</a>
               </li>
-              <li className="flex items-center">
-                <Mail className="h-5 w-5 text-accent mr-3" />
-                <span className="text-black/80">advashishkashyap@gmail.com</span>
+              <li className="flex items-center group">
+                <Mail className="h-5 w-5 text-accent mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                <a href="mailto:advashishkashyap@gmail.com" className="text-black/80 hover:text-black transition-colors">advashishkashyap@gmail.com</a>
               </li>
             </ul>
           </div>
