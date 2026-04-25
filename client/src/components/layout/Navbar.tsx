@@ -58,7 +58,7 @@ export function Navbar() {
           ))}
           <Link href="/contact#schedule-consultation">
             <Button variant="default" className="bg-primary text-primary-foreground hover:bg-accent transition-colors md:px-3 md:text-xs lg:px-4 lg:text-sm whitespace-nowrap">
-              <Calendar className="mr-1 lg:mr-2 h-3 w-3 lg:h-4 lg:w-4" /> <span className="hidden lg:inline">Book Appointment</span><span className="lg:hidden">Book</span>
+              <Calendar className="mr-1 lg:mr-2 h-3 w-3 lg:h-4 lg:w-4" /> <span className="hidden lg:inline">Book Appointment</span><span className="lg:hidden">Appointment</span>
             </Button>
           </Link>
         </div>
