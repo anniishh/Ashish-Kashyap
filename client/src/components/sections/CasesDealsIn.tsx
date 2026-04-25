@@ -100,11 +100,11 @@ export function CasesDealsIn() {
         >
           <div className="w-16 h-1 bg-accent mx-auto mb-6"></div>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary mb-6">
-            Cases We <span className="italic text-accent">Deal In</span>
+            Notable Case <span className="italic text-accent">Files</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Extensive experience representing clients across various high-stakes matters, 
-            special tribunals, and constitutional courts.
+            A curated selection of significant legal matters, orders, and representations 
+            across various courts and tribunals.
           </p>
         </motion.div>
 
