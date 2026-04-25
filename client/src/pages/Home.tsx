@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/Hero";
 import { NewsHighlights } from "@/components/sections/NewsHighlights";
 import { About } from "@/components/sections/About";
 import { Locations } from "@/components/sections/Locations";
+import { CasesDealsIn } from "@/components/sections/CasesDealsIn";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <CasesDealsIn />
         <NewsHighlights />
         <div className="bg-muted/30">
           <Locations limit={2} />
