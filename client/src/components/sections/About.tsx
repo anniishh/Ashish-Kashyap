@@ -97,21 +97,24 @@ export function About() {
           </div>
 
           <Dialog open={!!selectedImage} onOpenChange={(open) => !open && setSelectedImage(null)}>
-            <DialogContent className="max-w-[95vw] md:max-w-4xl p-1 bg-transparent border-none shadow-none h-[90vh] flex flex-col justify-center items-center" aria-describedby={undefined}>
+            <DialogContent 
+              className="max-w-[95vw] md:max-w-4xl p-0 bg-transparent border-none shadow-none h-[90vh] flex justify-center items-center [&>button]:hidden outline-none cursor-pointer" 
+              aria-describedby={undefined}
+              onClick={() => setSelectedImage(null)}
+            >
               <DialogTitle className="sr-only">Image Preview</DialogTitle>
               {selectedImage && (
-                <div className="relative w-full h-full flex items-center justify-center" onClick={() => setSelectedImage(null)}>
+                <div className="relative max-w-full max-h-full flex flex-col items-center w-full h-full justify-center">
                   <button 
                     onClick={(e) => { e.stopPropagation(); setSelectedImage(null); }}
-                    className="absolute -top-10 right-0 md:-right-10 z-50 p-2 bg-black/50 hover:bg-black/80 text-white rounded-full transition-colors"
+                    className="md:hidden absolute top-4 right-4 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white backdrop-blur-md transition-colors z-50"
                   >
                     <X className="h-6 w-6" />
                   </button>
                   <img 
                     src={selectedImage} 
                     alt="Gallery Full View" 
-                    className="max-w-full max-h-full object-contain rounded-md cursor-pointer"
-                    onClick={(e) => e.stopPropagation()}
+                    className="max-w-full max-h-[85vh] object-contain rounded-md shadow-2xl"
                   />
                 </div>
               )}
