@@ -86,7 +86,7 @@ export function Affiliations() {
                             <img src={logo} alt="IHRCCC Logo" className="h-full w-full object-contain" />
                           </div>
                           <div>
-                            <h3 className="text-lg md:text-xl font-bold text-black uppercase tracking-wide">IHRCCC</h3>
+                            <h3 className="text-lg md:text-xl font-bold text-black uppercase tracking-wide">International Human Rights & Crime Control Council (IHRCCC)</h3>
                             <p className="text-accent font-medium text-sm">Official Identity Credential</p>
                           </div>
                         </div>
