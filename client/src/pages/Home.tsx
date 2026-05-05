@@ -6,6 +6,7 @@ import { About } from "@/components/sections/About";
 import { Locations } from "@/components/sections/Locations";
 import { CasesDealsIn } from "@/components/sections/CasesDealsIn";
 import EDCasesTable from "@/components/sections/EDCasesTable";
+import { Affiliations } from "@/components/sections/Affiliations";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Affiliations />
         <About />
         <EDCasesTable />
         <CasesDealsIn />

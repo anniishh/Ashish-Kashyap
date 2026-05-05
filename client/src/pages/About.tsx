@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { About as AboutSection } from "@/components/sections/About";
+import { Affiliations } from "@/components/sections/Affiliations";
 import { motion } from "framer-motion";
 import scImage from "@assets/image_1769099584273.png";
 
@@ -42,6 +43,7 @@ export default function About() {
             </div>
           </motion.div>
         </div>
+        <Affiliations />
         <AboutSection />
       </main>
       <Footer />
