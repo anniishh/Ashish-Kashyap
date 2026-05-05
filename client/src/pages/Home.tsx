@@ -5,6 +5,7 @@ import { NewsHighlights } from "@/components/sections/NewsHighlights";
 import { About } from "@/components/sections/About";
 import { Locations } from "@/components/sections/Locations";
 import { CasesDealsIn } from "@/components/sections/CasesDealsIn";
+import EDCasesTable from "@/components/sections/EDCasesTable";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <EDCasesTable />
         <CasesDealsIn />
         <NewsHighlights />
         <div className="bg-muted/30">
