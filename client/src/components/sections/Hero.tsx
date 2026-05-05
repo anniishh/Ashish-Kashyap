@@ -18,14 +18,14 @@ export function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="flex flex-col items-start gap-4 mb-6">
-            <div className="inline-block px-3 py-1 border border-accent/20 rounded-full bg-accent/5 backdrop-blur-sm">
-              <span className="text-accent text-sm font-semibold tracking-wider uppercase">
+          <div className="flex flex-col w-fit gap-3 mb-6">
+            <div className="px-3 py-1 border border-accent/20 rounded-full bg-accent/5 backdrop-blur-sm text-center">
+              <span className="text-accent text-[11px] sm:text-sm font-semibold tracking-wider uppercase">
                 Supreme Court & High Court Advocate
               </span>
             </div>
-            <div className="inline-block bg-white px-4 py-2 rounded-xl shadow-sm border border-black/5">
-              <img src={arLogo} alt="A.R. & Associates Law Firm" className="h-10 md:h-12 object-contain" />
+            <div className="bg-white px-4 py-2 rounded-xl shadow-sm border border-black/5 flex justify-center items-center w-full h-16 sm:h-20">
+              <img src={arLogo} alt="A.R. & Associates Law Firm" className="max-w-full max-h-full object-contain" />
             </div>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-bold text-foreground leading-tight mb-6">
