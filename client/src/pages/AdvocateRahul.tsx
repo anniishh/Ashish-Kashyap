@@ -49,8 +49,8 @@ export default function AdvocateRahul() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="w-full md:w-2/3 space-y-6"
               >
-                <div className="inline-block bg-white p-3 rounded-xl shadow-sm border border-black/5 mb-2">
-                  <img src={logo} alt="A.R. & Associates" className="h-10 object-contain" />
+                <div className="inline-block bg-white p-4 rounded-xl shadow-sm border border-black/5 mb-4">
+                  <img src={logo} alt="A.R. & Associates" className="h-16 md:h-20 object-contain" />
                 </div>
                 
                 <h2 className="text-4xl md:text-5xl font-serif font-bold text-black">
