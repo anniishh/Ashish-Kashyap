@@ -1,5 +1,5 @@
 import { Globe, Award, ChevronRight } from "lucide-react";
-import logo from "@assets/adv_logo_1768985356594.png";
+import logo from "@assets/image_1777998797622.png";
 
 export function Affiliations() {
   return (
@@ -21,7 +21,7 @@ export function Affiliations() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-black text-lg">Executive Member</h4>
-                  <p className="text-black/70">International Human Rights & Crime Control Council</p>
+                  <p className="text-black/70">International Human Rights & Crime Control Council (IHRCCC)</p>
                 </div>
               </div>
               
@@ -53,11 +53,11 @@ export function Affiliations() {
               
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-8 border-b border-black/10 pb-6">
-                  <div className="h-16 w-16 bg-white rounded-full flex items-center justify-center shadow-inner overflow-hidden p-1 border border-accent/20">
+                  <div className="h-16 w-16 bg-white rounded-full flex items-center justify-center shadow-inner overflow-hidden p-1 border border-accent/20 flex-shrink-0">
                     <img src={logo} alt="IHRCCC Logo" className="h-full w-full object-contain" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-black uppercase tracking-wide">IHRCCC</h3>
+                    <h3 className="text-lg md:text-xl font-bold text-black uppercase tracking-wide">International Human Rights & Crime Control Council (IHRCCC)</h3>
                     <p className="text-accent font-medium text-sm">Official Identity Credential</p>
                   </div>
                 </div>
