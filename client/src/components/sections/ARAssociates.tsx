@@ -41,15 +41,41 @@ export function ARAssociates() {
               </p>
             </div>
 
-            <div>
-              <h4 className="text-xl font-bold text-black mb-4 border-b border-black/10 pb-2 inline-block">Areas of Practice</h4>
-              <div className="grid grid-cols-2 gap-4 mt-4">
-                {practiceAreas.map((area, index) => (
-                  <div key={index} className="flex items-center text-black/80">
-                    <CheckCircle2 className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
-                    <span className="font-medium">{area}</span>
+            <div className="flex flex-col gap-6 mt-8 border-t border-black/10 pt-8">
+              <h4 className="text-xl font-bold text-black mb-2">Areas of Practice</h4>
+              
+              <div className="flex flex-col gap-6">
+                <div className="flex flex-col md:flex-row gap-4 md:gap-8 md:items-start">
+                  <div className="md:w-1/3">
+                    <h5 className="font-semibold text-black/90 text-lg">Adv. Ashish Kashyap</h5>
+                    <p className="text-accent text-xs font-medium uppercase mt-1">Partner</p>
                   </div>
-                ))}
+                  <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {practiceAreas.slice(0, 4).map((area, index) => (
+                      <div key={index} className="flex items-center text-black/80">
+                        <CheckCircle2 className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
+                        <span className="font-medium text-sm md:text-base">{area}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="w-full h-px bg-black/5"></div>
+                
+                <div className="flex flex-col md:flex-row gap-4 md:gap-8 md:items-start">
+                  <div className="md:w-1/3">
+                    <h5 className="font-semibold text-black/90 text-lg">Adv. Rahul Kumar</h5>
+                    <p className="text-accent text-xs font-medium uppercase mt-1">Partner</p>
+                  </div>
+                  <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {practiceAreas.slice(4).map((area, index) => (
+                      <div key={index} className="flex items-center text-black/80">
+                        <CheckCircle2 className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
+                        <span className="font-medium text-sm md:text-base">{area}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
