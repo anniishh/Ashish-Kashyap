@@ -17,10 +17,17 @@ export function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="inline-block px-3 py-1 mb-6 border border-accent/20 rounded-full bg-accent/5 backdrop-blur-sm">
-            <span className="text-accent text-sm font-semibold tracking-wider uppercase">
-              Supreme Court & High Court Advocate
-            </span>
+          <div className="flex flex-col items-start gap-3 mb-6">
+            <div className="inline-block px-3 py-1 border border-accent/20 rounded-full bg-accent/5 backdrop-blur-sm">
+              <span className="text-accent text-sm font-semibold tracking-wider uppercase">
+                Supreme Court & High Court Advocate
+              </span>
+            </div>
+            <div className="inline-block px-3 py-1 border border-black/10 rounded-full bg-black/5 backdrop-blur-sm">
+              <span className="text-black/80 text-sm font-bold tracking-widest uppercase">
+                A.R. & Associates (Law Firm)
+              </span>
+            </div>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-bold text-foreground leading-tight mb-6">
             Advocate <br className="hidden sm:block" />
