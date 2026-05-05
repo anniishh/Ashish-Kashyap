@@ -1,4 +1,5 @@
-import { ShieldCheck, Globe, Award, ChevronRight } from "lucide-react";
+import { Globe, Award, ChevronRight } from "lucide-react";
+import logo from "@assets/adv_logo_1768985356594.png";
 
 export function Affiliations() {
   return (
@@ -16,7 +17,7 @@ export function Affiliations() {
             <div className="space-y-4 pt-4">
               <div className="flex items-start">
                 <div className="mt-1 bg-accent/10 p-2 rounded-full mr-4">
-                  <ShieldCheck className="h-5 w-5 text-accent" />
+                  <img src={logo} alt="IHRCCC Logo" className="h-5 w-5 object-contain" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-black text-lg">Executive Member</h4>
@@ -52,8 +53,8 @@ export function Affiliations() {
               
               <div className="relative z-10">
                 <div className="flex items-center gap-4 mb-8 border-b border-black/10 pb-6">
-                  <div className="h-16 w-16 bg-accent text-white rounded-full flex items-center justify-center shadow-inner">
-                    <ShieldCheck className="h-8 w-8" />
+                  <div className="h-16 w-16 bg-white rounded-full flex items-center justify-center shadow-inner overflow-hidden p-1 border border-accent/20">
+                    <img src={logo} alt="IHRCCC Logo" className="h-full w-full object-contain" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-black uppercase tracking-wide">IHRCCC</h3>
