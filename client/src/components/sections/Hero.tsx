@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import heroBg from "@assets/generated_images/abstract_legal_background_texture.png";
 import portrait from "@assets/image_1769096431460.png";
+import arLogo from "@assets/Gemini_Generated_Image_tob7rbtob7rbtob7-removebg-preview_1778000095802.png";
 
 export function Hero() {
   return (
@@ -17,16 +18,14 @@ export function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="flex flex-col items-start gap-3 mb-6">
+          <div className="flex flex-col items-start gap-4 mb-6">
             <div className="inline-block px-3 py-1 border border-accent/20 rounded-full bg-accent/5 backdrop-blur-sm">
               <span className="text-accent text-sm font-semibold tracking-wider uppercase">
                 Supreme Court & High Court Advocate
               </span>
             </div>
-            <div className="inline-block px-3 py-1 border border-black/10 rounded-full bg-black/5 backdrop-blur-sm">
-              <span className="text-black/80 text-sm font-bold tracking-widest uppercase">
-                A.R. & Associates (Law Firm)
-              </span>
+            <div className="inline-block bg-white px-4 py-2 rounded-xl shadow-sm border border-black/5">
+              <img src={arLogo} alt="A.R. & Associates Law Firm" className="h-10 md:h-12 object-contain" />
             </div>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-bold text-foreground leading-tight mb-6">
