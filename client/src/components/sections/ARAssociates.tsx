@@ -93,7 +93,7 @@ export function ARAssociates() {
                   +91 9716324341
                 </a>
                 <Link href="/advocate-rahul" className="flex items-center justify-center gap-2 text-sm font-semibold text-accent hover:text-accent/80 transition-colors py-2 border border-accent/20 rounded-full hover:bg-accent/5">
-                  View Full Profile <ArrowRight className="h-4 w-4" />
+                  View Profile <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>
