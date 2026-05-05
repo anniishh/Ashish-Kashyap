@@ -1,7 +1,8 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, CheckCircle2, GraduationCap, Briefcase, Scale } from "lucide-react";
+import { MapPin, Phone, Mail, CheckCircle2, GraduationCap, Briefcase, Scale, ArrowLeft } from "lucide-react";
+import { Link } from "wouter";
 import rahulImg from "@assets/image_1778000204738.png";
 import logo from "@assets/Gemini_Generated_Image_tob7rbtob7rbtob7-removebg-preview_1778000095802.png";
 
@@ -20,6 +21,13 @@ export default function AdvocateRahul() {
       <Navbar />
       
       <main className="pt-20 md:pt-24 pb-20">
+        {/* Back Button */}
+        <div className="container mx-auto px-6 md:px-12 lg:px-20 pt-8 pb-4">
+          <Link href="/" className="inline-flex items-center gap-2 text-accent hover:text-accent/80 font-medium transition-colors group">
+            <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" /> Back to Home
+          </Link>
+        </div>
+
         {/* Hero Profile Section */}
         <section className="bg-muted/30 py-16 md:py-24">
           <div className="container mx-auto px-6 md:px-12 lg:px-20">
