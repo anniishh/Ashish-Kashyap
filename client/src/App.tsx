@@ -9,6 +9,7 @@ import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Cases from "@/pages/Cases";
 import CaseGallery from "@/pages/CaseGallery";
+import AdvocateRahul from "@/pages/AdvocateRahul";
 import NotFound from "@/pages/not-found";
 
 function ScrollToTop() {
@@ -31,6 +32,7 @@ function Router() {
         <Route path="/cases" component={Cases} />
         <Route path="/gallery" component={CaseGallery} />
         <Route path="/contact" component={Contact} />
+        <Route path="/advocate-rahul" component={AdvocateRahul} />
         <Route component={NotFound} />
       </Switch>
     </>

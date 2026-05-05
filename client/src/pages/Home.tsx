@@ -7,6 +7,7 @@ import { Locations } from "@/components/sections/Locations";
 import { CasesDealsIn } from "@/components/sections/CasesDealsIn";
 import EDCasesTable from "@/components/sections/EDCasesTable";
 import { Affiliations } from "@/components/sections/Affiliations";
+import { ARAssociates } from "@/components/sections/ARAssociates";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <ARAssociates />
         <Affiliations />
         <About />
         <EDCasesTable />
