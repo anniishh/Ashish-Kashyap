@@ -32,8 +32,11 @@ export function ARAssociates() {
           <div className="w-24 h-1 bg-accent mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
-          <div className="lg:col-span-8 space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20 items-start">
+          <div className="lg:col-span-3 flex justify-center lg:justify-start pt-2 lg:-ml-24 relative overflow-visible">
+            <img src={logo} alt="A.R. & Associates Logo" className="w-full max-w-[400px] object-contain object-center lg:object-left drop-shadow-sm scale-125 lg:scale-[1.6] origin-center lg:origin-left" />
+          </div>
+          <div className="lg:col-span-5 space-y-8 lg:-ml-4">
             <div>
               <h3 className="text-2xl font-bold text-black mb-4">Adv. Ashish Kashyap & Adv. Rahul Kumar</h3>
               <p className="text-black/70 text-lg leading-relaxed">
