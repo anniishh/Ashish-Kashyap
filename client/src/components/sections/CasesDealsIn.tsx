@@ -7,7 +7,8 @@ import cmCaseImg1 from "@assets/pic_20260425233204_4_1780332432074.jpg";
 import cmCaseImg2 from "@assets/pic_20260425233204_5_1780332482966.jpg";
 import cmCaseImg3 from "@assets/pic_20260425233204_9_1780332644648.jpg";
 import cmCaseImg4 from "@assets/pic_20260425233204_10_1780332692821.jpg";
-import cwgCaseImg from "@assets/pic_20260425233204_3_1780332560604.jpg";
+import cwgCaseImg1 from "@assets/pic_20260425233204_3_1780332560604.jpg";
+import cwgCaseImg2 from "@assets/pic_20260425233204_17_1780332932909.jpg";
 import ranbaxyCaseImg from "@assets/pic_20260425233204_20_1780332829702.jpg";
 
 // Dynamically import all images
@@ -72,7 +73,7 @@ const casesData = [
     categoryId: "cwg",
     title: "DoE v. A.K. Reddy & Anr. (Commonwealth Games)",
     description: "Defense representation in the high-profile Commonwealth Games matter in Delhi, navigating complex proceedings initiated by the Directorate of Enforcement.",
-    images: [cwgCaseImg]
+    images: [cwgCaseImg1, cwgCaseImg2]
   },
   {
     categoryId: "ranbaxy",
