@@ -83,7 +83,7 @@ export function Affiliations() {
                       <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70 -translate-x-1/2 translate-y-1/2"></div>
                       
                       <div className="relative z-10 flex flex-col h-full">
-                        <div className="bg-gradient-to-r from-blue-600 via-teal-500 to-emerald-500 p-4 border-b-4 border-orange-400">
+                        <div className="bg-gradient-to-r from-blue-400 via-teal-400 to-emerald-400 p-4 border-b-4 border-orange-400">
                           <div className="flex items-center gap-4">
                             <div className="h-16 w-16 bg-white rounded-full flex items-center justify-center shadow-lg overflow-hidden p-1 border-2 border-white flex-shrink-0">
                               <img src={logo} alt="IHRCCC Logo" className="h-full w-full object-contain" />
@@ -138,7 +138,7 @@ export function Affiliations() {
                     className="absolute inset-0 w-full h-full [backface-visibility:hidden]"
                   >
                     <div className="w-full h-full border border-black/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col bg-gradient-to-br from-slate-50 to-blue-50">
-                      <div className="bg-gradient-to-r from-blue-600 via-teal-500 to-emerald-500 text-white py-3 px-6 text-center shadow-md">
+                      <div className="bg-gradient-to-r from-blue-400 via-teal-400 to-emerald-400 text-white py-3 px-6 text-center shadow-md">
                         <h4 className="font-bold text-sm md:text-base uppercase tracking-wider drop-shadow-md">Terms & Conditions</h4>
                       </div>
                       
