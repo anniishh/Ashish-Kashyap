@@ -48,7 +48,7 @@ const casesData = [
     title: "National Investigation Agency v. Accused",
     description: "Defense representation in a high-stakes UAPA matter involving complex procedural and constitutional questions. The case involved extensive cross-examination of digital evidence and testimonies.",
     images: (() => {
-      const arr = [...sortedImages.slice(0, 4)];
+      const arr = [...sortedImages.slice(0, 3)];
       if (arr.length >= 2) {
         const temp = arr[0];
         arr[0] = arr[1];
@@ -61,13 +61,13 @@ const casesData = [
     categoryId: "political",
     title: "Directorate of Enforcement v. Amarendra Dhari Singh (MP) & Ors.",
     description: "High-profile political case representing Member of Parliament Amarendra Dhari Singh in a complex matter involving the Directorate of Enforcement.",
-    images: [politicalCaseImg, ...sortedImages.slice(4, 7)]
+    images: [politicalCaseImg, ...sortedImages.slice(3, 5)]
   },
   {
     categoryId: "cm",
     title: "ED Vs. Virbhadra Singh and Ors.",
     description: "Legal strategy and representation in a politically sensitive matter involving a Chief Minister. The case required navigating complex media scrutiny and intricate legal frameworks across multiple jurisdictions.",
-    images: [cmCaseImg1, cmCaseImg2, cmCaseImg3, cmCaseImg4, ...sortedImages.slice(10, 12)]
+    images: [cmCaseImg1, cmCaseImg2, cmCaseImg3, cmCaseImg4]
   },
   {
     categoryId: "cwg",
@@ -85,25 +85,25 @@ const casesData = [
     categoryId: "cbi",
     title: "Central Bureau of Investigation - Bank Fraud",
     description: "Successfully defended the accused in a multi-crore financial matter investigated by the CBI. The defense focused on the lack of mens rea and procedural lapses in the forensic audit.",
-    images: sortedImages.slice(8, 12)
+    images: sortedImages.slice(5, 8)
   },
   {
     categoryId: "ed",
     title: "Enforcement Directorate - PMLA Proceedings",
     description: "Represented the client in money laundering proceedings initiated by the ED. Challenged the provisional attachment orders and argued for the protection of legitimate business assets.",
-    images: sortedImages.slice(12, 15)
+    images: sortedImages.slice(8, 10)
   },
   {
     categoryId: "sc",
     title: "Special Leave Petition - Supreme Court",
     description: "A landmark Special Leave Petition challenging the interpretation of statutory provisions by the High Court. The Supreme Court granted relief based on constitutional arguments.",
-    images: sortedImages.slice(15, 19)
+    images: sortedImages.slice(10, 12)
   },
   {
     categoryId: "hc",
     title: "Writ Petition - State High Court",
     description: "Quashing of illegal administrative orders through a Writ of Certiorari in the High Court, protecting the fundamental rights of the petitioner against arbitrary state action.",
-    images: sortedImages.slice(19, 22)
+    images: sortedImages.slice(12, 14)
   }
 ];
 
