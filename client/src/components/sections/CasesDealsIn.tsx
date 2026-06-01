@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X } from "lucide-react";
+import politicalCaseImg from "@assets/pic_20260425233204_2_1780332381350.jpg";
 
 // Dynamically import all images
 const caseImagesContext = import.meta.glob('../../assets/cases/*.jpg', { eager: true, query: '?url', import: 'default' });
@@ -23,7 +24,7 @@ const sortedImages = allCaseImages.sort((a, b) => {
 
 const categories = [
   { id: "nia", title: "NIA Cases" },
-  { id: "cm", title: "Chief Minister Cases" },
+  { id: "political", title: "Political Cases" },
   { id: "cbi", title: "CBI Matters" },
   { id: "ed", title: "ED Cases" },
   { id: "sc", title: "Supreme Court" },
@@ -36,10 +37,6 @@ const casesData = [
     categoryId: "nia",
     title: "National Investigation Agency v. Accused",
     description: "Defense representation in a high-stakes UAPA matter involving complex procedural and constitutional questions. The case involved extensive cross-examination of digital evidence and testimonies.",
-    // The user requested to swap image 1 and 2 for the first case.
-    // The array contains [img0, img1, img2, img3]... swapping index 0 and 1
-    // The previous attempt might not have worked perfectly if the first image was not index 0.
-    // Let's ensure the first two items in this specific array are swapped.
     images: (() => {
       const arr = [...sortedImages.slice(0, 4)];
       if (arr.length >= 2) {
@@ -51,10 +48,10 @@ const casesData = [
     })()
   },
   {
-    categoryId: "cm",
-    title: "High Profile Chief Minister Case",
-    description: "Legal strategy and representation in a politically sensitive matter involving a Chief Minister. The case required navigating complex media scrutiny and intricate legal frameworks across multiple jurisdictions.",
-    images: sortedImages.slice(4, 8)
+    categoryId: "political",
+    title: "Directorate of Enforcement v. Amarendra Dhari Singh (MP) & Ors.",
+    description: "High-profile political case representing Member of Parliament Amarendra Dhari Singh in a complex matter involving the Directorate of Enforcement.",
+    images: [politicalCaseImg, ...sortedImages.slice(4, 7)]
   },
   {
     categoryId: "cbi",
