@@ -5,6 +5,7 @@ import { X } from "lucide-react";
 import politicalCaseImg from "@assets/pic_20260425233204_2_1780332381350.jpg";
 import cmCaseImg1 from "@assets/pic_20260425233204_4_1780332432074.jpg";
 import cmCaseImg2 from "@assets/pic_20260425233204_5_1780332482966.jpg";
+import cwgCaseImg from "@assets/pic_20260425233204_3_1780332560604.jpg";
 
 // Dynamically import all images
 const caseImagesContext = import.meta.glob('../../assets/cases/*.jpg', { eager: true, query: '?url', import: 'default' });
@@ -28,6 +29,7 @@ const categories = [
   { id: "nia", title: "NIA Cases" },
   { id: "political", title: "Political Cases" },
   { id: "cm", title: "Virbhadra Singh Case" },
+  { id: "cwg", title: "Commonwealth Games" },
   { id: "cbi", title: "CBI Matters" },
   { id: "ed", title: "ED Cases" },
   { id: "sc", title: "Supreme Court" },
@@ -61,6 +63,12 @@ const casesData = [
     title: "ED Vs. Virbhadra Singh and Ors.",
     description: "Legal strategy and representation in a politically sensitive matter involving a Chief Minister. The case required navigating complex media scrutiny and intricate legal frameworks across multiple jurisdictions.",
     images: [cmCaseImg1, cmCaseImg2, ...sortedImages.slice(7, 10)]
+  },
+  {
+    categoryId: "cwg",
+    title: "DoE v. A.K. Reddy & Anr. (Commonwealth Games)",
+    description: "Defense representation in the high-profile Commonwealth Games matter in Delhi, navigating complex proceedings initiated by the Directorate of Enforcement.",
+    images: [cwgCaseImg]
   },
   {
     categoryId: "cbi",
