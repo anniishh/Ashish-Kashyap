@@ -43,39 +43,39 @@
   --font-serif: Calibri, Arial, sans-serif;
 }
 
-/* Colorful Light Theme */
+/* Colorful Light Theme (No Pink) */
 :root {
-  --background: 340 100% 98%; /* Light pinkish white */
-  --foreground: 330 30% 20%;  /* Dark pinkish grey */
+  --background: 210 40% 98%; /* Light blueish white */
+  --foreground: 220 30% 20%;  /* Dark slate */
 
   --card: 0 0% 100%;
-  --card-foreground: 330 30% 20%;
+  --card-foreground: 220 30% 20%;
   
   --popover: 0 0% 100%;
-  --popover-foreground: 330 30% 20%;
+  --popover-foreground: 220 30% 20%;
 
-  /* Hot Pink */
-  --primary: 330 85% 60%;
+  /* Royal Blue */
+  --primary: 225 85% 55%;
   --primary-foreground: 0 0% 100%;
 
-  /* Vibrant Teal/Mint for contrast */
-  --secondary: 160 70% 45%;
+  /* Vibrant Teal */
+  --secondary: 175 80% 40%;
   --secondary-foreground: 0 0% 100%;
 
-  /* Soft pink for muted areas */
-  --muted: 340 50% 94%;
-  --muted-foreground: 330 25% 45%;
+  /* Soft slate for muted areas */
+  --muted: 215 30% 94%;
+  --muted-foreground: 215 25% 45%;
 
-  /* Deep Pink Accent */
-  --accent: 330 85% 50%;
+  /* Vibrant Orange Accent */
+  --accent: 25 90% 55%;
   --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 340 30% 88%;
-  --input: 340 30% 88%;
-  --ring: 330 85% 55%;
+  --border: 215 30% 88%;
+  --input: 215 30% 88%;
+  --ring: 225 85% 55%;
 
   --radius: 0.75rem;
 }
@@ -86,7 +86,7 @@
   }
   body {
     @apply font-sans antialiased text-foreground;
-    background: linear-gradient(135deg, hsl(340, 100%, 98%), hsl(320, 80%, 96%), hsl(280, 50%, 97%));
+    background: linear-gradient(135deg, hsl(200, 70%, 97%), hsl(160, 60%, 96%), hsl(40, 70%, 96%));
     background-attachment: fixed;
     min-height: 100vh;
   }
