@@ -5,6 +5,8 @@ import { X } from "lucide-react";
 import politicalCaseImg from "@assets/pic_20260425233204_2_1780332381350.jpg";
 import cmCaseImg1 from "@assets/pic_20260425233204_4_1780332432074.jpg";
 import cmCaseImg2 from "@assets/pic_20260425233204_5_1780332482966.jpg";
+import cmCaseImg3 from "@assets/pic_20260425233204_9_1780332644648.jpg";
+import cmCaseImg4 from "@assets/pic_20260425233204_10_1780332692821.jpg";
 import cwgCaseImg from "@assets/pic_20260425233204_3_1780332560604.jpg";
 
 // Dynamically import all images
@@ -62,7 +64,7 @@ const casesData = [
     categoryId: "cm",
     title: "ED Vs. Virbhadra Singh and Ors.",
     description: "Legal strategy and representation in a politically sensitive matter involving a Chief Minister. The case required navigating complex media scrutiny and intricate legal frameworks across multiple jurisdictions.",
-    images: [cmCaseImg1, cmCaseImg2, ...sortedImages.slice(7, 10)]
+    images: [cmCaseImg1, cmCaseImg2, cmCaseImg3, cmCaseImg4, ...sortedImages.slice(10, 12)]
   },
   {
     categoryId: "cwg",
