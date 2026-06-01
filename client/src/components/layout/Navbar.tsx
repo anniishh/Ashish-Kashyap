@@ -47,7 +47,7 @@ export function Navbar() {
               key={link.name}
               href={link.href}
               className={`text-[11px] lg:text-sm font-medium transition-colors uppercase tracking-widest relative group whitespace-nowrap ${
-                location === link.href ? "text-accent" : "text-black hover:text-accent"
+                location === link.href ? "text-accent font-bold" : "text-foreground hover:text-accent"
               }`}
             >
               {link.name}
@@ -57,7 +57,7 @@ export function Navbar() {
             </Link>
           ))}
           <Link href="/contact#schedule-consultation">
-            <Button variant="default" className="bg-primary text-primary-foreground hover:bg-accent transition-colors px-3 md:px-1.5 lg:px-4 text-xs md:text-[9px] lg:text-sm whitespace-nowrap h-8 md:h-7 lg:h-10">
+            <Button variant="default" className="bg-primary text-primary-foreground hover:bg-primary/90 transition-colors px-3 md:px-1.5 lg:px-4 text-xs md:text-[9px] lg:text-sm whitespace-nowrap h-8 md:h-7 lg:h-10">
               <Calendar className="hidden lg:inline-block mr-2 h-4 w-4" /> Book Appointment
             </Button>
           </Link>
