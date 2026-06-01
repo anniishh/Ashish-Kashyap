@@ -18,10 +18,10 @@ export function ARAssociates() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden relative">
+    <section className="py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden relative w-full">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 -skew-x-12 transform origin-top-right"></div>
       
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
+      <div className="w-full px-6 md:px-12 lg:px-24 xl:px-32 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-black mb-4">
             A.R. & ASSOCIATES
