@@ -93,6 +93,28 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }
+  
+  /* Global Section Spacing for Mobile Responsiveness */
+  section {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+  @media (min-width: 768px) {
+    section {
+      padding-top: 40px !important;
+      padding-bottom: 40px !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .card,
+    .team-card,
+    .form-container,
+    .service-card,
+    .bg-white.rounded-2xl {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 @layer components {

@@ -7,7 +7,7 @@ export function Affiliations() {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-[40px] md:py-[40px] bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="lg:w-1/2 space-y-6">

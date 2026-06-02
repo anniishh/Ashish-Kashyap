@@ -18,7 +18,7 @@ export function ARAssociates() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden relative w-full">
+    <section className="py-[40px] md:py-[40px] bg-gradient-to-b from-white to-gray-50 overflow-hidden relative w-full">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 -skew-x-12 transform origin-top-right"></div>
       
       <div className="w-full px-6 md:px-12 lg:px-24 xl:px-32 relative z-10">
@@ -32,11 +32,11 @@ export function ARAssociates() {
           <div className="w-24 h-1 bg-accent mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20 items-start">
-          <div className="lg:col-span-3 flex justify-center lg:justify-start pt-2 lg:-ml-24 relative overflow-visible">
-            <img src={logo} alt="A.R. & Associates Logo" className="w-full max-w-[400px] object-contain object-center lg:object-left drop-shadow-sm scale-125 lg:scale-[1.6] origin-center lg:origin-left" />
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-20 items-start">
+          <div className="lg:col-span-3 flex justify-center lg:justify-start pt-2 relative overflow-visible lg:-ml-8 xl:-ml-12 mb-8 lg:mb-0">
+            <img src={logo} alt="A.R. & Associates Logo" className="w-full max-w-[280px] lg:max-w-[320px] object-contain object-center lg:object-left drop-shadow-sm scale-110 lg:scale-[1.4] lg:origin-left" />
           </div>
-          <div className="lg:col-span-5 space-y-8 lg:-ml-4">
+          <div className="lg:col-span-5 space-y-8 text-center lg:text-left">
             <div>
               <h3 className="text-2xl font-bold text-black mb-4">Adv. Ashish Kashyap & Adv. Rahul Kumar</h3>
               <p className="text-black/70 text-lg leading-relaxed">

@@ -78,7 +78,7 @@ export default function EDCasesTable() {
   );
 
   return (
-    <section className="py-20 bg-gray-50/50">
+    <section className="py-[40px] md:py-[40px] bg-gray-50/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
           <div className="max-w-2xl">

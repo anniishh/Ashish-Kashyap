@@ -1,0 +1,243 @@
+Copy and paste this prompt directly into Replit AI:
+
+---
+
+**PROMPT FOR REPLIT AI**
+
+You need to fix the mobile responsiveness issues across the entire website, not just a single page.
+
+### 1. Remove Excessive Gaps/Whitespace on Mobile
+
+There are large unwanted blank spaces between sections, cards, forms, and content blocks throughout the website in mobile view.
+
+**Requirements:**
+
+* Audit every page and every section.
+* Remove unnecessary top and bottom margins and paddings.
+* Reduce excessive vertical spacing between sections.
+* Ensure sections appear naturally connected without large blank areas.
+* Fix any containers that have fixed heights causing empty spaces.
+* Remove empty divs/spacers creating gaps.
+* Check for overflow, min-height, height: 100vh, large margin-top, margin-bottom, padding-top, and padding-bottom values that create white space.
+* Make spacing consistent across all pages.
+
+### Mobile Spacing Guidelines
+
+Use these values consistently:
+
+```css
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .card,
+  .team-card,
+  .form-container,
+  .service-card {
+    margin-bottom: 20px;
+  }
+}
+```
+
+### Specifically Fix
+
+* Hero section gap
+* Team section gap
+* Advocate profile cards gap
+* Consultation form gap
+* Footer gap
+* Any large empty area appearing between sections on mobile devices
+
+The website should look compact, professional, and properly aligned on mobile.
+
+---
+
+## 2. Consultation Form Email Notifications
+
+When a user submits the consultation form:
+
+### Send form details to my email address
+
+I want to receive an email containing:
+
+* Full Name
+* Phone Number
+* Email Address
+* Preferred Date
+* Case Summary
+* Submission Time
+
+### Email Subject
+
+```text
+New Consultation Request Received
+```
+
+### Email Body Example
+
+```text
+A new consultation request has been submitted.
+
+Name: John Doe
+Phone: +91 9876543210
+Email: john@gmail.com
+Preferred Date: 20/06/2026
+
+Case Summary:
+Details entered by user...
+
+Submitted At:
+20/06/2026 10:45 AM
+```
+
+### Backend Requirements
+
+* Create secure backend endpoint.
+* Store SMTP credentials in environment variables.
+* Do NOT expose credentials in frontend code.
+* Use Nodemailer (if Node.js project).
+* Return success/failure response to frontend.
+
+---
+
+## 3. Name Field Validation
+
+The Full Name field should allow:
+
+✅ Alphabets
+
+✅ Spaces
+
+✅ Periods
+
+Examples:
+
+```text
+Rahul Kumar
+A. K. Sharma
+Ashish Kashyap
+```
+
+Not Allowed:
+
+```text
+Rahul123
+12345
+Rahul@123
+```
+
+Validation Regex:
+
+```javascript
+/^[A-Za-z\s.]+$/
+```
+
+Show error:
+
+```text
+Please enter a valid name using letters only.
+```
+
+---
+
+## 4. Email Validation
+
+The Email field must:
+
+* Accept only properly formatted emails.
+* Reject invalid formats.
+* Verify email format before form submission.
+
+Examples Accepted:
+
+```text
+abc@gmail.com
+user@yahoo.com
+test@company.in
+```
+
+Examples Rejected:
+
+```text
+abc@
+@gmail.com
+abc.com
+123
+```
+
+Validation Regex:
+
+```javascript
+/^[^\s@]+@[^\s@]+\.[^\s@]+$/
+```
+
+Show error:
+
+```text
+Please enter a valid email address.
+```
+
+---
+
+## 5. Phone Number Validation
+
+Requirements:
+
+* Only digits allowed.
+* Minimum 10 digits.
+* Maximum 15 digits.
+* Prevent letters and special characters.
+
+Show error:
+
+```text
+Please enter a valid phone number.
+```
+
+---
+
+## 6. Form Submission Validation
+
+Do not allow submission unless:
+
+* Name is valid.
+* Email is valid.
+* Phone number is valid.
+* Case Summary is not empty.
+* Preferred Date is selected.
+
+Show user-friendly validation messages.
+
+---
+
+## 7. Mobile Testing
+
+After implementing:
+
+* Test at 320px width
+* Test at 375px width
+* Test at 425px width
+* Test at 768px width
+
+Ensure:
+
+* No horizontal scrolling
+* No large blank spaces
+* No overlapping elements
+* Proper alignment and spacing
+* Consultation form fully responsive
+
+Finally provide a summary of:
+
+1. Files modified.
+2. CSS changes made.
+3. Validation rules added.
+4. Email notification setup instructions.
+5. Any remaining issues found.

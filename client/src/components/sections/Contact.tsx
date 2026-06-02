@@ -17,15 +17,23 @@ import PhoneInput, { isValidPhoneNumber, parsePhoneNumber } from 'react-phone-nu
 import 'react-phone-number-input/style.css';
 
 const formSchema = z.object({
-  name: z.string().min(2, "Name is required"),
-  email: z.string().email("Invalid email address"),
-  phone: z.string().min(1, "Phone number is required").refine((val) => {
-    return isValidPhoneNumber(val);
-  }, {
-    message: "Invalid phone number for the selected country"
-  }),
+  name: z.string()
+    .min(2, "Name is required")
+    .regex(/^[A-Za-z\s.]+$/, "Please enter a valid name using letters only."),
+  email: z.string()
+    .min(1, "Email is required")
+    .regex(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, "Please enter a valid email address."),
+  phone: z.string()
+    .min(10, "Please enter a valid phone number.")
+    .max(15, "Please enter a valid phone number.")
+    .regex(/^\d+$/, "Please enter a valid phone number.")
+    .or(z.string().min(1, "Phone number is required").refine((val) => {
+      return isValidPhoneNumber(val);
+    }, {
+      message: "Please enter a valid phone number."
+    })),
   date: z.string().min(1, "Please select a date"),
-  message: z.string().optional(),
+  message: z.string().min(1, "Please provide a brief case summary."),
 });
 
 export function Contact() {
@@ -52,7 +60,7 @@ export function Contact() {
   }
 
   return (
-    <section id="schedule-consultation" className="py-24 bg-muted/30 relative">
+    <section id="schedule-consultation" className="py-[40px] md:py-[40px] bg-muted/30 relative">
       <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-4xl">
         <div className="bg-white border border-border rounded-2xl p-8 md:p-12 shadow-xl">
           <div className="text-center mb-10">
