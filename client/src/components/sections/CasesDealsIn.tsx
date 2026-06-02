@@ -114,7 +114,7 @@ export function CasesDealsIn() {
   const activeCases = casesData.filter(c => c.categoryId === activeCategory);
 
   return (
-    <section className="py-[40px] md:py-[40px] bg-background">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

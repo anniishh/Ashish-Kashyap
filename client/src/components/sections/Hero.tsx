@@ -8,7 +8,7 @@ import arLogo from "@assets/Gemini_Generated_Image_tob7rbtob7rbtob7-removebg-pre
 
 export function Hero() {
   return (
-    <section id="home" className="relative min-h-[90vh] md:min-h-screen flex items-center pt-[120px] pb-[40px] md:pt-36 lg:pt-[120px] lg:pb-[40px] md:mt-[1px] overflow-hidden bg-white">
+    <section id="home" className="relative min-h-[90vh] md:min-h-screen flex items-center pt-32 md:pt-36 lg:pt-24 md:mt-[1px] overflow-hidden bg-white">
       {/* Background Subtle Gradient */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,_var(--color-muted),_transparent_50%)]"></div>
 

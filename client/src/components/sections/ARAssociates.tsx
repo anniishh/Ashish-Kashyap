@@ -18,7 +18,7 @@ export function ARAssociates() {
   ];
 
   return (
-    <section className="py-[40px] md:py-[40px] bg-gradient-to-b from-white to-gray-50 overflow-hidden relative w-full">
+    <section className="py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden relative w-full">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 -skew-x-12 transform origin-top-right"></div>
       
       <div className="w-full px-6 md:px-12 lg:px-24 xl:px-32 relative z-10">
