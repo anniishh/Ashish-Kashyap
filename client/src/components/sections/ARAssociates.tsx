@@ -23,6 +23,11 @@ export function ARAssociates() {
       
       <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
         <div className="text-center mb-16">
+          <div className="flex justify-center mb-8">
+            <div className="bg-white p-4 rounded-xl shadow-sm border border-black/5 inline-block">
+              <img src={logo} alt="A.R. & Associates Logo" className="h-16 md:h-20 lg:h-24 object-contain" />
+            </div>
+          </div>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-black mb-4">
             A.R. & ASSOCIATES
           </h2>
@@ -34,14 +39,11 @@ export function ARAssociates() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
           <div className="lg:col-span-8 space-y-8">
-            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-4 md:gap-6 mb-6">
-              <img src={logo} alt="AR Law Associates Logo" className="h-28 sm:h-28 md:h-32 lg:h-36 object-contain shrink-0 lg:-ml-6" />
-              <div className="flex flex-col text-center sm:text-left">
-                <h3 className="text-xl md:text-2xl lg:text-[24px] font-bold text-black mb-2 whitespace-nowrap">Adv. Ashish Kashyap & Adv. Rahul Kumar</h3>
-                <p className="text-black/70 text-sm sm:text-base md:text-[16px] leading-relaxed max-w-2xl mt-1">
-                  A.R. & Associates is a premier law firm dedicated to providing exceptional legal representation across a broad spectrum of practice areas. Founded on the principles of integrity, aggressive advocacy, and strategic counsel, the firm operates at the highest levels of the Indian judicial system.
-                </p>
-              </div>
+            <div className="flex flex-col text-center sm:text-left">
+              <h3 className="text-xl md:text-2xl lg:text-[24px] font-bold text-black mb-2 whitespace-nowrap">Adv. Ashish Kashyap & Adv. Rahul Kumar</h3>
+              <p className="text-black/70 text-sm sm:text-base md:text-[16px] leading-relaxed max-w-3xl mt-2">
+                A.R. & Associates is a premier law firm dedicated to providing exceptional legal representation across a broad spectrum of practice areas. Founded on the principles of integrity, aggressive advocacy, and strategic counsel, the firm operates at the highest levels of the Indian judicial system.
+              </p>
             </div>
 
             <div>
