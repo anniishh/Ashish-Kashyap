@@ -19,13 +19,13 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <div className="flex flex-col w-fit gap-4 mb-6">
+            <div className="flex justify-start items-center w-full py-2">
+              <img src={arLogo} alt="A.R. & Associates Law Firm" className="h-20 sm:h-24 md:h-28 lg:h-32 object-contain" />
+            </div>
             <div className="px-3 py-1 border border-accent/20 rounded-full bg-accent/5 backdrop-blur-sm text-center">
               <span className="text-accent text-[11px] sm:text-sm font-semibold tracking-wider uppercase">
                 Supreme Court & High Court Advocate
               </span>
-            </div>
-            <div className="flex justify-start items-center w-full py-2">
-              <img src={arLogo} alt="A.R. & Associates Law Firm" className="h-20 sm:h-24 md:h-28 lg:h-32 object-contain" />
             </div>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-bold text-foreground leading-tight mb-6">
