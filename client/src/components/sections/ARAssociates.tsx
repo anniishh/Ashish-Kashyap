@@ -23,11 +23,6 @@ export function ARAssociates() {
       
       <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
         <div className="text-center mb-16">
-          <div className="flex justify-center mb-8">
-            <div className="bg-white p-4 rounded-xl shadow-sm border border-black/5 inline-block">
-              <img src={logo} alt="A.R. & Associates Logo" className="h-20 md:h-24 lg:h-32 object-contain" />
-            </div>
-          </div>
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-black mb-4">
             A.R. & ASSOCIATES
           </h2>
