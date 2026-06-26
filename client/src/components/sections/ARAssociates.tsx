@@ -18,10 +18,10 @@ export function ARAssociates() {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden relative w-full">
+    <section className="py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden relative">
       <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/5 -skew-x-12 transform origin-top-right"></div>
       
-      <div className="w-full px-6 md:px-12 lg:px-24 xl:px-32 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-black mb-4">
             A.R. & ASSOCIATES
@@ -32,49 +32,43 @@ export function ARAssociates() {
           <div className="w-24 h-1 bg-accent mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-20 items-start">
-          <div className="lg:col-span-3 flex justify-center lg:justify-start pt-2 relative overflow-visible lg:-ml-8 xl:-ml-12 mb-8 lg:mb-0">
-            <img src={logo} alt="A.R. & Associates Logo" className="w-full max-w-[280px] lg:max-w-[320px] object-contain object-center lg:object-left drop-shadow-sm scale-110 lg:scale-[1.4] lg:origin-left" />
-          </div>
-          <div className="lg:col-span-5 space-y-8 text-center lg:text-left">
-            <div>
-              <h3 className="text-2xl font-bold text-black mb-4">Adv. Ashish Kashyap & Adv. Rahul Kumar</h3>
-              <p className="text-black/70 text-lg leading-relaxed">
-                A.R. & Associates is a premier law firm dedicated to providing exceptional legal representation across a broad spectrum of practice areas. Founded on the principles of integrity, aggressive advocacy, and strategic counsel, the firm operates at the highest levels of the Indian judicial system.
-              </p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
+          <div className="lg:col-span-8 space-y-8">
+            <div className="flex flex-col sm:flex-row items-center sm:items-center gap-4 md:gap-6 mb-6">
+              <img src={logo} alt="AR Law Associates Logo" className="h-28 sm:h-28 md:h-32 lg:h-36 object-contain shrink-0 lg:-ml-6" />
+              <div className="flex flex-col text-center sm:text-left">
+                <h3 className="text-xl md:text-2xl lg:text-[24px] font-bold text-black mb-2 whitespace-nowrap">Adv. Ashish Kashyap & Adv. Rahul Kumar</h3>
+                <p className="text-black/70 text-sm sm:text-base md:text-[16px] leading-relaxed max-w-2xl mt-1">
+                  A.R. & Associates is a premier law firm dedicated to providing exceptional legal representation across a broad spectrum of practice areas. Founded on the principles of integrity, aggressive advocacy, and strategic counsel, the firm operates at the highest levels of the Indian judicial system.
+                </p>
+              </div>
             </div>
 
-            <div className="flex flex-col gap-6 mt-8 border-t border-black/10 pt-8">
-              <h4 className="text-xl font-bold text-black mb-2">Areas of Practice</h4>
+            <div>
+              <h4 className="text-xl font-bold text-black mb-4 border-b border-black/10 pb-2 inline-block">Areas of Practice</h4>
               
-              <div className="flex flex-col gap-6">
-                <div className="flex flex-col md:flex-row gap-4 md:gap-8 md:items-center">
-                  <div className="md:w-1/3">
-                    <h5 className="font-semibold text-black/90 text-lg">Adv. Ashish Kashyap</h5>
-                    <p className="text-accent text-xs font-medium uppercase mt-1">Partner</p>
-                  </div>
-                  <div className="md:w-2/3 flex flex-wrap gap-x-6 gap-y-3">
+              <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h5 className="font-semibold text-black/90 mb-1">Adv. Ashish Kashyap</h5>
+                  <p className="text-accent text-xs font-medium uppercase mb-3">Partner</p>
+                  <div className="space-y-3">
                     {practiceAreas.slice(0, 4).map((area, index) => (
                       <div key={index} className="flex items-center text-black/80">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 flex-shrink-0" />
-                        <span className="font-medium text-sm md:text-base">{area}</span>
+                        <CheckCircle2 className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
+                        <span className="font-medium">{area}</span>
                       </div>
                     ))}
                   </div>
                 </div>
                 
-                <div className="w-full h-px bg-black/5"></div>
-                
-                <div className="flex flex-col md:flex-row gap-4 md:gap-8 md:items-center">
-                  <div className="md:w-1/3">
-                    <h5 className="font-semibold text-black/90 text-lg">Adv. Rahul Kumar</h5>
-                    <p className="text-accent text-xs font-medium uppercase mt-1">Partner</p>
-                  </div>
-                  <div className="md:w-2/3 flex flex-wrap gap-x-6 gap-y-3">
+                <div>
+                  <h5 className="font-semibold text-black/90 mb-1">Adv. Rahul Kumar</h5>
+                  <p className="text-accent text-xs font-medium uppercase mb-3">Partner</p>
+                  <div className="space-y-3">
                     {practiceAreas.slice(4).map((area, index) => (
                       <div key={index} className="flex items-center text-black/80">
-                        <CheckCircle2 className="h-5 w-5 text-accent mr-2 flex-shrink-0" />
-                        <span className="font-medium text-sm md:text-base">{area}</span>
+                        <CheckCircle2 className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
+                        <span className="font-medium">{area}</span>
                       </div>
                     ))}
                   </div>
@@ -96,7 +90,7 @@ export function ARAssociates() {
                   +91 9716324341
                 </a>
                 <Link href="/advocate-rahul" className="flex items-center justify-center gap-2 text-sm font-semibold text-accent hover:text-accent/80 transition-colors py-2 border border-accent/20 rounded-full hover:bg-accent/5">
-                  View Profile <ArrowRight className="h-4 w-4" />
+                  View Full Profile <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </div>
