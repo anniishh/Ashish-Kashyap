@@ -77,13 +77,13 @@ export function Affiliations() {
                     transition={{ duration: 0.5 }}
                     className="absolute inset-0 w-full h-full [backface-visibility:hidden]"
                   >
-                    <div className="w-full h-full border border-black/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden bg-gradient-to-br from-blue-50 via-teal-50 to-orange-50">
+                    <div className="w-full h-full border border-black/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden bg-gradient-to-br from-white to-blue-50">
                       {/* Background decorations */}
-                      <div className="absolute top-0 right-0 w-48 h-48 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70 translate-x-1/2 -translate-y-1/2"></div>
-                      <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70 -translate-x-1/2 translate-y-1/2"></div>
+                      <div className="absolute top-0 right-0 w-48 h-48 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 translate-x-1/2 -translate-y-1/2"></div>
+                      <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 -translate-x-1/2 translate-y-1/2"></div>
                       
                       <div className="relative z-10 flex flex-col h-full">
-                        <div className="bg-gradient-to-r from-blue-400 via-teal-400 to-emerald-400 p-4 border-b-4 border-orange-400">
+                        <div className="bg-gradient-to-r from-blue-500 to-blue-400 p-4 border-b-4 border-blue-200">
                           <div className="flex items-center gap-4">
                             <div className="h-16 w-16 bg-white rounded-full flex items-center justify-center shadow-lg overflow-hidden p-1 border-2 border-white flex-shrink-0">
                               <img src={logo} alt="IHRCCC Logo" className="h-full w-full object-contain" />
@@ -93,28 +93,28 @@ export function Affiliations() {
                                 <span className="md:hidden">IHRCCC</span>
                                 <span className="hidden md:inline">International Human Rights & Crime Control Council (IHRCCC)</span>
                               </h3>
-                              <p className="text-teal-100 font-semibold text-sm">Official Identity Credential</p>
+                              <p className="text-blue-100 font-semibold text-sm">Official Identity Credential</p>
                             </div>
                           </div>
                         </div>
                         
                         <div className="p-6 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 flex-grow bg-white/40 backdrop-blur-sm">
-                          <div className="bg-white/60 p-3 rounded-lg border border-blue-100">
+                          <div className="bg-white/80 p-3 rounded-lg border border-blue-100">
                             <p className="text-xs text-blue-600 uppercase font-bold mb-1 tracking-wider">ID Number</p>
                             <p className="text-slate-800 font-mono font-bold">JKQT/IH24/73380</p>
                           </div>
-                          <div className="bg-white/60 p-3 rounded-lg border border-teal-100">
-                            <p className="text-xs text-teal-600 uppercase font-bold mb-1 tracking-wider">UID Number</p>
+                          <div className="bg-white/80 p-3 rounded-lg border border-blue-100">
+                            <p className="text-xs text-blue-600 uppercase font-bold mb-1 tracking-wider">UID Number</p>
                             <p className="text-slate-800 font-mono font-bold">17KTQSZIH1897</p>
                           </div>
-                          <div className="bg-white/60 p-3 rounded-lg border border-orange-100">
-                            <p className="text-xs text-orange-600 uppercase font-bold mb-1 tracking-wider">Jurisdiction / Location</p>
+                          <div className="bg-white/80 p-3 rounded-lg border border-blue-100">
+                            <p className="text-xs text-blue-600 uppercase font-bold mb-1 tracking-wider">Jurisdiction / Location</p>
                             <p className="text-slate-800 font-bold">Haryana (All India)</p>
                           </div>
-                          <div className="bg-white/60 p-3 rounded-lg border border-emerald-100 flex flex-col justify-center items-start">
-                            <p className="text-xs text-emerald-600 uppercase font-bold mb-1 tracking-wider">Validity Status</p>
+                          <div className="bg-white/80 p-3 rounded-lg border border-blue-100 flex flex-col justify-center items-start">
+                            <p className="text-xs text-blue-600 uppercase font-bold mb-1 tracking-wider">Validity Status</p>
                             <div className="flex items-center gap-2">
-                              <span className="inline-block bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-sm text-xs px-2.5 py-1 rounded font-bold uppercase">Lifetime</span>
+                              <span className="inline-block bg-blue-500 text-white shadow-sm text-xs px-2.5 py-1 rounded font-bold uppercase">Lifetime</span>
                               <span className="text-[10px] font-bold text-slate-500">(Issued Feb 2025)</span>
                             </div>
                           </div>
@@ -137,12 +137,12 @@ export function Affiliations() {
                     transition={{ duration: 0.5 }}
                     className="absolute inset-0 w-full h-full [backface-visibility:hidden]"
                   >
-                    <div className="w-full h-full border border-black/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col bg-gradient-to-br from-slate-50 to-blue-50">
-                      <div className="bg-gradient-to-r from-blue-400 via-teal-400 to-emerald-400 text-white py-3 px-6 text-center shadow-md">
+                    <div className="w-full h-full border border-black/10 rounded-2xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col bg-white">
+                      <div className="bg-gradient-to-r from-blue-500 to-blue-400 text-white py-3 px-6 text-center shadow-md">
                         <h4 className="font-bold text-sm md:text-base uppercase tracking-wider drop-shadow-md">Terms & Conditions</h4>
                       </div>
                       
-                      <div className="p-6 flex-grow flex flex-col justify-between overflow-y-auto bg-white/60 backdrop-blur-sm">
+                      <div className="p-6 flex-grow flex flex-col justify-between overflow-y-auto bg-blue-50/30 backdrop-blur-sm">
                         <ul className="text-xs md:text-[13px] text-slate-700 space-y-2.5 list-decimal list-inside pl-1 marker:text-blue-500 marker:font-bold font-medium">
                           <li>This Card is property of IHRCCC & must be returned upon request to IHRCCC.</li>
                           <li>This card can withdrawn any time without notice.</li>
@@ -154,13 +154,13 @@ export function Affiliations() {
                         </ul>
                       </div>
                       
-                      <div className="bg-gradient-to-r from-slate-800 to-slate-900 text-white p-4 md:p-5 text-center mt-auto border-t-4 border-orange-500">
-                        <h5 className="font-bold text-sm mb-2 text-orange-400 uppercase tracking-widest">Office Address</h5>
+                      <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white p-4 md:p-5 text-center mt-auto border-t-4 border-blue-400">
+                        <h5 className="font-bold text-sm mb-2 text-blue-200 uppercase tracking-widest">Office Address</h5>
                         <p className="text-xs text-white/90 leading-relaxed font-medium">
                           B-14, 2nd Floor, Neelkanth Bhawan 1st,<br />
                           (Above Yamaha Showroom), Kh No. 869<br />
                           Main Road, Sant Nagar, Burari, Delhi - 110084<br />
-                          <span className="text-teal-400 mt-1 inline-block">www.ihrccc.com | info@ihrccc.com</span><br />
+                          <span className="text-blue-200 mt-1 inline-block">www.ihrccc.com | info@ihrccc.com</span><br />
                           <span className="text-blue-300">Ph.: 9333333121, 8388888851</span>
                         </p>
                       </div>
