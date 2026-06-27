@@ -101,16 +101,12 @@ export function BusinessCard() {
         <div className="flex justify-center print:block">
           <motion.div 
             id="printable-card"
-            className="w-full max-w-3xl border border-black/5 rounded-2xl overflow-hidden shadow-2xl relative printable-card print:shadow-none print:border-none print:max-w-none bg-gradient-to-br from-white to-sky-50"
+            className="w-full max-w-3xl border border-sky-100 rounded-2xl overflow-hidden shadow-xl relative printable-card print:shadow-none print:border-none print:max-w-none bg-white"
             whileHover={{ scale: 1.01 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            {/* Background decorations */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-sky-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-sky-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
-
             {/* Card Header Design */}
-            <div className="h-2 bg-gradient-to-r from-sky-600 to-sky-300"></div>
+            <div className="h-3 bg-sky-500"></div>
             
             <div className="p-6 md:p-10 relative z-10">
               <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-8">
@@ -119,15 +115,9 @@ export function BusinessCard() {
                   <p className="text-sky-600 font-bold tracking-wide uppercase text-sm mb-4">Advocate</p>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {["Criminal Cases", "CBI", "ED", "NIA"].map((tag, idx) => {
-                      const colors = [
-                        "bg-sky-100 text-sky-700 border-sky-200",
-                        "bg-teal-100 text-teal-700 border-teal-200",
-                        "bg-orange-100 text-orange-700 border-orange-200",
-                        "bg-emerald-100 text-emerald-700 border-emerald-200"
-                      ];
+                    {["Criminal Cases", "CBI", "ED", "NIA"].map((tag) => {
                       return (
-                        <span key={tag} className={`px-3 py-1 rounded-full text-[10px] font-bold border uppercase tracking-wider ${colors[idx % colors.length]}`}>
+                        <span key={tag} className="px-3 py-1 rounded-full text-[10px] font-bold border uppercase tracking-wider bg-sky-100 text-sky-700 border-sky-200">
                           {tag}
                         </span>
                       );
