@@ -24,6 +24,9 @@ export function Hero() {
                 Supreme Court & High Court Advocate
               </span>
             </div>
+            <div className="bg-white p-3 rounded-2xl shadow-sm border border-black/5 inline-block w-fit mt-2">
+              <img src={arLogo} alt="A.R. & Associates Law Firm" className="h-16 sm:h-20 md:h-24 lg:h-28 object-contain" />
+            </div>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif font-bold text-foreground leading-tight mb-6">
             Advocate <br className="hidden sm:block" />
