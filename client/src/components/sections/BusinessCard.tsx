@@ -101,27 +101,27 @@ export function BusinessCard() {
         <div className="flex justify-center print:block">
           <motion.div 
             id="printable-card"
-            className="w-full max-w-3xl border border-black/5 rounded-2xl overflow-hidden shadow-2xl relative printable-card print:shadow-none print:border-none print:max-w-none bg-gradient-to-br from-white to-blue-50"
+            className="w-full max-w-3xl border border-black/5 rounded-2xl overflow-hidden shadow-2xl relative printable-card print:shadow-none print:border-none print:max-w-none bg-gradient-to-br from-white to-sky-50"
             whileHover={{ scale: 1.01 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             {/* Background decorations */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-sky-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-sky-50 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -translate-x-1/3 translate-y-1/3 pointer-events-none"></div>
 
             {/* Card Header Design */}
-            <div className="h-2 bg-gradient-to-r from-blue-600 to-blue-300"></div>
+            <div className="h-2 bg-gradient-to-r from-sky-600 to-sky-300"></div>
             
             <div className="p-6 md:p-10 relative z-10">
               <div className="flex flex-col md:flex-row justify-between items-start gap-6 mb-8">
                 <div className="flex-1">
                   <h3 className="text-3xl font-serif font-bold text-foreground mb-1">Ashish Kashyap</h3>
-                  <p className="text-blue-600 font-bold tracking-wide uppercase text-sm mb-4">Advocate</p>
+                  <p className="text-sky-600 font-bold tracking-wide uppercase text-sm mb-4">Advocate</p>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
                     {["Criminal Cases", "CBI", "ED", "NIA"].map((tag, idx) => {
                       const colors = [
-                        "bg-blue-100 text-blue-700 border-blue-200",
+                        "bg-sky-100 text-sky-700 border-sky-200",
                         "bg-teal-100 text-teal-700 border-teal-200",
                         "bg-orange-100 text-orange-700 border-orange-200",
                         "bg-emerald-100 text-emerald-700 border-emerald-200"
@@ -184,28 +184,28 @@ export function BusinessCard() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 py-6 border-y border-blue-100">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6 py-6 border-y border-sky-100">
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 shadow-sm border border-blue-200"><Phone size={14} /></div>
+                    <div className="w-8 h-8 rounded-lg bg-sky-100 flex items-center justify-center text-sky-600 shadow-sm border border-sky-200"><Phone size={14} /></div>
                     <div>
-                      <p className="text-[9px] uppercase tracking-widest text-blue-600 font-bold">Mobile</p>
+                      <p className="text-[9px] uppercase tracking-widest text-sky-600 font-bold">Mobile</p>
                       <p className="text-sm text-foreground font-bold">+91 88514 27770</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 shadow-sm border border-blue-200"><Phone size={14} /></div>
+                    <div className="w-8 h-8 rounded-lg bg-sky-100 flex items-center justify-center text-sky-600 shadow-sm border border-sky-200"><Phone size={14} /></div>
                     <div>
-                      <p className="text-[9px] uppercase tracking-widest text-blue-600 font-bold">Office</p>
+                      <p className="text-[9px] uppercase tracking-widest text-sky-600 font-bold">Office</p>
                       <p className="text-sm text-foreground font-bold">+91 97163 24341</p>
                     </div>
                   </div>
 
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 shadow-sm border border-blue-200"><Mail size={14} /></div>
+                    <div className="w-8 h-8 rounded-lg bg-sky-100 flex items-center justify-center text-sky-600 shadow-sm border border-sky-200"><Mail size={14} /></div>
                     <div>
-                      <p className="text-[9px] uppercase tracking-widest text-blue-600 font-bold">Email</p>
+                      <p className="text-[9px] uppercase tracking-widest text-sky-600 font-bold">Email</p>
                       <p className="text-sm text-foreground font-bold">advashishkashyap@gmail.com</p>
                     </div>
                   </div>
@@ -213,9 +213,9 @@ export function BusinessCard() {
 
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 shrink-0 mt-1 shadow-sm border border-blue-200"><MapPin size={14} /></div>
+                    <div className="w-8 h-8 rounded-lg bg-sky-100 flex items-center justify-center text-sky-600 shrink-0 mt-1 shadow-sm border border-sky-200"><MapPin size={14} /></div>
                     <div>
-                      <p className="text-[9px] uppercase tracking-widest text-blue-600 font-bold">Delhi High Court</p>
+                      <p className="text-[9px] uppercase tracking-widest text-sky-600 font-bold">Delhi High Court</p>
                       <p className="text-[13px] text-foreground font-medium leading-relaxed">
                         Consultation Room, Lawyer's Chamber's Block, Delhi High Court
                       </p>
@@ -223,9 +223,9 @@ export function BusinessCard() {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 shrink-0 mt-1 shadow-sm border border-blue-200"><MapPin size={14} /></div>
+                    <div className="w-8 h-8 rounded-lg bg-sky-100 flex items-center justify-center text-sky-600 shrink-0 mt-1 shadow-sm border border-sky-200"><MapPin size={14} /></div>
                     <div>
-                      <p className="text-[9px] uppercase tracking-widest text-blue-600 font-bold">Law Firm</p>
+                      <p className="text-[9px] uppercase tracking-widest text-sky-600 font-bold">Law Firm</p>
                       <p className="text-[13px] text-foreground font-medium leading-relaxed">
                         Office No. U-144(a), Shakarpur, East District, Delhi-110092
                       </p>
@@ -233,9 +233,9 @@ export function BusinessCard() {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 shrink-0 mt-1 shadow-sm border border-blue-200"><MapPin size={14} /></div>
+                    <div className="w-8 h-8 rounded-lg bg-sky-100 flex items-center justify-center text-sky-600 shrink-0 mt-1 shadow-sm border border-sky-200"><MapPin size={14} /></div>
                     <div>
-                      <p className="text-[9px] uppercase tracking-widest text-blue-600 font-bold">Regional Offices</p>
+                      <p className="text-[9px] uppercase tracking-widest text-sky-600 font-bold">Regional Offices</p>
                       <p className="text-[13px] text-foreground font-medium leading-relaxed">
                         Siwan (Bihar) | Kolkata (West Bengal)
                       </p>
@@ -245,19 +245,19 @@ export function BusinessCard() {
               </div>
 
               <div className="mt-8 flex justify-between items-center">
-                <p className="text-[10px] text-slate-500 font-semibold italic bg-slate-100 px-3 py-1 rounded-full">
+                <p className="text-[10px] text-sky-700 font-semibold italic bg-sky-100 px-3 py-1 rounded-full border border-sky-200">
                   Deals in Criminal Cases | CBI | ED | NIA
                 </p>
                 <div className="flex space-x-4">
                   <button 
                     onClick={handleDownload}
-                    className="flex items-center text-blue-600 text-xs font-bold hover:text-blue-800 transition-colors uppercase tracking-widest"
+                    className="flex items-center text-sky-600 text-xs font-bold hover:text-sky-800 transition-colors uppercase tracking-widest"
                   >
                     <Download className="w-4 h-4 mr-2" /> Download Card
                   </button>
                   <button 
                     onClick={handleShare}
-                    className="flex items-center text-blue-600 text-xs font-bold hover:text-blue-800 transition-colors uppercase tracking-widest"
+                    className="flex items-center text-sky-600 text-xs font-bold hover:text-sky-800 transition-colors uppercase tracking-widest"
                   >
                     <Share2 className="w-4 h-4 mr-2" /> Share Card
                   </button>
